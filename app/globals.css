@@ -40,6 +40,22 @@
 
 
 
+.icon_bg_color {
+  @apply text-base font-semibold text-[#55E6A5] capitalize
+  rounded-lg 
+  border border-[#55E6A5]/60 
+  bg-transparent
+  shadow-sm
+  transition-all duration-300 ease-in-out
+  hover:bg-[#55E6A5]/10 
+  hover:scale-[1.03]
+  hover:shadow-md 
+  active:scale-95
+  cursor-pointer;
+}
+
+
+
 /* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -218,4 +234,34 @@ pre {
     .banner {
         @apply h-[950px]
     }
+}
+
+
+@media (min-width : 500px )  {
+    .about_btn {
+        @apply flex-row
+    }
 } 
+
+
+@media (min-width : 400px ) and (max-width : 500px) {
+    .skill_tab {
+        @apply gap-4
+    }
+    .skill_tab_cnt {
+      @apply px-4
+    }
+}
+
+
+@media (min-width : 501px ) and (max-width : 639px) {
+    .skill_tab {
+        @apply gap-6
+    }
+
+        .skill_tab_cnt {
+      @apply px-6
+    }
+}
+
+

@@ -22,13 +22,13 @@ export default function SkillTabs() {
   return (
     <div className="mt-10">
       {/* Tabs */}
-      <div className=" w-full max-w-lg mx-auto flex gap-4 justify-center border border-green-100 py-2 rounded-4xl
+      <div className=" skill_tab w-full max-w-lg mx-auto flex gap-0 sm:gap-4  justify-center border border-green-100 py-2 rounded-4xl
     bg-[#55E6A5]/10 ">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`px-4 py-2 rounded-base rounded-sm  text-lg  transition-all duration-300  cursor-pointer ${
+            className={` skill_tab_cnt px-2 sm:px-4 py-2 rounded-base rounded-sm text-sm  sm:text-lg  transition-all duration-300  cursor-pointer ${
               active === tab.id
                 ? "bg-[#55E6A5] text-black"
                 : "bg-transparent text-gray-300 hover:text-[#55E6A5]"
