@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function BannerAnimateText() {
   return (
     <div>
-         <h3 className="text-2xl sm:text-3xl font-semibold capitalize flex items-center text-cyan-500 gap-2">
+         <h3 className="text-2xl  lg:text-3xl font-semibold capitalize flex items-center text-cyan-500 gap-2">
               <span className="text-[#F1F5F9]">A</span>
 
               <Typewriter

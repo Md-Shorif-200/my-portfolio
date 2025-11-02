@@ -11,8 +11,8 @@ import {
 import Container from "./Container";
 
 const navLinks = [
-  { href: "#", label: "Home", icon: <HiHome /> },
-  { href: "#", label: "About", icon: <HiInformationCircle /> },
+  { href: "/", label: "Home", icon: <HiHome /> },
+  { href: "/about", label: "About", icon: <HiInformationCircle /> },
   { href: "#", label: "Projects", icon: <HiBriefcase /> },
   { href: "#", label: "Profile", icon: <HiUser /> },
 ];
@@ -38,15 +38,15 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-[#F1F5F9] font-medium hover:text-[#55E6A5] uppercase transition-colors"
+                  className="nav-link text-[#F1F5F9]  hover:text-[#55E6A5] capitalize text-[18px] transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="flex justify-end">
-              <button className="primary_btn ">Services</button>
+            <div className="">
+              {/* <button className="primary_btn ">Services</button> */}
             </div>
           </div>
         </Container>

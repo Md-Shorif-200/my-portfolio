@@ -170,3 +170,52 @@
   }
 }
 
+
+/* ---------- Navbar Hover Animation ---------- */
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #55E6A5, #7FF4C0);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #55E6A5;
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}
+
+@media (min-width : 370px ) and (max-width : 470px) {
+    .banner {
+        @apply h-[1000px]
+    }
+} 
+
+@media (min-width : 471px ) and (max-width : 639px) {
+    .banner {
+        @apply h-[950px]
+    }
+} 

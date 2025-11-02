@@ -4,20 +4,21 @@ import { FaEye } from "react-icons/fa";
 import Container from "./Container";
 import { IoDocumentText } from "react-icons/io5";
 import BannerAnimateText from "./BannerAnimateText";
+import BannerTyped from "./BannerTyped";
 
 export default function Banner() {
   return (
-    <div className="w-full min-h-screen bg-[#02050A] flex items-center  overflow-hidden">
+    <div className=" banner w-full h-[1100px] sm:h-[950px]  md:h-[750px] xl:min-h-screen bg-[#02050A] flex items-center     overflow-hidden mb-10 md:mb-0">
      
 
       <Container>
-        <main className="flex flex-col lg:flex-row items-center justify-between relative z-10">
+        <main className="flex flex-col md:flex-row  gap-6 items-center justify-between relative z-10">
           <section className="text-[#F1F5F9] w-full lg:w-[55%] space-y-5">
             <h2 className="text-lg text-[#CBD5E1] tracking-wide capitalize">
               Hi, I&apos;m
             </h2>
 
-            <h1 className="text-5xl sm:text-6xl font-bold capitalize text-[#55E6A5] leading-tight">
+            <h1 className="text-4xl lg:text-5xl  xl:text-6xl font-bold capitalize primary_color leading-tight">
               Shorif Uddin Rifat
             </h1>
 
@@ -50,7 +51,7 @@ export default function Banner() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex flex-col lg:flex-row items-center gap-4 mt-8 mb-8 xl:mb-0">
               <button className="primary_btn flex items-center gap-3">
                 Download Resume
                 <IoDocumentText className="text-lg" />
@@ -62,7 +63,10 @@ export default function Banner() {
             </div>
           </section>
 
-          <section className="w-full lg:w-[40%] mt-10 lg:mt-0 flex justify-center">
+          <section className="w-full lg:w-[40%] flex justify-center md:mt-10 ">
+
+                <BannerTyped/>
+
             {/* <div className="relative">
               <div className="absolute -inset-4 bg-[#55E6A5]/30 rounded-full blur-2xl"></div>
               <img
