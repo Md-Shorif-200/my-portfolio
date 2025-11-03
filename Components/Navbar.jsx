@@ -13,7 +13,7 @@ import Container from "./Container";
 const navLinks = [
   { href: "/", label: "Home", icon: <HiHome /> },
   { href: "/about", label: "About", icon: <HiInformationCircle /> },
-  { href: "#", label: "Projects", icon: <HiBriefcase /> },
+  { href: "/projects", label: "Projects", icon: <HiBriefcase /> },
   { href: "#", label: "Profile", icon: <HiUser /> },
 ];
 

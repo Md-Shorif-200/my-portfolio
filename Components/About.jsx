@@ -13,7 +13,7 @@ import MyJourney from "./MyJourney";
 
 export default function About() {
   return (
-    <div className="w-full min-h-screen bg-[#02050A] py-10 md:pt-28 xl:pt-28">
+    <div className="w-full min-h-screen bg-[#02050A] py-10 md:pt-28 xl:pt-28 pb-10">
       <Container>
         {/* <div className="mb-20">
                          <SectionTitleContainer title='about me' paragrap='loremjfkdjfjdslkfjdkjflkdjfkdjfkdkfjkfjlkdfjdkfjlkdfkldfkldjflkdjfkjdfkdkfkdfjkdfjkdfjkf' btn_1='explore my project' btn_2='my service' />
@@ -50,10 +50,12 @@ export default function About() {
               <div
                 className="about_btn flex flex-col  items-center gap-4 mt-6 "
               >
-                <button className=" w-[250px] primary_btn flex items-center gap-3">
+                <button className=" w-[250px] primary_btn flex items-center gap-3"  data-aos="fade-up"
+                data-aos-delay="300">
                     explore my projects
                 </button>
-                <button className=" w-[250px] secondary_btn flex items-center gap-3">
+                <button className=" w-[250px] secondary_btn flex items-center gap-3"     data-aos="fade-up"
+                data-aos-delay="400">
                   my services
                 </button>
               </div>
@@ -63,7 +65,7 @@ export default function About() {
               <div
                 className="my_goals my-4"
                 data-aos="fade-up"
-                data-aos-delay="300"
+                data-aos-delay="500"
               >
                 {/* <h2 className="text-xl  lg:text-2xl capitalize primary_color ">
                   {" "}
@@ -106,7 +108,7 @@ export default function About() {
           <SkillTabs />
         </section>
 
-          <section>
+          <section className="mt-8 xl:mt-0">
                <MyJourney/>
           </section>
       </Container>

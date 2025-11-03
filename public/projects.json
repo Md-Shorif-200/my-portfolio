@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "category": "fullstack",
+    "title": "Go Marathon",
+    "image": "/images/go-marathon.jpg",
+    "clientTech": ["React", "Tailwind", "Framer Motion","React", "Tailwind", "Framer Motion","React", "Tailwind"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
+    "clientGithub": "https://github.com/username/go-marathon-client",
+    "serverGithub": "https://github.com/username/go-marathon-server",
+    "liveLink": "https://go-marathon.vercel.app",
+    "description": "Go Marathon is a full-stack marathon management web app that allows users to register, track, and manage marathons in real-time with authentication, admin panel, and participant dashboards.",
+    "keyFeatures": [
+      { "title": "Registration System", "feature": "Users can register and view their race details in real-time." },
+      { "title": "Admin Dashboard", "feature": "Admins can approve marathons and manage participants." },
+      { "title": "Performance Analytics", "feature": "Charts and data insights for tracking marathon results." }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "fullstack",
+    "title": "EduMate",
+    "image": "/images/edumate.jpg",
+    "clientTech": ["React", "Tailwind", "Redux Toolkit"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
+    "clientGithub": "https://github.com/username/edumate-client",
+    "serverGithub": "https://github.com/username/edumate-server",
+    "liveLink": "https://edumate.vercel.app",
+    "description": "EduMate connects students and teachers in a unified platform offering class management, assignments, and feedback systems with real-time updates.",
+    "keyFeatures": [
+      { "title": "Live Class Management", "feature": "Teachers can schedule and manage classes easily." },
+      { "title": "Student Dashboard", "feature": "Students can view progress, feedback, and class materials." },
+      { "title": "Secure Authentication", "feature": "JWT-based authentication for all users." }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "fullstack",
+    "title": "TaskHub",
+    "image": "/images/taskhub.jpg",
+    "clientTech": ["React", "Tailwind", "Context API"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
+    "clientGithub": "https://github.com/username/taskhub-client",
+    "serverGithub": "https://github.com/username/taskhub-server",
+    "liveLink": "https://taskhub.vercel.app",
+    "description": "TaskHub helps teams organize, track, and collaborate on projects efficiently, offering real-time updates and role-based access.",
+    "keyFeatures": [
+      { "title": "Team Collaboration", "feature": "Multiple users can manage tasks collaboratively." },
+      { "title": "Drag & Drop Boards", "feature": "Interactive task boards with reorderable tasks." },
+      { "title": "Notifications", "feature": "Real-time alerts for task updates and comments." }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "fullstack",
+    "title": "ShopEase",
+    "image": "/images/shopease.jpg",
+    "clientTech": ["React", "Tailwind", "Redux"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
+    "clientGithub": "https://github.com/username/shopease-client",
+    "serverGithub": "https://github.com/username/shopease-server",
+    "liveLink": "https://shopease.vercel.app",
+    "description": "ShopEase is an e-commerce web app that enables users to browse products, add to cart, and securely checkout with JWT authentication.",
+    "keyFeatures": [
+      { "title": "Dynamic Cart System", "feature": "Syncs cart data with MongoDB in real-time." },
+      { "title": "Payment Integration", "feature": "Secure checkout using Stripe API." },
+      { "title": "Admin Panel", "feature": "Admins can add, edit, or remove products easily." }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "fullstack",
+    "title": "BlogNest",
+    "image": "/images/blognest.jpg",
+    "clientTech": ["React", "Tailwind", "React Query"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
+    "clientGithub": "https://github.com/username/blognest-client",
+    "serverGithub": "https://github.com/username/blognest-server",
+    "liveLink": "https://blognest.vercel.app",
+    "description": "BlogNest is a full-stack blogging platform where users can write, edit, and comment on blogs with authentication and real-time content updates.",
+    "keyFeatures": [
+      { "title": "Markdown Editor", "feature": "Rich text and markdown supported blog editor." },
+      { "title": "User Comments", "feature": "Interactive commenting with nested replies." },
+      { "title": "Profile Management", "feature": "Users can manage profile info and blogs." }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "frontend",
+    "title": "Portfolio Pro",
+    "image": "/images/portfolio-pro.jpg",
+    "clientTech": ["Next.js", "Tailwind", "Framer Motion"],
+    "serverTech": [],
+    "clientGithub": "https://github.com/username/portfolio-pro",
+    "serverGithub": "",
+    "liveLink": "https://portfolio-pro.vercel.app",
+    "description": "Portfolio Pro is a modern portfolio site showcasing personal projects, skills, and experience with animations and responsive design.",
+    "keyFeatures": [
+      { "title": "Dynamic Animations", "feature": "Framer Motion based smooth transitions." },
+      { "title": "Responsive Design", "feature": "Fully responsive for all screen sizes." },
+      { "title": "Interactive UI", "feature": "Hover effects and tab-based project showcase." }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "frontend",
+    "title": "TravelX Landing Page",
+    "image": "/images/travelx.jpg",
+    "clientTech": ["React", "Tailwind", "AOS Animation"],
+    "serverTech": [],
+    "clientGithub": "https://github.com/username/travelx",
+    "serverGithub": "",
+    "liveLink": "https://travelx.vercel.app",
+    "description": "TravelX is a landing page for a travel agency showcasing destinations, testimonials, and promotional offers.",
+    "keyFeatures": [
+      { "title": "Parallax Scrolling", "feature": "Smooth scroll animations for better UX." },
+      { "title": "AOS Animation", "feature": "Eye-catching animated elements on scroll." },
+      { "title": "SEO Optimized", "feature": "Built with semantic HTML and meta tags." }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "frontend",
+    "title": "Foodify",
+    "image": "/images/foodify.jpg",
+    "clientTech": ["React", "Tailwind", "React Router"],
+    "serverTech": [],
+    "clientGithub": "https://github.com/username/foodify",
+    "serverGithub": "",
+    "liveLink": "https://foodify.vercel.app",
+    "description": "Foodify is a responsive food ordering UI built with React featuring a product grid, cart UI, and smooth navigation.",
+    "keyFeatures": [
+      { "title": "Cart UI", "feature": "Visually appealing cart system with animations." },
+      { "title": "Category Filtering", "feature": "Dynamic filtering by category." },
+      { "title": "Dark Mode", "feature": "Includes light/dark theme toggle." }
+    ]
+  },
+  {
+    "id": 9,
+    "category": "frontend",
+    "title": "Designify",
+    "image": "/images/designify.jpg",
+    "clientTech": ["Next.js", "Tailwind", "Typewriter Effect"],
+    "serverTech": [],
+    "clientGithub": "https://github.com/username/designify",
+    "serverGithub": "",
+    "liveLink": "https://designify.vercel.app",
+    "description": "Designify is a creative portfolio template for designers built with Next.js, showcasing design works and smooth animations.",
+    "keyFeatures": [
+      { "title": "Typing Animation", "feature": "Typewriter text animation in hero section." },
+      { "title": "Project Gallery", "feature": "Masonry layout for creative works." },
+      { "title": "Framer Motion", "feature": "Smooth transitions between pages." }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "frontend",
+    "title": "Evently",
+    "image": "/images/evently.jpg",
+    "clientTech": ["React", "Tailwind", "GSAP"],
+    "serverTech": [],
+    "clientGithub": "https://github.com/username/evently",
+    "serverGithub": "",
+    "liveLink": "https://evently.vercel.app",
+    "description": "Evently is a modern event landing page featuring GSAP-based animations, schedules, and speaker highlights.",
+    "keyFeatures": [
+      { "title": "Animated Banner", "feature": "Hero section with smooth GSAP entry animations." },
+      { "title": "Schedule Section", "feature": "Beautifully styled timeline of event sessions." },
+      { "title": "Modern UI", "feature": "Professional, engaging layout for events." }
+    ]
+  }
+]
