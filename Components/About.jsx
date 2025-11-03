@@ -9,6 +9,7 @@ import lotteImg_2 from "../public/Animation - 1751123195695.json";
 import Lottie from "lottie-react";
 import { SiNextdotjs, SiPostgresql, SiTypescript } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+import MyJourney from "./MyJourney";
 
 export default function About() {
   return (
@@ -104,6 +105,10 @@ export default function About() {
 
           <SkillTabs />
         </section>
+
+          <section>
+               <MyJourney/>
+          </section>
       </Container>
     </div>
   );
