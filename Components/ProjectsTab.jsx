@@ -18,20 +18,20 @@ export default function ProjectsTab() {
     <div className="container mx-auto px-4 py-10">
       {/* Tabs (DESIGN UPDATED ONLY) */}
       <div
-        className="w-full max-w-lg mx-auto flex gap-2 sm:gap-4 justify-center border border-green-100 py-2 rounded-4xl
+        className="w-[350px] mx-auto flex gap-2 sm:gap-4 justify-center border border-green-100 py-2 rounded-4xl
       bg-[#55E6A5]/10 backdrop-blur-sm mb-8"
       >
         {["fullstack", "frontend"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-lg font-medium transition-all duration-300 cursor-pointer ${
+            className={`px-4 sm:px-6 py-2 rounded-xl text-sm sm:text-lg font-medium transition-all duration-300 cursor-pointer ${
               activeTab === tab
                 ? "bg-[#55E6A5] text-black shadow-md"
                 : "bg-transparent text-gray-400 hover:text-[#55E6A5]"
             }`}
           >
-            {tab === "fullstack" ? "Full-Stack Projects" : "Frontend Projects"}
+            {tab === "fullstack" ? "Full-Stack" : "Frontend"}
           </button>
         ))}
       </div>

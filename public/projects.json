@@ -2,76 +2,171 @@
   {
     "id": 1,
     "category": "fullstack",
-    "title": "Go Marathon",
-    "image": "/images/go-marathon.jpg",
-    "clientTech": ["React", "Tailwind", "Framer Motion","React", "Tailwind", "Framer Motion","React", "Tailwind"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/username/go-marathon-client",
-    "serverGithub": "https://github.com/username/go-marathon-server",
-    "liveLink": "https://go-marathon.vercel.app",
-    "description": "Go Marathon is a full-stack marathon management web app that allows users to register, track, and manage marathons in real-time with authentication, admin panel, and participant dashboards.",
+    "title": "AIYRA",
+    "subTitle" : " B2B Product Inquiry & Showcase Website",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture_vwo6f1.png",
+    "clientTech": [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Tiptap Editor",
+      "Chart.js",
+      "Swiper.js",
+      "Aos",
+      "Cloudinary"
+    ],
+    "serverTech": [
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Multer",
+  "Socket.io",
+  "firebase",
+  "Nodemailer",
+  "OpenAI "
+
+]
+,
+    "clientGithub": "https://github.com/Md-Shorif-200/ayira-ecommerce",
+    "serverGithub": "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
+    "liveLink": "https://ayira-ecommerce-1.vercel.app/",
+    "description": "A modern B2B platform for exploring products, saving favorites, and connecting with admin via Gemini AI chat, focusing on product showcasing, personalized engagement, and smooth admin-driven management",
     "keyFeatures": [
-      { "title": "Registration System", "feature": "Users can register and view their race details in real-time." },
-      { "title": "Admin Dashboard", "feature": "Admins can approve marathons and manage participants." },
-      { "title": "Performance Analytics", "feature": "Charts and data insights for tracking marathon results." }
+      {
+        "title": "AI-Powered Chat System",
+        "feature": "Integrated Gemini AI for real-time communication between users and admin."
+      },
+      {
+        "title": "Advanced Admin Dashboard",
+        "feature": "Complete product management, blog updates, banner editing, and data analytics with Chart.js visualization."
+      },
+      {
+        "title": "Smart Order & Inquiry System",
+        "feature": "Dynamic order form with Nodemailer integration for instant email notifications and manual order processing."
+      }
     ]
   },
   {
     "id": 2,
     "category": "fullstack",
-    "title": "EduMate",
-    "image": "/images/edumate.jpg",
-    "clientTech": ["React", "Tailwind", "Redux Toolkit"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/username/edumate-client",
-    "serverGithub": "https://github.com/username/edumate-server",
-    "liveLink": "https://edumate.vercel.app",
-    "description": "EduMate connects students and teachers in a unified platform offering class management, assignments, and feedback systems with real-time updates.",
+    "title": "EduSpark",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture-2_u5zt9z.png",
+    "clientTech": [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Aos",
+      "sweper.js",
+      "Tanstack query"
+    ],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "stripe", "firebase"],
+    "clientGithub": "https://github.com/Md-Shorif-200/EduSpark-Client",
+    "serverGithub": "https://github.com/Md-Shorif-200/EduSpark-Server",
+    "liveLink": "https://eduspark-3990d.web.app/",
+    "description": "Students can enroll through a user-friendly interface with secure authentication. Solved Stripe and image hosting issues using online resources; planning to add JWT for better access control.",
     "keyFeatures": [
-      { "title": "Live Class Management", "feature": "Teachers can schedule and manage classes easily." },
-      { "title": "Student Dashboard", "feature": "Students can view progress, feedback, and class materials." },
-      { "title": "Secure Authentication", "feature": "JWT-based authentication for all users." }
+      {
+        "title": "User Friendly Interface",
+        "feature": " Easy to use and simple design helps everyone find what they want fast. Works smoothly on phones, tablets, and computers."
+      },
+      {
+        "title": "Filtering & Searching",
+        "feature": "Users can filter courses by category and search by title to quickly find relevant content. This improves navigation and helps users access their desired courses more efficiently."
+      },
+      {
+        "title": "Dynamic Dashboard",
+        "feature": "Provides separate dashboards for students, teachers, and admins, each with role-specific features and controls."
+      }
     ]
   },
   {
     "id": 3,
     "category": "fullstack",
-    "title": "TaskHub",
-    "image": "/images/taskhub.jpg",
+    "title": "Car Doctor",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
     "clientTech": ["React", "Tailwind", "Context API"],
     "serverTech": ["Node.js", "Express", "MongoDB"],
     "clientGithub": "https://github.com/username/taskhub-client",
     "serverGithub": "https://github.com/username/taskhub-server",
     "liveLink": "https://taskhub.vercel.app",
-    "description": "TaskHub helps teams organize, track, and collaborate on projects efficiently, offering real-time updates and role-based access.",
+    "description": "With a user-friendly interface and secure authentication, users can log in to upvote roadmap items and actively engage in discussions through comments and replies.",
     "keyFeatures": [
-      { "title": "Team Collaboration", "feature": "Multiple users can manage tasks collaboratively." },
-      { "title": "Drag & Drop Boards", "feature": "Interactive task boards with reorderable tasks." },
-      { "title": "Notifications", "feature": "Real-time alerts for task updates and comments." }
+      {
+        "title": "Upvote Interaction",
+        "feature": "Users can upvote each roadmap item only once to express their support, helping prioritize the most valuable features."
+      },
+      {
+        "title": "Threaded Commenting",
+        "feature": "Supports nested replies up to three levels, allowing users to engage in structured and meaningful discussions under each roadmap item."
+      },
+      {
+        "title": "Filtering ",
+        "feature": "Roadmap items can be filtered by status like 'Planned', 'In Progress , or 'Completed' to ensure better clarity and smoother navigation."
+      }
     ]
   },
   {
     "id": 4,
     "category": "fullstack",
-    "title": "ShopEase",
-    "image": "/images/shopease.jpg",
-    "clientTech": ["React", "Tailwind", "Redux"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/username/shopease-client",
-    "serverGithub": "https://github.com/username/shopease-server",
-    "liveLink": "https://shopease.vercel.app",
-    "description": "ShopEase is an e-commerce web app that enables users to browse products, add to cart, and securely checkout with JWT authentication.",
+    "title": "roadForge",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153768/Capture-4_fbmihg.png",
+    "clientTech": ["React", "Tailwind", "Aos", "Tanstack query"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "firebase"],
+    "clientGithub": "https://github.com/Md-Shorif-200/Road-Forge-Client",
+    "serverGithub": "https://github.com/Md-Shorif-200/Road-Forge-Server",
+    "liveLink": "https://road-forge.web.app/",
+    "description": "With a user-friendly interface and secure authentication, users can log in to upvote roadmap items and actively engage in discussions through comments and replies.",
     "keyFeatures": [
-      { "title": "Dynamic Cart System", "feature": "Syncs cart data with MongoDB in real-time." },
-      { "title": "Payment Integration", "feature": "Secure checkout using Stripe API." },
-      { "title": "Admin Panel", "feature": "Admins can add, edit, or remove products easily." }
+      {
+        "title": "Upvote Interaction",
+        "feature": "Users can upvote each roadmap item only once to express their support, helping prioritize the most valuable features."
+      },
+      {
+        "title": "Threaded Commenting",
+        "feature": "Supports nested replies up to three levels, allowing users to engage in structured and meaningful discussions under each roadmap item."
+      },
+      {
+        "title": "Filtering ",
+        "feature": "Roadmap items can be filtered by status like 'Planned', 'In Progress , or 'Completed' to ensure better clarity and smoother navigation."
+      }
     ]
   },
   {
     "id": 5,
     "category": "fullstack",
-    "title": "BlogNest",
-    "image": "/images/blognest.jpg",
+    "title": "Go Marathon",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153776/Capture-5_qjsta5.png",
+    "clientTech": ["React", "Tailwind", "daisy ui", "Tanstack query", "Aos"],
+    "serverTech": ["Node.js", "Express", "MongoDB", "firebase"],
+    "clientGithub": "https://github.com/Md-Shorif-200/go-marathon-client",
+    "serverGithub": "hhttps://github.com/Md-Shorif-200/go-marathon-server",
+    "liveLink": "https://go-marathon-21c56.web.app/",
+    "description": "A responsive marathon management platform featuring event registration, real-time updates, and role-based dashboards for runners, organizers, and administrators.",
+    "keyFeatures": [
+      {
+        "title": "Event Registration",
+        "feature": "With secure authentication and a user-friendly interface, users can easily explore events and complete registration based on their preferences."
+      },
+      {
+        "title": "Registration Deadline",
+        "feature": "Prevents registration once the event deadline has passed, ensuring timely participation and better event management."
+      },
+      {
+        "title": "Dashboard",
+        "feature": "Role-based control panels for runners, organizers, and admins enabling smooth event management."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "fullstack",
+    "title": "Dream Arc",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153774/Capture-6_qb5jhb.png",
     "clientTech": ["React", "Tailwind", "React Query"],
     "serverTech": ["Node.js", "Express", "MongoDB"],
     "clientGithub": "https://github.com/username/blognest-client",
@@ -79,15 +174,25 @@
     "liveLink": "https://blognest.vercel.app",
     "description": "BlogNest is a full-stack blogging platform where users can write, edit, and comment on blogs with authentication and real-time content updates.",
     "keyFeatures": [
-      { "title": "Markdown Editor", "feature": "Rich text and markdown supported blog editor." },
-      { "title": "User Comments", "feature": "Interactive commenting with nested replies." },
-      { "title": "Profile Management", "feature": "Users can manage profile info and blogs." }
+      {
+        "title": "Markdown Editor",
+        "feature": "Rich text and markdown supported blog editor."
+      },
+      {
+        "title": "User Comments",
+        "feature": "Interactive commenting with nested replies."
+      },
+      {
+        "title": "Profile Management",
+        "feature": "Users can manage profile info and blogs."
+      }
     ]
   },
   {
     "id": 6,
     "category": "frontend",
     "title": "Portfolio Pro",
+    "subTitle" : "",
     "image": "/images/portfolio-pro.jpg",
     "clientTech": ["Next.js", "Tailwind", "Framer Motion"],
     "serverTech": [],
@@ -96,15 +201,25 @@
     "liveLink": "https://portfolio-pro.vercel.app",
     "description": "Portfolio Pro is a modern portfolio site showcasing personal projects, skills, and experience with animations and responsive design.",
     "keyFeatures": [
-      { "title": "Dynamic Animations", "feature": "Framer Motion based smooth transitions." },
-      { "title": "Responsive Design", "feature": "Fully responsive for all screen sizes." },
-      { "title": "Interactive UI", "feature": "Hover effects and tab-based project showcase." }
+      {
+        "title": "Dynamic Animations",
+        "feature": "Framer Motion based smooth transitions."
+      },
+      {
+        "title": "Responsive Design",
+        "feature": "Fully responsive for all screen sizes."
+      },
+      {
+        "title": "Interactive UI",
+        "feature": "Hover effects and tab-based project showcase."
+      }
     ]
   },
   {
     "id": 7,
     "category": "frontend",
     "title": "TravelX Landing Page",
+    "subTitle" : "",
     "image": "/images/travelx.jpg",
     "clientTech": ["React", "Tailwind", "AOS Animation"],
     "serverTech": [],
@@ -113,15 +228,25 @@
     "liveLink": "https://travelx.vercel.app",
     "description": "TravelX is a landing page for a travel agency showcasing destinations, testimonials, and promotional offers.",
     "keyFeatures": [
-      { "title": "Parallax Scrolling", "feature": "Smooth scroll animations for better UX." },
-      { "title": "AOS Animation", "feature": "Eye-catching animated elements on scroll." },
-      { "title": "SEO Optimized", "feature": "Built with semantic HTML and meta tags." }
+      {
+        "title": "Parallax Scrolling",
+        "feature": "Smooth scroll animations for better UX."
+      },
+      {
+        "title": "AOS Animation",
+        "feature": "Eye-catching animated elements on scroll."
+      },
+      {
+        "title": "SEO Optimized",
+        "feature": "Built with semantic HTML and meta tags."
+      }
     ]
   },
   {
     "id": 8,
     "category": "frontend",
     "title": "Foodify",
+    "subTitle" : "",
     "image": "/images/foodify.jpg",
     "clientTech": ["React", "Tailwind", "React Router"],
     "serverTech": [],
@@ -130,8 +255,14 @@
     "liveLink": "https://foodify.vercel.app",
     "description": "Foodify is a responsive food ordering UI built with React featuring a product grid, cart UI, and smooth navigation.",
     "keyFeatures": [
-      { "title": "Cart UI", "feature": "Visually appealing cart system with animations." },
-      { "title": "Category Filtering", "feature": "Dynamic filtering by category." },
+      {
+        "title": "Cart UI",
+        "feature": "Visually appealing cart system with animations."
+      },
+      {
+        "title": "Category Filtering",
+        "feature": "Dynamic filtering by category."
+      },
       { "title": "Dark Mode", "feature": "Includes light/dark theme toggle." }
     ]
   },
@@ -139,6 +270,7 @@
     "id": 9,
     "category": "frontend",
     "title": "Designify",
+    "subTitle" : "",
     "image": "/images/designify.jpg",
     "clientTech": ["Next.js", "Tailwind", "Typewriter Effect"],
     "serverTech": [],
@@ -147,15 +279,25 @@
     "liveLink": "https://designify.vercel.app",
     "description": "Designify is a creative portfolio template for designers built with Next.js, showcasing design works and smooth animations.",
     "keyFeatures": [
-      { "title": "Typing Animation", "feature": "Typewriter text animation in hero section." },
-      { "title": "Project Gallery", "feature": "Masonry layout for creative works." },
-      { "title": "Framer Motion", "feature": "Smooth transitions between pages." }
+      {
+        "title": "Typing Animation",
+        "feature": "Typewriter text animation in hero section."
+      },
+      {
+        "title": "Project Gallery",
+        "feature": "Masonry layout for creative works."
+      },
+      {
+        "title": "Framer Motion",
+        "feature": "Smooth transitions between pages."
+      }
     ]
   },
   {
     "id": 10,
     "category": "frontend",
     "title": "Evently",
+    "subTitle" : "",
     "image": "/images/evently.jpg",
     "clientTech": ["React", "Tailwind", "GSAP"],
     "serverTech": [],
@@ -164,9 +306,18 @@
     "liveLink": "https://evently.vercel.app",
     "description": "Evently is a modern event landing page featuring GSAP-based animations, schedules, and speaker highlights.",
     "keyFeatures": [
-      { "title": "Animated Banner", "feature": "Hero section with smooth GSAP entry animations." },
-      { "title": "Schedule Section", "feature": "Beautifully styled timeline of event sessions." },
-      { "title": "Modern UI", "feature": "Professional, engaging layout for events." }
+      {
+        "title": "Animated Banner",
+        "feature": "Hero section with smooth GSAP entry animations."
+      },
+      {
+        "title": "Schedule Section",
+        "feature": "Beautifully styled timeline of event sessions."
+      },
+      {
+        "title": "Modern UI",
+        "feature": "Professional, engaging layout for events."
+      }
     ]
   }
 ]
