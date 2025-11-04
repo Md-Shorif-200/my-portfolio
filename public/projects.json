@@ -13,7 +13,8 @@
       "Chart.js",
       "Swiper.js",
       "Aos",
-      "Cloudinary"
+      "Cloudinary",
+        "firebase"
     ],
     "serverTech": [
   "Node.js",
@@ -21,7 +22,7 @@
   "MongoDB",
   "Multer",
   "Socket.io",
-  "firebase",
+
   "Nodemailer",
   "OpenAI "
 
@@ -50,7 +51,7 @@
     "id": 2,
     "category": "fullstack",
     "title": "EduSpark",
-    "subTitle" : "",
+    "subTitle" : "online course management website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture-2_u5zt9z.png",
     "clientTech": [
       "React",
@@ -58,9 +59,11 @@
       "Framer Motion",
       "Aos",
       "sweper.js",
-      "Tanstack query"
+      "Tanstack query",
+       "firebase"
+      
     ],
-    "serverTech": ["Node.js", "Express.js", "MongoDB", "stripe", "firebase"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "stripe"],
     "clientGithub": "https://github.com/Md-Shorif-200/EduSpark-Client",
     "serverGithub": "https://github.com/Md-Shorif-200/EduSpark-Server",
     "liveLink": "https://eduspark-3990d.web.app/",
@@ -84,26 +87,25 @@
     "id": 3,
     "category": "fullstack",
     "title": "Car Doctor",
-    "subTitle" : "",
+    "subTitle" : "Car Servicing & Auto Parts Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
-    "clientTech": ["React", "Tailwind", "Context API"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/username/taskhub-client",
-    "serverGithub": "https://github.com/username/taskhub-server",
-    "liveLink": "https://taskhub.vercel.app",
-    "description": "With a user-friendly interface and secure authentication, users can log in to upvote roadmap items and actively engage in discussions through comments and replies.",
+    "clientTech": ["React", "Next.js", "Tailwind","Aos"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB","Next Auth"],
+    "github" : "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
+    "liveLink": "https://car-doctor-ruby.vercel.app/",
+    "description": "Car Doctor is a modern, user-friendly platform connecting car owners with reliable services and auto parts, offering a seamless experience with secure authentication via NextAuth..",
     "keyFeatures": [
       {
-        "title": "Upvote Interaction",
-        "feature": "Users can upvote each roadmap item only once to express their support, helping prioritize the most valuable features."
+        "title": "Service Booking ",
+        "feature": "Users can view detailed information of a specific car service, book the service, and update or delete their bookings."
       },
       {
-        "title": "Threaded Commenting",
-        "feature": "Supports nested replies up to three levels, allowing users to engage in structured and meaningful discussions under each roadmap item."
+        "title": "Service Management",
+        "feature": "Admins can add, update, and delete car service data efficiently."
       },
       {
-        "title": "Filtering ",
-        "feature": "Roadmap items can be filtered by status like 'Planned', 'In Progress , or 'Completed' to ensure better clarity and smoother navigation."
+        "title": "Secure Authentication ",
+        "feature": "Authentication and user management implemented securely using NextAuth."
       }
     ]
   },
@@ -111,10 +113,10 @@
     "id": 4,
     "category": "fullstack",
     "title": "roadForge",
-    "subTitle" : "",
+    "subTitle" : "Roadmap & Feedback Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153768/Capture-4_fbmihg.png",
-    "clientTech": ["React", "Tailwind", "Aos", "Tanstack query"],
-    "serverTech": ["Node.js", "Express.js", "MongoDB", "firebase"],
+    "clientTech": ["React", "Tailwind", "Aos", "Tanstack query", "firebase"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB"],
     "clientGithub": "https://github.com/Md-Shorif-200/Road-Forge-Client",
     "serverGithub": "https://github.com/Md-Shorif-200/Road-Forge-Server",
     "liveLink": "https://road-forge.web.app/",
@@ -138,10 +140,10 @@
     "id": 5,
     "category": "fullstack",
     "title": "Go Marathon",
-    "subTitle" : "",
+    "subTitle" : "marathon management website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153776/Capture-5_qjsta5.png",
-    "clientTech": ["React", "Tailwind", "daisy ui", "Tanstack query", "Aos"],
-    "serverTech": ["Node.js", "Express", "MongoDB", "firebase"],
+    "clientTech": ["React", "Tailwind", "daisy ui", "Tanstack query", "firebase", "Aos"],
+    "serverTech": ["Node.js", "Express", "MongoDB"],
     "clientGithub": "https://github.com/Md-Shorif-200/go-marathon-client",
     "serverGithub": "hhttps://github.com/Md-Shorif-200/go-marathon-server",
     "liveLink": "https://go-marathon-21c56.web.app/",
@@ -165,26 +167,26 @@
     "id": 6,
     "category": "fullstack",
     "title": "Dream Arc",
-    "subTitle" : "",
+    "subTitle" : "Crowd Funding Application",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153774/Capture-6_qb5jhb.png",
-    "clientTech": ["React", "Tailwind", "React Query"],
+    "clientTech": ["React", "Tailwind","daisy ui", "firebase", "Aos","sweper.js"],
     "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/username/blognest-client",
-    "serverGithub": "https://github.com/username/blognest-server",
-    "liveLink": "https://blognest.vercel.app",
-    "description": "BlogNest is a full-stack blogging platform where users can write, edit, and comment on blogs with authentication and real-time content updates.",
+    "clientGithub": "https://github.com/Md-Shorif-200/Dream-Arc-Client",
+    "serverGithub": "https://github.com/Md-Shorif-200/Dream-Arc-Server",
+    "liveLink": "https://dreamarc-7c050.web.app/",
+    "description": "Crowdcube is a modern crowdfunding platform where users can explore campaigns, donate to causes, and manage their own campaigns effortlessly with secure authentication and real-time updates.",
     "keyFeatures": [
       {
-        "title": "Markdown Editor",
-        "feature": "Rich text and markdown supported blog editor."
+        "title": "Campaign Management",
+        "feature": "Users can add, update, and delete their campaigns, while admins can efficiently manage all campaigns."
       },
       {
-        "title": "User Comments",
-        "feature": "Interactive commenting with nested replies."
+        "title": "Donation Tracking",
+        "feature": "Users can donate to active campaigns, with contributions securely recorded and viewable in their personal dashboard."
       },
       {
-        "title": "Profile Management",
-        "feature": "Users can manage profile info and blogs."
+        "title": "Secure Authentication",
+        "feature": "Login and registration system with email/password and optional social login, ensuring protected access to private routes."
       }
     ]
   },

@@ -81,9 +81,24 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
 
               {/* Buttons */}
               <div className="flex justify-between mt-3 text-sm font-medium transition-all duration-300 z-20">
-                <Link
+               
+                {
+                  project?.github ? 
+                   <>
+                   <Link
+                  href={project.github}
+                  className=" text-gray-300 text-sm capitalize bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
+                >
+                  <FaGithub className="text-lg" />
+                  github
+                </Link>
+                   </>
+                  : 
+
+                   <>
+                    <Link
                   href={project.clientGithub}
-                  className=" text-gray-300 text-sm bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
+                  className=" text-gray-300 text-sm capitalize bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
                 >
                   <FaGithub className="text-lg" />
                   Client
@@ -91,15 +106,17 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
 
                 <Link
                   href={project.serverGithub}
-                  className=" text-gray-300 text-sm bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
+                  className=" text-gray-300 text-sm capitalize bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
                 >
                   <FaGithub className="text-lg" />
                   Server
                 </Link>
+                   </>
+                }
 
                 <Link
                   href={project.liveLink}
-                  className=" text-gray-300 text-sm bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
+                  className=" text-gray-300 text-sm capitalize bg-[#55E6A5]/10 shadow-sm shadow-green-200 flex justify-center items-center px-2 py-1 gap-2 group-hover:bg-[#55E6A5] group-hover:text-black transition-all duration-300"
                 >
                   <VscLiveShare className="text-lg" />
                   Preview
