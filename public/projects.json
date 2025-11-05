@@ -191,11 +191,11 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "category": "frontend",
     "title": "Swat Babymall",
     "subTitle" : "Modern Baby Shopping Platform",
-    "image": "/images/portfolio-pro.jpg",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277349/Capture-8-min_its4zm.png",
     "clientTech": ["React", "Tailwind", "React Router", "React Select", "daisy ui"],
     "serverTech": [],
       "github" : "https://github.com/Md-Shorif-200/swat-babymall",
@@ -217,7 +217,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "category": "frontend",
     "title": "escrowly",
     "subTitle" : "Marketplace platform",
@@ -243,11 +243,11 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "category": "frontend",
     "title": "boring Pilot",
     "subTitle" : "",
-    "image": "/images/foodify.jpg",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277351/Capture-9-min_jfecgm.png",
     "clientTech": ["React", "Tailwind", "React Router","daisy ui"],
     "serverTech": [],
      "github" : "#",
@@ -266,56 +266,132 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "category": "frontend",
-    "title": "Designify",
+    "title": "gyan",
     "subTitle" : "",
-    "image": "/images/designify.jpg",
-    "clientTech": ["Next.js", "Tailwind", "Typewriter Effect"],
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-11-min_menqgq.png",
+    "clientTech": ["html","css","bootstrap","javascript","jquery","slick slider"],
     "serverTech": [],
-    "clientGithub": "https://github.com/username/designify",
-    "serverGithub": "",
-    "liveLink": "https://designify.vercel.app",
-    "description": "Designify is a creative portfolio template for designers built with Next.js, showcasing design works and smooth animations.",
+    "github" : "https://github.com/Md-Shorif-200/gyan-course-website",
+     "liveLink": "https://gyan-online-course.netlify.app/",
+    "description": "gyan is a beautifully designed, fully responsive and  static website that showcases online courses with a modern look and smooth browsing experience.",
     "keyFeatures": [
       {
-        "title": "Typing Animation",
-        "feature": "Typewriter text animation in hero section."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "Project Gallery",
-        "feature": "Masonry layout for creative works."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "Framer Motion",
-        "feature": "Smooth transitions between pages."
+        "title": "",
+        "feature": ""
       }
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "category": "frontend",
-    "title": "Evently",
+    "title": "donate bangladesh",
     "subTitle" : "",
-    "image": "/images/evently.jpg",
-    "clientTech": ["React", "Tailwind", "GSAP"],
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-12-min_yaanpq.png",
+    "clientTech": ["html","css","Tailwind","javascript","daisy ui"],
     "serverTech": [],
-    "clientGithub": "https://github.com/username/evently",
-    "serverGithub": "",
-    "liveLink": "https://evently.vercel.app",
-    "description": "Evently is a modern event landing page featuring GSAP-based animations, schedules, and speaker highlights.",
+    "github" : "https://github.com/Md-Shorif-200/ph-assignment-5",
+    "liveLink": "https://donate-bangladesh-201.netlify.app/",
+    "description": "This is a modern, responsive donation website that allows users to contribute to various causes across Bangladesh — from disaster relief to helping poor students or patients in need.",
     "keyFeatures": [
       {
-        "title": "Animated Banner",
-        "feature": "Hero section with smooth GSAP entry animations."
+        "title": "",
+        "feature":""
       },
       {
-        "title": "Schedule Section",
-        "feature": "Beautifully styled timeline of event sessions."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "Modern UI",
-        "feature": "Professional, engaging layout for events."
+        "title":"",
+        "feature": ""
+      }
+    ]
+  },
+   {
+    "id": 12,
+    "category": "frontend",
+    "title": "Rinterio",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-13-min_guwcul.png",
+    "clientTech": ["html","css","Tailwind","daisy ui"],
+    "serverTech": [],
+    "github" : "https://github.com/Md-Shorif-200/ph-assignment-3",
+    "liveLink": "https://rinterio-200.netlify.app/",
+    "description": "This is a beautifully designed, fully responsive website where users can explore various luxurious and elegant apartments.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature":""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title":"",
+        "feature": ""
+      }
+    ]
+  },
+   {
+    "id": 13,
+    "category": "frontend",
+    "title": "donate bangladesh",
+    "subTitle" : "",
+    "image": "/images/evently.jpg",
+    "clientTech": ["html","css","Tailwind","javascript","daisy ui"],
+    "serverTech": [],
+    "github" : "https://github.com/Md-Shorif-200/ph-assignment-5",
+    "liveLink": "https://donate-bangladesh-201.netlify.app/",
+    "description": "This is a modern, responsive donation website that allows users to contribute to various causes across Bangladesh — from disaster relief to helping poor students or patients in need.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature":""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title":"",
+        "feature": ""
+      }
+    ]
+  },
+   {
+    "id": 14,
+    "category": "frontend",
+    "title": "donate bangladesh",
+    "subTitle" : "",
+    "image": "/images/evently.jpg",
+    "clientTech": ["html","css","Tailwind","javascript","daisy ui"],
+    "serverTech": [],
+    "github" : "https://github.com/Md-Shorif-200/ph-assignment-5",
+    "liveLink": "https://donate-bangladesh-201.netlify.app/",
+    "description": "This is a modern, responsive donation website that allows users to contribute to various causes across Bangladesh — from disaster relief to helping poor students or patients in need.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature":""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title":"",
+        "feature": ""
       }
     ]
   }
