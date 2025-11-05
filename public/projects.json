@@ -89,7 +89,7 @@
     "title": "Car Doctor",
     "subTitle" : "Car Servicing & Auto Parts Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
-    "clientTech": ["React", "Next.js", "Tailwind","Aos"],
+    "clientTech": ["React", "Next.js", "Tailwind", "shadcn ui", "Origin ui" , "Aos"],
     "serverTech": ["Node.js", "Express.js", "MongoDB","Next Auth"],
     "github" : "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
     "liveLink": "https://car-doctor-ruby.vercel.app/",
@@ -193,79 +193,76 @@
   {
     "id": 6,
     "category": "frontend",
-    "title": "Portfolio Pro",
-    "subTitle" : "",
+    "title": "Swat Babymall",
+    "subTitle" : "Modern Baby Shopping Platform",
     "image": "/images/portfolio-pro.jpg",
-    "clientTech": ["Next.js", "Tailwind", "Framer Motion"],
+    "clientTech": ["React", "Tailwind", "React Router", "React Select", "daisy ui"],
     "serverTech": [],
-    "clientGithub": "https://github.com/username/portfolio-pro",
-    "serverGithub": "",
-    "liveLink": "https://portfolio-pro.vercel.app",
-    "description": "Portfolio Pro is a modern portfolio site showcasing personal projects, skills, and experience with animations and responsive design.",
+      "github" : "https://github.com/Md-Shorif-200/swat-babymall",
+    "liveLink": "https://swat-babymall.vercel.app/",
+    "description": "Swat BabyMall is a modern, responsive e-commerce site for baby essentials, featuring a clean, interactive interface. The front-end is complete, with backend and order processing planned for future updates.",
     "keyFeatures": [
       {
-        "title": "Dynamic Animations",
-        "feature": "Framer Motion based smooth transitions."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "Responsive Design",
-        "feature": "Fully responsive for all screen sizes."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "Interactive UI",
-        "feature": "Hover effects and tab-based project showcase."
+        "title": "",
+        "feature": ""
       }
     ]
   },
   {
     "id": 7,
     "category": "frontend",
-    "title": "TravelX Landing Page",
-    "subTitle" : "",
-    "image": "/images/travelx.jpg",
-    "clientTech": ["React", "Tailwind", "AOS Animation"],
+    "title": "escrowly",
+    "subTitle" : "Marketplace platform",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762225689/Capture-7-min_ydsnbz.png",
+    "clientTech": ["React", "Next.js","Tailwind", "shadcn ui","firebase"],
     "serverTech": [],
-    "clientGithub": "https://github.com/username/travelx",
-    "serverGithub": "",
-    "liveLink": "https://travelx.vercel.app",
-    "description": "TravelX is a landing page for a travel agency showcasing destinations, testimonials, and promotional offers.",
+      "github" : "https://github.com/Md-Shorif-200/Escrowly-client",
+    "liveLink": "https://escrowly-client.vercel.app/",
+    "description": "Escrowly is a modern Buyer↔Seller freelance platform with light/dark mode and secure Firebase Authentication. It features UI layouts for KYC, wallet & escrow payments, chat, disputes, and an admin panel.",
     "keyFeatures": [
       {
-        "title": "Parallax Scrolling",
-        "feature": "Smooth scroll animations for better UX."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "AOS Animation",
-        "feature": "Eye-catching animated elements on scroll."
+        "title": "",
+        "feature": ""
       },
       {
-        "title": "SEO Optimized",
-        "feature": "Built with semantic HTML and meta tags."
+        "title": "",
+        "feature": ""
       }
     ]
   },
   {
     "id": 8,
     "category": "frontend",
-    "title": "Foodify",
+    "title": "boring Pilot",
     "subTitle" : "",
     "image": "/images/foodify.jpg",
-    "clientTech": ["React", "Tailwind", "React Router"],
+    "clientTech": ["React", "Tailwind", "React Router","daisy ui"],
     "serverTech": [],
-    "clientGithub": "https://github.com/username/foodify",
-    "serverGithub": "",
-    "liveLink": "https://foodify.vercel.app",
-    "description": "Foodify is a responsive food ordering UI built with React featuring a product grid, cart UI, and smooth navigation.",
+     "github" : "#",
+    "liveLink": "http://boring-plot.surge.sh/",
+    "description": "Boring Pilot is an interactive platform where users can top-up their account, browse cricket player cards, select favorites within their balance, and remove them if needed.",
     "keyFeatures": [
       {
-        "title": "Cart UI",
-        "feature": "Visually appealing cart system with animations."
+        "title": "",
+        "feature":""
       },
       {
-        "title": "Category Filtering",
-        "feature": "Dynamic filtering by category."
+        "title": "",
+        "feature": ""
       },
-      { "title": "Dark Mode", "feature": "Includes light/dark theme toggle." }
+      { "title": "", "feature": "" }
     ]
   },
   {

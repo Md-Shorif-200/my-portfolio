@@ -21,7 +21,7 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
         {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
-            className="relative bg-transparent w-full h-[570px] border border-[#55E6A5]/10 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group"
+            className={` relative bg-transparent w-full  border border-[#55E6A5]/10 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group ${project.category == "frontend" ? "h-[450px]" : "h-[570px]"}`}
             whileHover={{ scale: 1.03 }}
           >
             {/* Image Section */}
@@ -62,7 +62,7 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
 
                 <div className="w-full flex gap-x-2 mb-4">
                   <div className="w-[30%]">
-                    <h2 className="capitalize text-base text-gray-300 font-semibold">
+                    <h2 className={`${project.category == "frontend"   ? "hidden" : "capitalize text-base text-gray-300 font-semibold" }`}>
                       Server tech:
                     </h2>
                   </div>
@@ -133,7 +133,7 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
               <p className="text-base text-gray-300 mb-4 ">
                 {project.description}
               </p>
-              <div className="w-full">
+              <div className={`${project.category == "frontend" ? "hidden" : "w-full"}`}>
                 <h4 className="text-[#55E6A5] text-lg font-semibold mb-2">
                   Key Features
                 </h4>
