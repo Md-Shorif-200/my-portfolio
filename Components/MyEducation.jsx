@@ -17,15 +17,15 @@ const education = [
     id: 2,
     education: "Complete Web Development",
     institute: "Programming  hero",
-    description: `I completed my Diploma in Engineering in Computer Science and Technology from Chattogram Polytechnic Institute. This journey deepened my technical foundation and strengthened my problem-solving mindset, preparing me for real-world challenges in the field of technology.`,
-    link: "fdfds",
+    description: `A comprehensive MERN Stack development course covering MongoDB, Express, React, and Node.js — designed to build real-world, full-stack web applications with modern tools and best practices.`,
+    link: "https://drive.google.com/file/d/1Lrx87aM4Kg2fOTWanowBM0RGM-9MkwPN/view?usp=sharing",
   },
   {
     id: 3,
     education: "responsive web design",
     institute: "creative it institute",
-    description: `I completed my Diploma in Engineering in Computer Science and Technology from Chattogram Polytechnic Institute. This journey deepened my technical foundation and strengthened my problem-solving mindset, preparing me for real-world challenges in the field of technology.`,
-    link: "fdsfs",
+    description: `A professional front-end design course focused on creating fully responsive websites using HTML, CSS, Bootstrap, SASS, JavaScript, jQuery, and Figma for modern UI/UX development.`,
+    link: "https://drive.google.com/file/d/15qCQurIpKf3G7c98Um2yeVgRGlqZKoP0/view?usp=sharing",
   },
 ];
 
@@ -36,7 +36,8 @@ export default function MyEducation() {
    <div>
             {education?.map((edu, index) => {
               return (
-                <div key={index} className="secondary_color flex gap-4 mb-6 ">
+                <div key={index} className="secondary_color flex gap-4 mb-6"  data-aos="fade-up"
+                >
                   <div className="w-[200px] h-[40px] flex justify-center items-center border rounded-lg">
                     <FaGraduationCap className="text-2xl " />
                   </div>

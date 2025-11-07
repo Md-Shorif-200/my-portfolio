@@ -1,7 +1,5 @@
-"use client";
+"use client"
 import Container from "./Container";
-import { IoDocumentText } from "react-icons/io5";
-import { FaEye } from "react-icons/fa";
 import SectionTitleContainer from "./SectionTitleContainer";
 import SkillTabs from "./SkillTabs";
 
@@ -10,6 +8,8 @@ import Lottie from "lottie-react";
 import { SiNextdotjs, SiPostgresql, SiTypescript } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import MyJourney from "./MyJourney";
+import Link from "next/link";
+import Footer from "./Footer";
 
 export default function About() {
   return (
@@ -47,15 +47,20 @@ export default function About() {
                 clean code and seamless user experiences.
               </p>
 
-              <div
-                className="about_btn flex flex-col  items-center gap-4 mt-6 "
-              >
-                <button className=" w-[250px] primary_btn flex items-center gap-3"  data-aos="fade-up"
-                data-aos-delay="300">
-                    explore my projects
-                </button>
-                <button className=" w-[250px] secondary_btn flex items-center gap-3"     data-aos="fade-up"
-                data-aos-delay="400">
+              <div className="about_btn flex flex-col  items-center gap-4 mt-6 ">
+                <Link
+                  href="/projects"
+                  className=" w-[250px] primary_btn flex items-center gap-3"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  explore my projects
+                </Link>
+                <button
+                  className=" w-[250px] secondary_btn flex items-center gap-3"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   my services
                 </button>
               </div>
@@ -108,10 +113,14 @@ export default function About() {
           <SkillTabs />
         </section>
 
-          <section className="mt-8 xl:mt-0">
-               <MyJourney/>
-          </section>
+        <section className="mt-8 xl:mt-0">
+          <MyJourney />
+        </section>
       </Container>
+
+       <div className='md:hidden'>
+                         <Footer/>
+                 </div>
     </div>
   );
 }

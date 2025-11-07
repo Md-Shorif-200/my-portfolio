@@ -9,7 +9,7 @@ export default function BannerAnimateText() {
 
               <Typewriter
                 words={[
-                  "Full Stack Developer",
+                  "MERN Stack Developer",
                   "React Specialist",
                   "Next.js Enthusiast",
                 ]}

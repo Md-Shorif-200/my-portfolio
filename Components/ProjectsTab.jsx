@@ -7,18 +7,21 @@ export default function ProjectsTab() {
   const [activeTab, setActiveTab] = useState("fullstack");
 
   useEffect(() => {
-    fetch("/projects.json")
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
-  }, []);
-
-  const filteredProjects = projects.filter((p) => p.category === activeTab);
+    const fetchData = async () => {
+      const filePath =
+        activeTab === "fullstack" ? "/fullstack.json" : "/frontend.json";
+      const res = await fetch(filePath);
+      const data = await res.json();
+      setProjects(data);
+    };
+    fetchData();
+  }, [activeTab]);
 
   return (
     <div className="container mx-auto px-4 py-10">
-      {/* Tabs (DESIGN UPDATED ONLY) */}
+      {/* Tabs */}
       <div
-        className="w-[350px] mx-auto flex gap-2 sm:gap-4 justify-center border border-green-100 py-2 rounded-4xl
+        className="w-[280px] sm:w-[350px] mx-auto flex gap-2 sm:gap-4 justify-center border border-green-100 py-2 rounded-4xl
       bg-[#55E6A5]/10 backdrop-blur-sm mb-8"
       >
         {["fullstack", "frontend"].map((tab) => (
@@ -36,8 +39,7 @@ export default function ProjectsTab() {
         ))}
       </div>
 
-      {/* ProjectsCard call - unchanged (only its internal styles may be updated) */}
-      <ProjectsCard activeTab={activeTab} filteredProjects={filteredProjects} />
+      <ProjectsCard activeTab={activeTab} filteredProjects={projects} />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import SectionTitleContainer from './SectionTitleContainer'
 import ProjectsTab from './ProjectsTab'
 import Container from './Container'
+import Footer from './Footer'
 
 export default function Projects() {
   return (
@@ -13,6 +14,9 @@ export default function Projects() {
             <ProjectsTab/>
 
                 </Container>
+               <div className='md:hidden'>
+                       <Footer/>
+               </div>
     </main>
   )
 }

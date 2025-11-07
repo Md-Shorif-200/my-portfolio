@@ -57,6 +57,19 @@
   active:scale-95
   cursor-pointer;
 }
+.featurd_card {
+  @apply text-base font-semibold text-white capitalize
+  rounded-lg 
+  border border-[#55E6A5]/30 
+  bg-transparent
+  shadow-sm
+  transition-all duration-300 ease-in-out
+bg-[#55E6A5]/10 
+  hover:scale-[1.03]
+  hover:shadow-md 
+  active:scale-95
+  cursor-pointer;
+}
 
 
 
@@ -230,13 +243,13 @@ pre {
 
 @media (min-width : 370px ) and (max-width : 470px) {
     .banner {
-        @apply h-[1000px]
+        @apply h-[1150px]
     }
 } 
 
 @media (min-width : 471px ) and (max-width : 639px) {
     .banner {
-        @apply h-[950px]
+        @apply h-[1100px]
     }
 }
 
