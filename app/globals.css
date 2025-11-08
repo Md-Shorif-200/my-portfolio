@@ -203,9 +203,6 @@ bg-[#55E6A5]/10
   }
 }
 
-
-/* ---------- Navbar Hover Animation ---------- */
-
 .nav-link {
   position: relative;
   display: inline-block;
@@ -234,6 +231,15 @@ bg-[#55E6A5]/10
 .nav-link:hover::after {
   width: 100%;
 }
+
+.nav-link.active {
+  color: #55E6A5;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
 
 pre {
   white-space: pre-wrap;
