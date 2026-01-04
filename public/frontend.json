@@ -52,8 +52,31 @@
       }
     ]
   },
-  {
+   {
     "id": 3,
+    "category": "frontend",
+    "title": "Daily Tasks",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1766949570/daily-task_ghfe6z.png",
+    "clientTech": ["TypeScript","React", "Tailwind", "React Router"],
+    "serverTech": [],
+     "github" : "https://github.com/Md-Shorif-200/daily-tasks",
+    "liveLink": "https://daily-tasks-phi.vercel.app/",
+    "description": "This is a modern Todo management web application built with React and TypeScript.Users can add tasks, mark them as completed, filter tasks by All, Active, and Completed, and delete completed items",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature":""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      { "title": "", "feature": "" }
+    ]
+  },
+  {
+    "id": 4,
     "category": "frontend",
     "title": "boring Pilot",
     "subTitle" : "",
@@ -76,7 +99,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "category": "frontend",
     "title": "gyan",
     "subTitle" : "",
@@ -102,7 +125,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "category": "frontend",
     "title": "donate bangladesh",
     "subTitle" : "",
@@ -128,7 +151,7 @@
     ]
   },
    {
-    "id": 6,
+    "id": 7,
     "category": "frontend",
     "title": "Rinterio",
     "subTitle" : "",

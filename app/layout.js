@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
         {children}
            <AosInitializer></AosInitializer>
             <Toaster/>
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <Footer/>
-            </div>
+            </div> */}
       </body>
     </html>
   );

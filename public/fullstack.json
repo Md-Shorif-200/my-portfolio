@@ -109,8 +109,34 @@
       }
     ]
   },
-  {
+    {
     "id": 4,
+    "category": "fullstack",
+    "title": "Smart Task",
+    "subTitle" : "Task Management Web app",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1763805963/Capture-17_hdiotj.png",
+    "clientTech": ["React", "Next.js", "Tailwind","Aos"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB","firebase"],
+    "github" : "https://github.com/Md-Shorif-200/smart-task-manager",
+    "liveLink": "https://smart-task-iota.vercel.app/",
+    "description": "Smart Task Manager is a lightweight web app for organizing teams, managing projects, and assigning tasks efficiently. It helps track workload, auto-balance tasks based on capacity, and keeps a clear activity log for smooth team collaboration.",
+    "keyFeatures": [
+      {
+        "title": "Smart Task Assignment",
+        "feature": "Checks member workload, warns on overload, and supports quick auto-assign."
+      },
+      {
+        "title": "Auto Reassignment",
+        "feature": "Redistributes excess tasks with one click while keeping high-priority tasks in place."
+      },
+      {
+        "title": "Overview Dashboard",
+        "feature": "Shows project totals, task counts, member workload, and recent reassignments."
+      }
+    ]
+  },
+  {
+    "id": 5,
     "category": "fullstack",
     "title": "roadForge",
     "subTitle" : "Roadmap & Feedback Platform",
@@ -137,7 +163,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "category": "fullstack",
     "title": "Go Marathon",
     "subTitle" : "marathon management website",
@@ -164,7 +190,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "category": "fullstack",
     "title": "Dream Arc",
     "subTitle" : "Crowd Funding Application",

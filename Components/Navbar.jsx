@@ -11,6 +11,7 @@ import { MdAddIcCall } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import Container from "./Container";
 
+
 const navLinks = [
   { href: "/", label: "Home", icon: <HiHome /> },
   { href: "/about", label: "About", icon: <HiInformationCircle /> },
@@ -19,14 +20,14 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const pathname = usePathname(); // বর্তমান রুট
+  const pathname = usePathname(); 
 
   return (
     <>
       {/* Desktop Navbar */}
-      <header className="hidden md:block fixed top-0 p-3 left-0 w-full z-50 backdrop-blur-md">
+      <header className="hidden md:block fixed top-0 px-3 py-1  left-0 w-full z-50 ">
         <Container>
-          <div className="relative grid grid-cols-3 bg-[#141C27]/80 items-center py-3 rounded-lg px-6">
+          <div className="relative flex justify-between items-center py-3 rounded-lg px-0">
             
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
@@ -34,7 +35,8 @@ export default function Navbar() {
               <h1 className="text-2xl font-bold text-white capitalize">SHORIF</h1>
             </Link>
 
-            {/* Nav Links */}
+               <div className="flex items-center gap-x-28">
+                  {/* Nav Links */}
             <nav className="flex gap-8">
               {navLinks.map((link, index) => {
                 const isActive = pathname === link.href;
@@ -42,7 +44,7 @@ export default function Navbar() {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`nav-link text-[18px] text-white/90 capitalize transition-colors ${
+                    className={`nav-link  ${
                       isActive ? "active" : ""
                     }`}
                   >
@@ -52,13 +54,16 @@ export default function Navbar() {
               })}
             </nav>
 
-            <div>{/* Future button or action */}</div>
+              <div>
+                <button type="button">Dark Mode</button>
+              </div>
+               </div>
           </div>
         </Container>
       </header>
 
       {/* Mobile Bottom Navbar */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-[#141C27]/95 text-white border-t border-gray-800 flex justify-around items-center py-2 z-50 backdrop-blur-sm">
+      {/* <nav className="md:hidden fixed bottom-0 left-0 w-full text-white border-t flex justify-around items-center py-2 z-50 backdrop-blur-sm">
         {navLinks.map((link, index) => {
           const isActive = pathname === link.href;
           return (
@@ -74,7 +79,7 @@ export default function Navbar() {
             </Link>
           );
         })}
-      </nav>
+      </nav> */}
     </>
   );
 }

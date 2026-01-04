@@ -4,12 +4,13 @@ import { Typewriter } from "react-simple-typewriter";
 export default function BannerAnimateText() {
   return (
     <div>
-         <h3 className="text-2xl  lg:text-3xl font-semibold capitalize flex items-center text-cyan-500 gap-2">
-              <span className="text-[#F1F5F9]">A</span>
+         <h3 className="text-lg  lg:text-xl font-semibold capitalize flex items-center text-cyan-500 gap-2">
+              <span className="">A</span>
 
               <Typewriter
                 words={[
                   "MERN Stack Developer",
+                   "Frontend Developer",
                   "React Specialist",
                   "Next.js Enthusiast",
                 ]}

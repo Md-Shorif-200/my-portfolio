@@ -1,94 +1,96 @@
-
-
 import { FaEye } from "react-icons/fa";
-import Container from "./Container";
 import { IoDocumentText } from "react-icons/io5";
-import BannerAnimateText from "./BannerAnimateText";
-import BannerTyped from "./BannerTyped";
+import Image from "next/image";
 import Link from "next/link";
-import Footer from "./Footer";
-import Topbar from "./Topbar";
+
+import Container from "./Container";
+import BannerAnimateText from "./BannerAnimateText";
 import SocialLinks from "./SocialLinks";
+import { TechStack } from "./TechStack";
+// import TechStack from "./TechStack";
+
+const shorif_img = "/shorif-image-removebg-preview.png";
 
 export default function Banner() {
   return (
-    <div className=" banner w-full h-[1200px] sm:h-[1100px]  md:h-[750px] xl:min-h-screen bg-[#02050A] flex items-center     overflow-hidden">
-     
-
+    <div
+      className="w-full min-h-screen flex items-center overflow-hidden"
+      style={{ backgroundColor: "#FAF8F6" }}
+    >
       <Container>
-        <main className="flex flex-col md:flex-row  gap-6 items-center justify-between relative z-10">
-           
-          <section className="text-[#F1F5F9] w-full lg:w-[55%] space-y-5">
-            <h2 className="text-lg text-[#CBD5E1] tracking-wide capitalize">
-              Hi, I&apos;m
-            </h2>
+        <main className="flex flex-col lg:flex-row items-center justify-between gap-12 py-10 ">
+          {/* LEFT CONTENT */}
+          <section className="relative w-full lg:w-[55%] py-12 rounded-2xl">
+            <div className="z-10">
+              <h2 className="text-lg font-semibold tracking-wide text-[#21BF73]">
+                Hi, I&apos;m
+              </h2>
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight my-1">
+                Shorif Uddin Rifat
+              </h1>
+              <BannerAnimateText />
 
-            <h1 className="text-4xl lg:text-5xl  xl:text-6xl font-bold capitalize primary_color leading-tight">
-              Shorif Uddin Rifat
-            </h1>
-
-                    <BannerAnimateText/>
-           
-
-            <p className="text-base text-[#A2A2A2] leading-relaxed max-w-[550px] text-justify">
-              Passionate about building efficient, scalable, and user-friendly
-              web applications. I enjoy turning ideas into real-world digital
-              experiences with clean code and modern technologies.
-            </p>
-
-            <div className="flex flex-wrap gap-6 mt-6 text-sm sm:text-base">
-              {/* Status 1 */}
-              <div className="flex items-center gap-2">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#55E6A5] animate-pulse-small"></span>
-                <p className="text-[#F1F5F9]">2+ Years Experience</p>
+              <div className="flex flex-wrap gap-4 mt-5">
+                {[
+                  "2+ Years Experience",
+                  "20+ Projects Completed",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 "
+                  >
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#21BF73] animate-pulse"></span>
+                    <p className="text-gray-700 text-sm font-medium">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <Link
+                  href="https://drive.google.com/file/d/1sa3l2JMPrL1D2RXmr-njdMWB252Bd64p/view?usp=sharing"
+                  className="primary_btn"
+                >
+                  Download Resume
+                  <IoDocumentText className="text-lg" />
+                </Link>
+                <Link
+                  href="/projects"
+                  className="secondary_btn"
+                >
+                  Explore My Work
+                  <FaEye />
+                </Link>
 
-              {/* Status 2 */}
-              <div className="flex items-center gap-2">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#FF6B6B] animate-pulse-small"></span>
-                <p className="text-[#F1F5F9]">20+ Projects</p>
               </div>
-
-              {/* Status 3 */}
-              <div className="flex items-center gap-2">
-                <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#FFD93D] animate-pulse-small"></span>
-                <p className="text-[#F1F5F9]">Remote Friendly</p>
-              </div>
+                  <TechStack/>
+              <SocialLinks />
             </div>
-
-            <div className="flex flex-col lg:flex-row items-center gap-4 mt-8 mb-8 xl:mb-0">
-              <Link href='https://drive.google.com/file/d/1sa3l2JMPrL1D2RXmr-njdMWB252Bd64p/view?usp=sharing' className="primary_btn flex items-center gap-3">
-                Download Resume
-                <IoDocumentText className="text-lg" />
-              </Link>
-              <Link href='/projects' className="secondary_btn flex items-center gap-3">
-                explore my work
-                <FaEye className="text-lg" />
-              </Link>
-            </div>
-                  <SocialLinks/>
           </section>
 
+  
+          <section className="w-full lg:w-[45%] flex justify-end items-center">
+        
+            <div className="relative w-[300px] sm:w-[340px] lg:w-[400px] aspect-[3/4]">
      
+            <div 
+  className="absolute bottom-0 w-full h-[75%] bg-gradient-to-t from-[#21BF73]/30 via-[#21BF73]/20 to-[#21BF73]/10 rounded-sm shadow-xl shadow-[#21BF73]/20"
+>
+</div>
 
-
-          <section className="w-full lg:w-[40%] flex justify-center md:mt-10 ">
-
-                <BannerTyped/>
-
-            {/* <div className="relative">
-              <div className="absolute -inset-4 bg-[#55E6A5]/30 rounded-full blur-2xl"></div>
-              <img
-                src="/assets/profile.png"
-                alt="Shorif Uddin Rifat"
-                className="relative z-10 w-[250px] sm:w-[300px] lg:w-[350px] rounded-full border-4 border-[#55E6A5]/40 shadow-lg hover:scale-105 transition-all duration-500"
-              />
-            </div> */}
+              {/* 2. Wrapper for the image to control its position */}
+              <div className="relative h-full w-full ">
+                <Image
+                  src={shorif_img}
+                  alt="Shorif Uddin Rifat"
+                  fill
+                  className="object-contain scale-110 drop-shadow-xl "
+                  priority
+                />
+              </div>
+            </div>
           </section>
-               <div className='md:hidden'>
-                    <Footer />
-               </div>
-                  </main>
+        </main>
       </Container>
     </div>
   );
