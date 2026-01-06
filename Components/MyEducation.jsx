@@ -1,6 +1,7 @@
 import { FaGraduationCap } from "react-icons/fa";
 import Link from "next/link";
 
+import { GoDash } from "react-icons/go";
 
 
 
@@ -11,7 +12,7 @@ const education = [
     institute: "chattogram polytechnic institute",
     cgpa: 3.18,
     mainCgpa: 4.00,
-    description: `I completed my Diploma in Engineering in Computer Science and Technology from Chattogram Polytechnic Institute. This journey deepened my technical foundation and strengthened my problem-solving mindset, preparing me for real-world challenges in the field of technology.`,
+    description: `This academic journey strengthened my technical foundation and problem-solving mindset, preparing me to tackle real-world challenges in modern software development.`,
   },
   {
     id: 2,
@@ -36,30 +37,34 @@ export default function MyEducation() {
    <div>
             {education?.map((edu, index) => {
               return (
-                <div key={index} className="secondary_color flex gap-4 mb-6"  data-aos="fade-up"
+                <div key={index} className=" w-full bg-white shadow-xs border-[1px]      px-2 py-4 rounded-lg flex gap-4 mb-6"  
+                // data-aos="fade-up"
                 >
-                  <div className="w-[200px] h-[40px] flex justify-center items-center border rounded-lg">
+                <div className="w-[8%]">
+                       <div className="w-10 h-10  bg-[#21BF73] flex justify-center items-center rounded-full text-white ">
                     <FaGraduationCap className="text-2xl " />
                   </div>
+                </div>
 
-                  <div className="secondary_color capitalize">
-                    <h1 className=" text-xl font-semibold">
+                  <div className="w-[92%]  capitalize pr-8">
+                    <h1 className=" text-xl font-semibold ">
                       {" "}
                       {edu?.education}{" "}
                     </h1>
-                    <p className="text-gray-300 text-xl mt-2">
+                    <p className="text-gray-700 text-md mt-1 flex items-center gap-1">
+                        <GoDash className="text-2xl"/>
                       {" "}
                       {edu?.institute}
                     </p>
-                    <p className={`${edu.cgpa && edu.mainCgpa ? "w-[200px] rounded-2xl py-1 text-center text-gray-300 text-base bg-[#55E6A5]/10 shadow-sm shadow-green-200 mt-4" : "hidden"}`}>
+                    {/* <p className={`${edu.cgpa && edu.mainCgpa ? "w-[160px] rounded-2xl py-1 text-center text-gray-700 font-semibold text-base bg-[#55E6A5]/10 shadow-sm shadow-green-200 mt-4" : "hidden"}`}>
                       {" "}
                       CGPA {edu?.cgpa} out of {edu?.mainCgpa}
-                    </p>
-                    <p className="text-gray-400 text-base mt-4 mb-5 text-justify">
+                    </p> */}
+                    <p className="text-gray-600 text-base mt-2 mb-5 text-justify">
                       {edu?.description}
                     </p>
 
-                        <Link href={edu?.link ? edu.link : ""} className={`${edu.link ? "capitalize  cursor-pointer bg-[#55E6A5]/10 shadow-sm shadow-green-200 px-4 py-1" : "hidden"}`}>
+                        <Link href={edu?.link ? edu.link : ""} className={`${edu.link ? " border-[1px] border-[#21BF73] text-[12px] text-black px-3 py-1.5 rounded-md font-semibold transition-all shadow-sm  uppercase hover:bg-[#21BF73] hover:text-white " : "hidden"}`}>
                              Certificate
                          </Link>
                   </div>

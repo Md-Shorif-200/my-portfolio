@@ -16,12 +16,8 @@ const shorif_img = "/img-3-removebg-preview.png";
 
 export default function Banner() {
   return (
-    <div
-      className="banner w-full min-h-[700px] flex items-center overflow-hidden relative"
-  
-    >
-
-       {/* Background color always */}
+    <div className="banner w-full min-h-[700px] flex items-center overflow-hidden relative">
+      {/* Background color always */}
       <div
         className="absolute inset-0 "
         style={{ backgroundColor: "#FAF8F6" }}
@@ -38,10 +34,8 @@ export default function Banner() {
         }}
       />
 
-
       <Container>
         <main className="flex flex-col-reverse md:flex-row items-center justify-between md:gap-6 lg:gap-12 py-10 ">
-          
           {/* LEFT CONTENT */}
           <section className="relative w-full lg:w-[55%] py-12 rounded-2xl   ">
             <div className="relative z-10">
@@ -79,7 +73,10 @@ export default function Banner() {
                   <IoDocumentText className="text-lg" />
                 </Link>
 
-                <Link href="/projects" className="secondary_btn flex justify-center items-center">
+                <Link
+                  href="/projects"
+                  className="secondary_btn flex justify-center items-center"
+                >
                   Explore My Work
                   <FaEye />
                 </Link>
@@ -93,25 +90,23 @@ export default function Banner() {
           {/* RIGHT IMAGE */}
           <section className=" .banner_img_section w-full lg:w-[45%] flex justify-center sm:justify-end items-center">
             <div className=" banner_img_section relative w-[300px]  lg:w-[400px] aspect-[3/4] ">
-              
               {/* Background gradient card */}
               <div className="absolute bottom-0 w-full h-[75%] bg-gradient-to-t from-[#21BF73]/30 via-[#21BF73]/20 to-[#21BF73]/10 rounded-sm shadow-xl shadow-[#21BF73]/20"></div>
 
-                <div className="absolute bottom-0 w-full h-[95%]">
-                   {/* Image */}
-              <div className="relative w-full h-full">
-                <Image
-                  src={shorif_img}
-                  alt="Shorif Image"
-                  fill
-                  className="object-contain  drop-shadow-xl "
-                  priority
-                />
-              </div>
+              <div className="absolute bottom-0 w-full h-[95%]">
+                {/* Image */}
+                <div className="relative w-full h-full">
+                  <Image
+                    src={shorif_img}
+                    alt="Shorif Image"
+                    fill
+                    className="object-contain  drop-shadow-xl "
+                    priority
+                  />
                 </div>
+              </div>
             </div>
           </section>
-
         </main>
       </Container>
     </div>

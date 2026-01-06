@@ -446,7 +446,7 @@ pre {
 
 
 
-@media (min-width : 400px ) and (max-width : 500px) {
+/* @media (min-width : 400px ) and (max-width : 500px) {
     .skill_tab {
         @apply gap-4
     }
@@ -464,7 +464,7 @@ pre {
         .skill_tab_cnt {
       @apply px-6
     }
-}
+} */
 
 
 .Techstack_Div_1 {

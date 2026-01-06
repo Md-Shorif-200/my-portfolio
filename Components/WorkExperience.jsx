@@ -1,12 +1,13 @@
 import { MdWorkHistory } from "react-icons/md";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
+import { GoDash } from "react-icons/go";
 
 const work_experience = [
   {
     id: 1,
-    role: "MERN Stack Developer",
+    role: "Web Developer",
     company: "Devnasa Technology",
-    companyAddress: "gaibandha,bangladesh",
+    companyAddress: "Rangpur,bangladesh",
     workLocation: "remote",
     employmentType: "full-time",
     StarDate: "July-2025 ",
@@ -22,17 +23,17 @@ export default function WorkExperience() {
   <div>
             {work_experience?.map((work, index) => {
               return (
-                <div key={index} className="secondary_color flex gap-4 mb-6 ">
-                  <div className="w-[50px] h-[40px] flex justify-center items-center border rounded-lg">
+                <div key={index} className="w-full bg-white shadow-xs border-[1px]      px-2 py-4 rounded-lg flex gap-4 mb-6">
+                  <div className="w-10 h-10  bg-[#21BF73] flex justify-center items-center rounded-full text-white ">
                     <MdWorkHistory className="text-2xl " />
                   </div>
 
-                  <div className="secondary_color capitalize">
+                  <div className="secondary_color capitalize ">
                     <h1 className=" text-xl font-semibold">
-                      {" "}
-                      {work?.role} - {" "}
-                      <span className="text-gray-300"> {work?.company}</span>
+              
+                      {work?.role} 
                     </h1>
+                      <h1 className="text-gray-700 flex gap-1 items-center"> <GoDash className="text-2xl" /> {work.company}</h1>
                     <p className="text-gray-300 text-xl mt-2">
                       {" "}
                       {work?.companyAddress}

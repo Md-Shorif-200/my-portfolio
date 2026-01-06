@@ -4,7 +4,13 @@ import SectionTitleContainer from "./SectionTitleContainer";
 import SkillTabs from "./SkillTabs";
 
 import Lottie from "lottie-react";
-import { SiNestjs, SiPostgresql, SiTypescript ,SiMysql,SiPrisma} from "react-icons/si";
+import {
+  SiNestjs,
+  SiPostgresql,
+  SiTypescript,
+  SiMysql,
+  SiPrisma,
+} from "react-icons/si";
 
 import { GrMysql } from "react-icons/gr";
 
@@ -46,8 +52,8 @@ export default function About() {
                 // data-aos="fade-up"
                 // data-aos-delay="200"
               >
-                I’m a passionate web developer with over 2 years of hands-on
-                experience, focused on building reliable and user-focused
+                I’m a passionate web developer with over 2+ years of hands-on
+                experience, focused on building reliable and user-friendly
                 applications. I add value to teams by delivering clean, scalable
                 solutions, understanding requirements clearly, and collaborating
                 effectively in professional environments.
@@ -57,9 +63,16 @@ export default function About() {
                 // data-aos="fade-up"
                 // data-aos-delay="200"
               >
-                As a <span className="text-[#21BF73] font-semibold capitalize">web Developer</span> at <span className="text-[#21BF73] font-semibold capitalize">Devnasa Technology</span>, i contributing
-                to production-level applications and team-based development
-                workflows.
+                As a{" "}
+                <span className="text-[#21BF73] font-semibold capitalize">
+                  web Developer
+                </span>{" "}
+                at{" "}
+                <span className="text-[#21BF73] font-semibold capitalize">
+                  Devnasa Technology
+                </span>
+                , i contributing to production-level applications and team-based
+                development workflows.
               </p>
 
               <div className="banner_buttons flex flex-col sm:flex-row   lg:flex-row gap-4 my-6 md:my-8 ">
@@ -87,9 +100,11 @@ export default function About() {
                 // data-aos="fade-up"
                 // data-aos-delay="500"
               >
-             
                 <p className="text-base text-gray-700 mt-3  ">
-                My goal is to master TypeScript, Nest.js and other high-demand technologies to build robust and scalable web applications, while continuously growing into a skilled software engineer and a capable technical leader.
+                  My goal is to master TypeScript, Nest.js and other high-demand
+                  technologies to build robust and scalable web applications,
+                  while continuously growing into a skilled software engineer
+                  and a capable technical leader.
                 </p>
 
                 <div className="icons flex flex-wrap gap-3 mt-6">
@@ -116,8 +131,6 @@ export default function About() {
                   <div className=" icon_bg_color text-2xl  p-3">
                     <FaAws className="text-[#FF9900]"></FaAws>
                   </div>
-
-             
                 </div>
               </div>
             </div>
@@ -136,8 +149,6 @@ export default function About() {
 
         <section className="mt-8 xl:mt-0">{/* <MyJourney /> */}</section>
       </Container>
-
-  
     </div>
   );
 }
