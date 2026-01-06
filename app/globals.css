@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+.primary_color {
+   @apply text-[#21BF73]
+}
+
+.bg_color {
+  @apply bg-[#FAF8F6]
+}
+
 /* @custom-variant dark (&:is(.dark *)); */
  /* .primary_color {
   @apply text-[#55E6A5]
@@ -42,8 +51,12 @@
   cursor-pointer;
 }
 
+
+
+
+
 */
-.featurd_card {
+/* .featurd_card {
   @apply text-base font-semibold text-white capitalize
   rounded-lg 
   border border-[#55E6A5]/30 
@@ -55,7 +68,13 @@ bg-[#55E6A5]/10
   hover:shadow-md 
   active:scale-95
   cursor-pointer;
+} */
+
+.featurd_card:hover .icon {
+  transform: rotateY(360deg);
+  transition: transform 0.6s ease;
 }
+
 
 
 /* globals.css এ যোগ করুন */
@@ -390,12 +409,41 @@ pre {
     }
 } */
 
+@media (min-width : 350px ) and (max-width : 449px) {
+    .banner  .banner_img_section {
+        @apply w-[350px]
+    }
+} 
 
-@media (min-width : 500px )  {
-    .about_btn {
+@media (min-width : 450px ) and (max-width : 500px) {
+    .banner  .banner_img_section {
+        @apply w-[400px]
+    }
+} 
+
+@media (min-width : 501px ) and (max-width : 767px) {
+    .banner  .banner_img_section {
+        @apply w-[450px]
+    }
+} 
+
+
+@media (min-width : 430px ) and (max-width : 639px) {
+    .banner  .banner_buttons {
         @apply flex-row
     }
 } 
+@media (min-width : 480px ) and (max-width : 639px) {
+    .FocusCard_secton   {
+        @apply grid-cols-2 
+    }
+} 
+@media (min-width : 450px ) and (max-width : 639px) {
+    .about_section .lottie_img   {
+        @apply  w-[80%] h-[400px]
+    }
+} 
+
 
 
 @media (min-width : 400px ) and (max-width : 500px) {
@@ -420,10 +468,10 @@ pre {
 
 
 .Techstack_Div_1 {
-  @apply  w-14 h-14 flex justify-center items-center border border-2 border-[#21BF73] rounded-full bg-white
+  @apply w-12 h-12  2xl:w-14 2xl:h-14 flex justify-center items-center border border-2 border-[#21BF73] rounded-full bg-white
 }
 
 .Techstack_Div_2 {
-@apply  w-12 h-12 flex justify-center items-center bg-[#EAF9F2]  rounded-full
+@apply w-10 h-10 2xl:w-14 2xl:h-14 flex justify-center items-center bg-[#EAF9F2]  rounded-full
 }
 

@@ -50,12 +50,12 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <FaCode
               className={`text-4xl transition-colors duration-300 ${
-                scrolled ? "text-[#21BF73]" : "text-white"
+                scrolled ? "text-[#21BF73]" : "text-black"
               }`}
             />
             <h1
               className={`text-xl font-bold transition-colors duration-300 ${
-                scrolled ? "text-gray-900" : "text-white"
+                scrolled ? "text-gray-900" : "text-black"
               }`}
             >
               SHORIF
