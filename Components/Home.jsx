@@ -4,6 +4,8 @@ import FocusCardsSection from "./FocusCardsSection";
 import About from "./About";
 import SkillTabs from "./SkillTabs";
 import MyJourney from "./MyJourney";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <About/>
       <SkillTabs/>
        <MyJourney/>
+        <Projects/>
+         <Contact/>
     </div>
   );
 }

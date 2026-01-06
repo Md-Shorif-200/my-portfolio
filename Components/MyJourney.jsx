@@ -10,7 +10,7 @@ import { FaCode, FaUserCircle } from "react-icons/fa";
 export default function MyJourney() {
   return (
     <div className="bg_color">
-          <div className="skill_heading flex flex-col  items-center w-full">
+          <div className=" flex flex-col  items-center w-full">
                   <div
                     className="w-[140px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
                     // data-aos="fade-up"
@@ -19,12 +19,12 @@ export default function MyJourney() {
                      Profile
                   </div>
         
-                  <h1 className="text-2xl md:text-3xl xl:text-4xl my-3  text-gray-800 font-bold text-center ">
+                  <h1 className="text-2xl md:text-3xl  my-2  text-gray-800 font-bold text-center ">
                     {" "}
                   Education & Experience
                   </h1>
         
-                  <p className="text-md md:text-lg text-gray-800 mb-6">
+                  <p className="text-md md:text-lg text-gray-800 mb-4">
                     Progress, learning, and real-world contributions
                   </p>
                 </div>

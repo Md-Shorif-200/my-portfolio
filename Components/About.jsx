@@ -23,7 +23,7 @@ import { BsStars } from "react-icons/bs";
 
 export default function About() {
   return (
-    <div className="w-full min-h-screen bg_color pt-20 pb-10">
+    <div className="w-full  bg_color pt-20 pb-10">
       <Container>
         {/* about section */}
         <section>

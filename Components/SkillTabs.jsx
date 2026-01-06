@@ -15,7 +15,7 @@ const tabs = [
       "react.js",
       "Next.js",
       "redux",
-      "tailwind CSs",
+      "tailwind CSS",
       "bootstrap",
       "shadcn ui",
       "sass",
@@ -73,12 +73,12 @@ export default function SkillTabs() {
             Tech Stack
           </div>
 
-          <h1 className="text-2xl md:text-3xl xl:text-4xl my-3  text-gray-800 font-bold text-center ">
+          <h1 className="text-2xl md:text-3xl  my-2  text-gray-800 font-bold text-center ">
             {" "}
             Technical Expertise{" "}
           </h1>
 
-          <p className="text-md md:text-lg text-gray-800 mb-6">
+          <p className="text-md md:text-lg text-gray-800 mb-8">
             Tools and technologies I use to build reliable solutions
           </p>
         </div>

@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <main className="w-full min-h-screen bg-[#02050A] py-10 md:pt-28 xl:pt-28 pb-10">
+    <main className="w-full  bg_color ">
       <Container>
         <div className="text-center mt-10">
           <h1 className="text-3xl md:text-5xl font-bold primary_color">
@@ -18,7 +18,7 @@ export default function Contact() {
             reality.
           </p>
         </div>
-        <FeaturedSection />
+        {/* <FeaturedSection /> */}
 
         <section className="  py-8 md:py-20 flex flex-col md:flex-row gap-10">
           <div className="md:w-1/2">

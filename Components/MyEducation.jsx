@@ -51,12 +51,12 @@ export default function MyEducation() {
                       {" "}
                       {edu?.education}{" "}
                     </h1>
-                    <p className="text-gray-700 text-md mt-1 flex items-center gap-1">
+                    <p className="text-gray-900 text-md mt-1 flex items-center gap-1">
                         <GoDash className="text-2xl"/>
                       {" "}
                       {edu?.institute}
                     </p>
-                    {/* <p className={`${edu.cgpa && edu.mainCgpa ? "w-[160px] rounded-2xl py-1 text-center text-gray-700 font-semibold text-base bg-[#55E6A5]/10 shadow-sm shadow-green-200 mt-4" : "hidden"}`}>
+                    {/* <p className={`${edu.cgpa && edu.mainCgpa ? "w-[160px] rounded-2xl py-1 text-center text-gray-900 font-semibold text-base bg-[#55E6A5]/10 shadow-sm shadow-green-200 mt-4" : "hidden"}`}>
                       {" "}
                       CGPA {edu?.cgpa} out of {edu?.mainCgpa}
                     </p> */}
