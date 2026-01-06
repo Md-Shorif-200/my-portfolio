@@ -42,21 +42,7 @@
   cursor-pointer;
 }
 
-
-
-.icon_bg_color {
-  @apply text-base font-semibold text-[#55E6A5] capitalize
-  rounded-lg 
-  border border-[#55E6A5]/60 
-  bg-transparent
-  shadow-sm
-  transition-all duration-300 ease-in-out
-  hover:bg-[#55E6A5]/10 
-  hover:scale-[1.03]
-  hover:shadow-md 
-  active:scale-95
-  cursor-pointer;
-} */
+*/
 .featurd_card {
   @apply text-base font-semibold text-white capitalize
   rounded-lg 
@@ -168,6 +154,48 @@ bg-[#55E6A5]/10
     .secondary_btn {
       @apply inline-flex items-center gap-3 border-2 border-[#21BF73] text-[#21BF73] hover:bg-[#21BF73]/10 px-4 py-2 rounded-xl font-semibold transition-all
     }
+
+
+    
+/* Professional Social Icon Style */
+
+.icon_bg_color {
+  @apply
+  w-11 h-11
+  flex items-center justify-center
+  rounded-xl
+  bg-white
+  text-gray-700
+  border border-gray-200
+  shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+  transition-all duration-300 ease-out
+  hover:-translate-y-1
+  hover:shadow-[0_12px_28px_rgba(33,191,115,0.25)]
+  hover:text-[#21BF73]
+  hover:border-[#21BF73]/40
+  active:scale-95;
+}
+
+/* gradient ring (not background) */
+.icon_bg_color::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(33,191,115,0.6),
+    rgba(33,191,115,0.15)
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.icon_bg_color:hover::after {
+  opacity: 1;
+}
+
 
 
 @theme inline {
