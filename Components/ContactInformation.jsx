@@ -1,56 +1,75 @@
-import { FaAddressBook, FaLocationArrow, FaMailBulk, FaPhone } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdAddIcCall } from "react-icons/md";
 
-
+const contactInfo = [
+  {
+    id: 1,
+    icon: FaMailBulk,
+    title: "mdshorifuddin463@gmail.com",
+    subtitle: "Send me an email anytime",
+    link: "mailto:mdshorifuddin463@gmail.com",
+  },
+  {
+    id: 2,
+    icon: MdAddIcCall,
+    title: "+88 01972-144240",
+    subtitle: "Call me for urgent matters",
+    link: "tel:+8801972144240",
+  },
+  {
+    id: 3,
+    icon: FaLocationDot,
+    title: "Noakhali, Chattogram",
+    subtitle: "Bangladesh",
+  },
+];
 
 const ContactInformation = () => {
-  const infoClasses =
-    "flex items-center gap-4 p-4 bg-[#0B1120] rounded-2xl border border-[#1A2235] hover:border-[#55E6A5] hover:shadow-[0_0_15px_#55E6A580] transition-all duration-300 cursor-pointer";
-
-  const iconClasses =
-    "h-10 w-10 text-[#55E6A5] bg-[#121826] p-2 rounded-xl flex-shrink-0";
-
   return (
     <div className="flex flex-col gap-5">
-      {/* Email */}
-      <a
-        href="mailto:mdshorifuddin463@gmail.com"
-        className={infoClasses}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaMailBulk className={iconClasses} />
-        <div>
-          <p className="text-sm text-gray-400">Send mail to</p>
-          <p className="font-semibold text-white">mdshorifuddin463@gmail.com</p>
-          <p className="text-xs opacity-80 text-gray-400">
-            Send me an email anytime
-          </p>
-        </div>
-      </a>
+      {contactInfo.map((item) => {
+        const Icon = item.icon;
 
-      {/* Phone */}
-      <a href="tel:+8801972144240" className={infoClasses}>
-        <MdAddIcCall className={iconClasses} />
-        <div>
-          <p className="text-sm text-gray-400">Call or text</p>
-          <p className="font-semibold text-white">+88 01972-144240</p>
-          <p className="text-xs opacity-80 text-gray-400">
-            Call me for urgent matters
-          </p>
-        </div>
-      </a>
+        const CardContent = (
+          <div
+            className=" w-full flex    rounded-2xl "
+          >
+            {/* Icon */}
+         <div className="w-[20%]  ">
+                <div
+              className=" w-12 h-12  flex items-center justify-center rounded-full
+              bg-white text-black
+              group-hover:scale-110 transition-transform duration-300"
+            >
+              <Icon className="text-xl" />
+            </div>
+         </div>
 
-      {/* Location */}
-      <div className={infoClasses}>
-        <FaLocationDot className={iconClasses} />
-        <div>
-          <p className="text-sm text-gray-400">Location</p>
-          <p className="font-semibold text-white">Noakhali, Chattogram</p>
-          <p className="text-xs opacity-80 text-gray-400">Bangladesh</p>
-        </div>
-      </div>
+            {/* Text */}
+            <div className="w-[80%] flex flex-col">
+              <p className="text-white font-semibold leading-tight text-base sm:text-lg">
+                {item.title}
+              </p>
+              <p className="text-base text-white/70 ">{item.subtitle}</p>
+            </div>
+          </div>
+        );
+
+        return item.link ? (
+          <a
+            key={item.id}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus:outline-none"
+          >
+            {CardContent}
+          </a>
+        ) : (
+          <div key={item.id}>{CardContent}</div>
+        );
+      })}
     </div>
   );
 };

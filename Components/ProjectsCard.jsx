@@ -116,7 +116,7 @@ export default function ProjectsCard({ filteredProjects, activeTab }) {
               transition-opacity duration-500 flex flex-col justify-between"
             >
               <div>
-                <p className="text-sm leading-relaxed mb-4">
+                <p className="text-sm leading-relaxed ">
                   {project.description}
                 </p>
 
