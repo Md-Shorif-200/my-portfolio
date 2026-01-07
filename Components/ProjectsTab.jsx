@@ -18,7 +18,7 @@ export default function ProjectsTab() {
   }, [activeTab]);
 
   return (
-    <div className="container mx-auto  py-10">
+    <div className="container mx-auto  pt-6 pb-3">
       {/* Tabs */}
       <div
         className=" w-[250px]  mx-auto flex gap-2 sm:gap-4 justify-between border border-green-200 py-2 rounded-4xl

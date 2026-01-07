@@ -21,7 +21,11 @@ export default function Home() {
 
       <SkillTabs />
 
+
+      <section id="experience">
+    
       <MyJourney />
+      </section>
 
       <section id="projects">
         <Projects />

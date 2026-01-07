@@ -23,7 +23,7 @@ import { BsStars } from "react-icons/bs";
 
 export default function About() {
   return (
-    <div className="w-full  bg_color pt-20 pb-10">
+    <div className="w-full  bg_color pt-20 pb-6">
       <Container>
         {/* about section */}
         <section>
@@ -76,21 +76,42 @@ export default function About() {
               </p>
 
               <div className="banner_buttons flex flex-col sm:flex-row   lg:flex-row gap-4 my-6 md:my-8 ">
-                <Link
-                  href="/projects"
-                  className=" w-[250px] primary_btn flex justify-center items-center capitalize"
+                {/* <Link
+                  href="#experience"
+                  scroll={true}
+                  className=" "
                   // data-aos="fade-up"
                   // data-aos-delay="300"
                 >
-                  explore my projects
-                </Link>
-                <button
-                  className=" w-[250px] secondary_btn flex justify-center items-center capitalize"
-                  // data-aos="fade-up"
-                  // data-aos-delay="400"
-                >
                   my Journey
+                </Link> */}
+
+                <button
+                  onClick={() => {
+                    const section = document.getElementById("experience");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="w-[200px] primary_btn flex justify-center items-center capitalize cursor-pointer"
+                >
+                  My Journey
                 </button>
+
+                
+                <button
+                  onClick={() => {
+                    const section = document.getElementById("contact");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="w-[200px] secondary_btn flex justify-center items-center cursor-pointer"
+                >
+                  Get In Touch
+                </button>
+
+
               </div>
 
               {/* <hr className="text-gray-700 my-1" /> */}

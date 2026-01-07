@@ -1,3 +1,4 @@
+"use client"
 import { FaEye } from "react-icons/fa";
 import { IoDocumentText } from "react-icons/io5";
 import Image from "next/image";
@@ -73,13 +74,19 @@ export default function Banner() {
                   <IoDocumentText className="text-lg" />
                 </Link>
 
-                <Link
-                  href="/projects"
-                  className="secondary_btn flex justify-center items-center"
-                >
-                  Explore My Work
-                  <FaEye />
-                </Link>
+              <button
+  onClick={() => {
+    const section = document.getElementById("projects");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="secondary_btn flex justify-center items-center cursor-pointer"
+>
+  Explore My Work
+  <FaEye />
+</button>
+
               </div>
 
               <TechStack />

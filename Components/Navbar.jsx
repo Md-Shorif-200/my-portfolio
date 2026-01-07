@@ -15,6 +15,7 @@ import Container from "./Container";
 const navLinks = [
   { id: "home", label: "Home", icon: <HiHome /> },
   { id: "about", label: "About", icon: <HiInformationCircle /> },
+  { id: "experience", label: "Experience", icon: <HiBriefcase /> },
   { id: "projects", label: "Projects", icon: <HiBriefcase /> },
   { id: "contact", label: "Contact", icon: <MdAddIcCall /> },
 ];
@@ -79,7 +80,7 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => handleScrollTo(link.id)}
-                className={`nav-link transition-all ${
+                className={`nav-link transition-all cursor-pointer ${
                   activeSection === link.id
                     ? "text-[#21BF73] font-semibold"
                     : scrolled

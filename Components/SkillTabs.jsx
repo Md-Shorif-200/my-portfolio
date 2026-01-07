@@ -62,23 +62,23 @@ export default function SkillTabs() {
   const [active, setActive] = useState("frontend");
 
   return (
-    <div className="bg_color">
+    <div className="bg-[#21BF73] py-10">
       <Container>
         <div className="skill_heading flex flex-col  items-center w-full">
           <div
-            className="w-[140px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
+            className="w-[140px] py-1 text-center text-md  font-semibold bg-white/90 rounded-full uppercase primary_color flex justify-center items-center gap-1"
             // data-aos="fade-up"
           >
             <FaCode />
             Tech Stack
           </div>
 
-          <h1 className="text-2xl md:text-3xl  my-2  text-gray-800 font-bold text-center ">
+          <h1 className="text-2xl md:text-3xl  my-2  text-white font-bold text-center ">
             {" "}
             Technical Expertise{" "}
           </h1>
 
-          <p className="text-md md:text-lg text-gray-800 mb-8">
+          <p className="text-md md:text-lg text-white/90 mb-8 text-center">
             Tools and technologies I use to build reliable solutions
           </p>
         </div>
@@ -92,8 +92,9 @@ export default function SkillTabs() {
               onClick={() => setActive(tab.id)}
               className={` skill_tab_cnt   px-3 py-1.5 rounded-base rounded-full text-sm  sm:text-lg  transition-all duration-300  cursor-pointer ${
                 active === tab.id
-                  ? "bg-[#55E6A5] text-black"
-                  : "bg-transparent text-black hover:text-[#55E6A5] "
+                                 ? "bg-white text-[#21BF73] shadow-lg"
+                  : "bg-white/20 text-white hover:bg-white/30 hover:text-[#ffffff] font-semibold"
+
               }`}
             >
               {tab.label}
@@ -118,7 +119,7 @@ export default function SkillTabs() {
                     {tab.skills.map((skill) => (
                       <p
                         key={skill}
-                        className="text-gray-800 capitalize font-semibold border-[1px] bg-white shadow-sm border-gray-300 px-4 py-2 inline-block rounded-lg mx-2"
+                        className="text-[#21BF73] capitalize font-semibold border border-white/30 px-4 py-2 inline-block rounded-lg bg-white shadow hover:bg-white/100 hover:scale-105 transition-transform duration-300 mx-2"
                       >
                         {skill}
                       </p>
