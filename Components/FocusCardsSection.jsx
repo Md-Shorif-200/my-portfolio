@@ -35,9 +35,11 @@ const FocusCardsSection = () => {
     <div className="bg_color">
       <Container>
         <div className="w-full  lg:pt-6 ">
-          <div className="FocusCard_secton grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="FocusCard_secton grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"   data-aos="fade-up">
             {cardData.map((data) => (
               <motion.div
+                    
+                  // data-aos-delay="300"
                 key={data.id}
                 whileHover="hover"
                 initial="initial"

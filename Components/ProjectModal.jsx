@@ -30,9 +30,21 @@ export default function ProjectModal({ project, onClose }) {
         {/* Client Technology */}
         {project.clientTech?.length > 0 && (
           <div className="mt-6">
-            <h3 className="font-semibold primary_color mb-2">
+             {
+              project.category == "frontend" ? 
+               <>
+                  <h3 className="font-semibold primary_color mb-2">
+               Technologies
+            </h3>
+               </>
+               :
+               <>
+                  <h3 className="font-semibold primary_color mb-2">
               Client Technologies
             </h3>
+               </>
+             }
+         
             <div className="flex flex-wrap gap-2">
               {project.clientTech.map((tech, i) => (
                 <span
@@ -67,7 +79,7 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Key Features */}
         {project.keyFeatures?.length > 0 && (
-          <div className="mt-6">
+          <div className={`mt-6 ${project.category == "frontend" ? "hidden" : ""}`}>
             <h3 className="font-semibold text-gray-800 mb-2">Key Features</h3>
             <ul className="list-disc list-inside text-sm space-y-1 text-gray-700">
               {project.keyFeatures.map((f, i) => (

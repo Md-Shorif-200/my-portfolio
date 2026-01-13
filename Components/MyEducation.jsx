@@ -69,12 +69,12 @@ export default function MyEducation() {
               </p>
 
               {/* CGPA (Optional) */}
-              {edu.cgpa && edu.mainCgpa && (
+              {/* {edu.cgpa && edu.mainCgpa && (
                 <p className="inline-block mt-3 px-4 py-1 text-sm font-semibold 
                 text-[#21BF73] bg-[#21BF73]/10 rounded-full">
                   CGPA {edu.cgpa} / {edu.mainCgpa}
                 </p>
-              )}
+              )} */}
 
               <p className="mt-4 text-gray-600 text-base leading-relaxed text-justify">
                 {edu.description}

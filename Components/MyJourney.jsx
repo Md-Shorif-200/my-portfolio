@@ -33,20 +33,20 @@ export default function MyJourney() {
       
 
       <main className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <section>
-          {/* <h1 className="primary_color font-bold text-3xl capitalize mb-10">
-            {" "}
-            Education & Certification{" "}
-          </h1> */}
+        <section 
+        //  data-aos="fade-right"
+        //           data-aos-delay="200"
+      >
+ 
 
           <MyEducation />
         </section>
 
-        <section>
-          {/* <h1 className="primary_color font-bold text-3xl capitalize mb-10">
-            {" "}
-            Work Experience{" "}
-          </h1> */}
+        <section
+          //  data-aos="fade-left"
+                  // data-aos-delay="400"
+        >
+        
 
             <WorkExperience/>
          

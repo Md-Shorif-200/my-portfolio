@@ -60,18 +60,17 @@ export default function Navbar() {
       }`}
     >
       <Container>
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-4 ">
           {/* Logo */}
           <div
             onClick={() => handleScrollTo("home")}
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer bg-black/90 px-2 py-1 rounded-tr-2xl rounded-bl-2xl"
           >
             <FaCode
-              className={`text-4xl ${
-                scrolled ? "text-[#21BF73]" : "text-black"
-              }`}
+              className='text-4xl text-[#21BF73] font-semibold'
             />
-            <h1 className="text-xl font-bold">SHORIF</h1>
+            
+            <h1 className="text-xl font-bold text-white"> SHOR<span className="text-[#21BF73]">IF</span> </h1>
           </div>
 
           {/* Desktop Nav */}
@@ -95,36 +94,68 @@ export default function Navbar() {
 
           {/* Mobile Button */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-3xl"
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden text-3xl cursor-pointer"
           >
-            {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+            <HiMenuAlt3 />
           </button>
         </div>
+      </Container>
 
-        {/* Mobile Menu */}
+      {/* ================= Mobile Slide Menu ================= */}
+      <div
+        className={`fixed inset-0 z-[999] md:hidden transition-all duration-300 ${
+          menuOpen ? "visible" : "invisible"
+        }`}
+      >
+        {/* Background Overlay (20%) */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          onClick={() => setMenuOpen(false)}
+          className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Drawer (80%) */}
+        <div
+          className={`absolute top-0 left-0 h-full w-[80%] bg-white shadow-xl
+          transform transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="bg-white rounded-xl shadow-lg p-5 space-y-4 mb-4">
+          {/* Drawer Header */}
+          <div className="flex items-center justify-between px-5 py-4 border-b">
+            <div className="flex items-center gap-2">
+              <FaCode className="text-3xl text-[#21BF73]" />
+              <h2 className="text-lg font-bold">SHORIF</h2>
+            </div>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl cursor-pointer"
+            >
+              <HiX />
+            </button>
+          </div>
+
+          {/* Nav Links */}
+          <div className="p-5 space-y-5">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleScrollTo(link.id)}
-                className={`block w-full text-left font-medium ${
+                className={`flex items-center gap-3 w-full text-left text-lg font-medium transition cursor-pointer  hover:text-[#21BF73] transition-all ${
                   activeSection === link.id
                     ? "text-[#21BF73]"
                     : "text-gray-700"
                 }`}
               >
+                <span className="text-xl">{link.icon}</span>
                 {link.label}
               </button>
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </header>
   );
 }

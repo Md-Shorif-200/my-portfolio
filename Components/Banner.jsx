@@ -10,7 +10,7 @@ import SocialLinks from "./SocialLinks";
 import { TechStack } from "./TechStack";
 
 // const shorif_img = "/shorif-image-removebg-preview.png";
-const shorif_img = "/img-3-removebg-preview.png";
+const shorif_img = "/shorif-img.png";
 // const shorif_img = "/img-1.png";
 // const shorif_img = "/img-2.png";
 // const shorif_img = "/img-4.png";
@@ -40,11 +40,15 @@ export default function Banner() {
           {/* LEFT CONTENT */}
           <section className="relative w-full lg:w-[55%] py-12 rounded-2xl   ">
             <div className="relative z-10">
-              <h2 className="text-lg font-semibold tracking-wide text-[#21BF73]">
+              <h2 className="text-lg font-semibold tracking-wide text-[#21BF73]" 
+           
+                
+              >
                 Hellow, I&apos;m
               </h2>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight my-1">
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight my-1"   
+           >
                 Shorif Uddin Rifat
               </h1>
 

@@ -26,11 +26,12 @@ export default function About() {
     <div className="w-full  bg_color pt-20 pb-6">
       <Container>
         {/* about section */}
-        <section>
+        <section   >
           <div className=" about_section w-full  flex flex-col lg:flex-row       gap-x-6   ">
             <div
               className="about_img  w-full lg:w-[50%] flex justify-center md:justify-start items-center  "
               // data-aos="fade-right"
+              //   data-aos-delay="300"
             >
               <Lottie
                 animationData={lotteImg_2}
@@ -38,7 +39,10 @@ export default function About() {
               ></Lottie>
             </div>
 
-            <div className="about_cnt w-full lg:w-[50%] mt-8 lg:mt-0 ">
+            <div className="about_cnt w-full lg:w-[50%] mt-8 lg:mt-0 " 
+                  // data-aos="fade-left"
+                  // data-aos-delay="300"
+            >
               <h2
                 className="w-[130px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
                 // data-aos="fade-up"
@@ -158,17 +162,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* skill section */}
-        <section className="lg:mt-10">
-          {/* <SectionTitleContainer
-            title="my skills"
-            paragrap="Constantly evolving and mastering new technologies to deliver cutting-edge solutions"
-          /> */}
+     
 
-          {/* <SkillTabs /> */}
-        </section>
-
-        <section className="mt-8 xl:mt-0">{/* <MyJourney /> */}</section>
       </Container>
     </div>
   );

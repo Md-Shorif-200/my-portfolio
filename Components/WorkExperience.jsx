@@ -8,7 +8,8 @@ const work_experience = [
     company: "Devnasa Technology",
     companyAddress: "Rangpur, Bangladesh",
     workLocation: "Remote",
-    employmentType: "Full-time",
+    employmentType: "Internship",
+    employmentMode: "Full-time",
     StarDate: "July 2025",
     EndDate: "October 2025",
   },
@@ -70,6 +71,10 @@ export default function WorkExperience() {
 
               {/* Badges */}
               <div className="flex flex-wrap gap-3 mt-4">
+                <span className="px-4 py-1 text-sm font-medium
+                text-[#21BF73] bg-[#21BF73]/10 rounded-full">
+                  {work.employmentMode}
+                </span>
                 <span className="px-4 py-1 text-sm font-medium
                 text-[#21BF73] bg-[#21BF73]/10 rounded-full">
                   {work.employmentType}

@@ -31,15 +31,15 @@
     "clientGithub": "https://github.com/Md-Shorif-200/ayira-ecommerce",
     "serverGithub": "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
     "liveLink": "https://ayira-ecommerce-1.vercel.app/",
-    "description": "A modern B2B platform for exploring products, saving favorites, and connecting with admin via Gemini AI chat, focusing on product showcasing, personalized engagement, and smooth admin-driven management",
+    "description": "Customers can browse and filter products across multiple categories with server-side pagination. Each product shows details like  fabric, color, and production process. The admin dashboard manages products, orders, and users with full control over attributes, media, and SEO. I solved challenges in implementing the rich text editor for product descriptions by researching and applying optimized solutions. I solved challenges in implementing the rich text editor for product descriptions by researching and applying optimized solutions.",
     "keyFeatures": [
       {
-        "title": "AI-Powered Chat System",
-        "feature": "Integrated Gemini AI for real-time communication between users and admin."
+        "title": "Product Browsing",
+        "feature": "Category-based products with filtering and server-side pagination for smooth performance."
       },
       {
         "title": "Advanced Admin Dashboard",
-        "feature": "Complete product management, blog updates, banner editing, and data analytics with Chart.js visualization."
+        "feature": "Complete product management, banner editing and data analytics with Chart.js visualization."
       },
       {
         "title": "Smart Order & Inquiry System",

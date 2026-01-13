@@ -24,7 +24,10 @@ export default function Contact() {
      
 
         <div className="  pt-6 pb-12 flex flex-col md:flex-row gap-10 ">
-          <div className="md:w-1/2 lg:w-[35%]  bg-[#21BF73]  rounded-lg px-4 py-10">
+          <div
+              data-aos="fade-right"
+             
+          className="md:w-1/2 lg:w-[35%]  bg-[#21BF73]  rounded-lg px-4 py-10">
             <ContactInformation />
 
 

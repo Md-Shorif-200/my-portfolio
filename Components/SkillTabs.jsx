@@ -67,27 +67,36 @@ export default function SkillTabs() {
         <div className="skill_heading flex flex-col  items-center w-full">
           <div
             className="w-[140px] py-1 text-center text-md  font-semibold bg-white/90 rounded-full uppercase primary_color flex justify-center items-center gap-1"
-            // data-aos="fade-up"
+            data-aos="fade-up"
           >
             <FaCode />
             Tech Stack
           </div>
 
-          <h1 className="text-2xl md:text-3xl  my-2  text-white font-bold text-center ">
+          <h1 className="text-2xl md:text-3xl  my-2  text-white font-bold text-center "
+                data-aos="fade-up"
+                  data-aos-delay="100"
+          >
             {" "}
             Technical Expertise{" "}
           </h1>
 
-          <p className="text-md md:text-lg text-white/90 mb-8 text-center">
+          <p className="text-md md:text-lg text-white/90 mb-8 text-center" 
+             data-aos="fade-up"
+                  data-aos-delay="300"
+          >
             Tools and technologies I use to build reliable solutions
           </p>
         </div>
-        <div
+        <div 
+           data-aos="fade-up"
+                  data-aos-delay="400"
           className=" skill_tab w-full max-w-sm mx-auto flex gap-0 sm:gap-4  justify-between border border-green-100 px-2 py-1 rounded-4xl
     bg-[#55E6A5]/10 "
         >
           {tabs.map((tab) => (
             <button
+              
               key={tab.id}
               onClick={() => setActive(tab.id)}
               className={` skill_tab_cnt   px-3 py-1.5 rounded-base rounded-full text-sm  sm:text-lg  transition-all duration-300  cursor-pointer ${
@@ -103,7 +112,10 @@ export default function SkillTabs() {
         </div>
 
         {/* Animated Content */}
-        <div className="mt-8 min-h-[150px] flex justify-center">
+        <div
+           data-aos="fade-up"
+                  data-aos-delay="500"
+        className="mt-8 min-h-[150px] flex justify-center">
           <AnimatePresence mode="wait">
             {tabs.map(
               (tab) =>
