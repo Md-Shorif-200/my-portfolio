@@ -25,7 +25,7 @@ export default function Contact() {
 
         <div className="  pt-6 pb-12 flex flex-col md:flex-row gap-10 ">
           <div
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="150"
           className="md:w-1/2 lg:w-[35%]  bg-[#21BF73]  rounded-lg px-4 py-10">
             <ContactInformation />
@@ -70,7 +70,7 @@ export default function Contact() {
     </section>
           </div>
 
-          <div className="md:w-1/2 lg:w-[65%] " data-aos="fade-left" data-aos-delay="200">
+          <div className="md:w-1/2 lg:w-[65%] " data-aos="fade-up" data-aos-delay="200">
             <ContactForm />
           </div>
         </div>

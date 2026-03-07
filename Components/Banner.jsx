@@ -18,7 +18,7 @@ const shorif_img = "/shorif-img.png";
 
 export default function Banner() {
   return (
-    <div className="banner w-full min-h-[900px] md:min-h-[1050px] lg:min-h-[700px]  flex items-center overflow-hidden relative">
+    <div className="banner w-full min-h-[1000px] md:min-h-[1050px] lg:min-h-[700px]  flex items-center overflow-hidden relative">
       {/* Background color always */}
       <div className="absolute inset-0" style={{ backgroundColor: "#FAF8F6" }} />
 
@@ -37,7 +37,7 @@ export default function Banner() {
         <main className="flex flex-col-reverse lg:flex-row items-center justify-between md:gap-6 lg:gap-12 py-10">
           
           {/* ── LEFT CONTENT ── */}
-          <section className="relative w-full lg:w-[55%] py-12 rounded-2xl" data-aos="fade-right" data-aos-duration="800">
+          <section className="relative w-full lg:w-[55%] py-12 rounded-2xl" data-aos="fade-up" data-aos-duration="800">
             <div className="relative z-10">
               <h2 className="text-lg font-semibold tracking-wide text-[#1AA863]" data-aos="fade-up" data-aos-delay="100">
                 Hellow, I&apos;m
@@ -93,7 +93,7 @@ export default function Banner() {
 
          {/* ── RIGHT SECTION ── */}
 {/* ── RIGHT SECTION ── */}
-<section className="banner_img_section w-full lg:w-[45%] flex justify-center  items-center" data-aos="fade-left" data-aos-duration="800">
+<section className="banner_img_section w-full lg:w-[45%] flex justify-center  items-center" data-aos="fade-up" data-aos-duration="800">
   {/* The main container's height is increased for a larger image and card */}
   <div className="relative w-[260px] sm:w-[300px] h-[380px] lg:w-[370px] lg:h-[450px]">
 

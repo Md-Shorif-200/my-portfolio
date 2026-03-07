@@ -33,7 +33,7 @@ export default function MyJourney() {
       
 
       <main className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <section data-aos="fade-right" data-aos-delay="200">
+        <section data-aos="fade-up" data-aos-delay="200">
           <h2 className="text-xl font-bold text-gray-800 mb-4 md:hidden flex items-center gap-2">
             <FaGraduationCap className="text-[#21BF73]" />
             Education
@@ -41,7 +41,7 @@ export default function MyJourney() {
           <MyEducation />
         </section>
 
-        <section data-aos="fade-left" data-aos-delay="300">
+        <section data-aos="fade-up" data-aos-delay="300">
           <h2 className="text-xl font-bold text-gray-800 mb-4 md:hidden flex items-center gap-2">
             <MdWorkHistory className="text-[#21BF73]" />
             Work Experience

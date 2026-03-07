@@ -30,7 +30,7 @@ export default function About() {
           <div className=" about_section w-full  flex flex-col lg:flex-row       gap-x-6   ">
             <div
               className="about_img  w-full lg:w-[50%] flex justify-center md:justify-start items-center  "
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="200"
             >
               <Lottie
@@ -40,7 +40,7 @@ export default function About() {
             </div>
 
             <div className="about_cnt w-full lg:w-[50%] mt-8 lg:mt-0 "
-                  data-aos="fade-left"
+                  data-aos="fade-up"
                   data-aos-delay="200"
             >
               <h2

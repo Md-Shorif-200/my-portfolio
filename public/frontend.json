@@ -59,7 +59,6 @@
     "id": 5,
     "category": "frontend",
     "title": "gyan",
-    "subTitle" : "",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-11-min_menqgq.png",
     "clientTech": ["html","css","bootstrap","javascript","jquery","slick slider"],
     "serverTech": [],
