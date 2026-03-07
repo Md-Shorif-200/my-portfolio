@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { VscLiveShare } from "react-icons/vsc";
+import { IoMdClose } from "react-icons/io";
 
 export default function ProjectModal({ project, onClose }) {
   return (
@@ -16,9 +17,9 @@ export default function ProjectModal({ project, onClose }) {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-4xl font-semibold text-gray-500 hover:text-black cursor-pointer"
+          className=" w-9 h-9 bg-gray-200 hover:bg-gray-300  absolute top-4  right-4 text-2xl font-semibold text-black/70 hover:text-black  cursor-pointer flex justify-center items-center rounded-full transform   "
         >
-          ×
+           <IoMdClose/>
         </button>
 
         <h2 className="text-2xl  primary_color font-bold">{project.title}</h2>

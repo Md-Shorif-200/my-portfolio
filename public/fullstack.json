@@ -188,33 +188,7 @@
         "feature": "Role-based control panels for runners, organizers, and admins enabling smooth event management."
       }
     ]
-  },
-  {
-    "id": 7,
-    "category": "fullstack",
-    "title": "Dream Arc",
-    "subTitle" : "Crowd Funding Application",
-    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153774/Capture-6_qb5jhb.png",
-    "clientTech": ["React", "Tailwind","daisy ui", "firebase", "Aos","sweper.js"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/Md-Shorif-200/Dream-Arc-Client",
-    "serverGithub": "https://github.com/Md-Shorif-200/Dream-Arc-Server",
-    "liveLink": "https://dreamarc-7c050.web.app/",
-    "description": "Crowdcube is a modern crowdfunding platform where users can explore campaigns, donate to causes, and manage their own campaigns effortlessly with secure authentication and real-time updates.",
-    "keyFeatures": [
-      {
-        "title": "Campaign Management",
-        "feature": "Users can add, update, and delete their campaigns, while admins can efficiently manage all campaigns."
-      },
-      {
-        "title": "Donation Tracking",
-        "feature": "Users can donate to active campaigns, with contributions securely recorded and viewable in their personal dashboard."
-      },
-      {
-        "title": "Secure Authentication",
-        "feature": "Login and registration system with email/password and optional social login, ensuring protected access to private routes."
-      }
-    ]
   }
+ 
   
 ]
