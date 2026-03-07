@@ -37,17 +37,19 @@ export default function Banner() {
         <main className="flex flex-col-reverse lg:flex-row items-center justify-between md:gap-6 lg:gap-12 py-10">
           
           {/* ── LEFT CONTENT ── */}
-          <section className="relative w-full lg:w-[55%] py-12 rounded-2xl">
+          <section className="relative w-full lg:w-[55%] py-12 rounded-2xl" data-aos="fade-right" data-aos-duration="800">
             <div className="relative z-10">
-              <h2 className="text-lg font-semibold tracking-wide text-[#1AA863]">
+              <h2 className="text-lg font-semibold tracking-wide text-[#1AA863]" data-aos="fade-up" data-aos-delay="100">
                 Hellow, I&apos;m
               </h2>
 
-              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight my-1">
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight my-1" data-aos="fade-up" data-aos-delay="200">
                 Shorif Uddin Rifat
               </h1>
 
-              <BannerAnimateText />
+              <div data-aos="fade-up" data-aos-delay="300">
+                <BannerAnimateText />
+              </div>
 
               {/* Stats */}
               {/* <div className="flex flex-wrap gap-4 mt-3 sm:mt-5">
@@ -60,10 +62,12 @@ export default function Banner() {
               </div> */}
 
               {/* Buttons */}
-              <div className="banner_buttons flex flex-col sm:flex-row  gap-4 mt-6 md:mt-8">
+              <div className="banner_buttons flex flex-col sm:flex-row  gap-4 mt-6 md:mt-8" data-aos="fade-up" data-aos-delay="400">
                 <Link
-                  href="https://drive.google.com/file/d/1sa3l2JMPrL1D2RXmr-njdMWB252Bd64p/view?usp=sharing"
+                  href="https://drive.google.com/file/d/18AMVdyCwxUkdzvUnS8-iGFJaLOku2Fnj/view?usp=sharing"
                   className="primary_btn flex justify-center items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Download Resume
                   <IoDocumentText className="text-lg" />
@@ -89,7 +93,7 @@ export default function Banner() {
 
          {/* ── RIGHT SECTION ── */}
 {/* ── RIGHT SECTION ── */}
-<section className="banner_img_section w-full lg:w-[45%] flex justify-center  items-center">
+<section className="banner_img_section w-full lg:w-[45%] flex justify-center  items-center" data-aos="fade-left" data-aos-duration="800">
   {/* The main container's height is increased for a larger image and card */}
   <div className="relative w-[260px] sm:w-[300px] h-[380px] lg:w-[370px] lg:h-[450px]">
 
@@ -142,6 +146,7 @@ export default function Banner() {
         src={shorif_img}
         alt="Shorif Image"
         fill
+        sizes="(max-width: 640px) 260px, (max-width: 1024px) 300px, 370px"
         className="object-contain object-bottom drop-shadow-2xl"
         priority
       />

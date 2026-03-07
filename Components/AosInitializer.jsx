@@ -6,9 +6,13 @@ import "aos/dist/aos.css";
 const AosInitializer = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: false,     
-      offset: 120,    
+      duration: 800,
+      once: true,
+      offset: 100,
+      easing: "ease-out-cubic",
+      delay: 0,
+      mirror: false,
+      anchorPlacement: "top-bottom",
     });
   }, []);
 

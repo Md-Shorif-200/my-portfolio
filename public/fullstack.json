@@ -20,11 +20,8 @@
   "Node.js",
   "Express.js",
   "MongoDB",
-  "Multer",
-  "Socket.io",
+  "Nodemailer"
 
-  "Nodemailer",
-  "OpenAI "
 
 ]
 ,
@@ -161,34 +158,8 @@
         "feature": "Roadmap items can be filtered by status like 'Planned', 'In Progress , or 'Completed' to ensure better clarity and smoother navigation."
       }
     ]
-  },
-  {
-    "id": 6,
-    "category": "fullstack",
-    "title": "Go Marathon",
-    "subTitle" : "marathon management website",
-    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153776/Capture-5_qjsta5.png",
-    "clientTech": ["React", "Tailwind", "daisy ui", "Tanstack query", "firebase", "Aos"],
-    "serverTech": ["Node.js", "Express", "MongoDB"],
-    "clientGithub": "https://github.com/Md-Shorif-200/go-marathon-client",
-    "serverGithub": "hhttps://github.com/Md-Shorif-200/go-marathon-server",
-    "liveLink": "https://go-marathon-21c56.web.app/",
-    "description": "A responsive marathon management platform featuring event registration, real-time updates, and role-based dashboards for runners, organizers, and administrators.",
-    "keyFeatures": [
-      {
-        "title": "Event Registration",
-        "feature": "With secure authentication and a user-friendly interface, users can easily explore events and complete registration based on their preferences."
-      },
-      {
-        "title": "Registration Deadline",
-        "feature": "Prevents registration once the event deadline has passed, ensuring timely participation and better event management."
-      },
-      {
-        "title": "Dashboard",
-        "feature": "Role-based control panels for runners, organizers, and admins enabling smooth event management."
-      }
-    ]
   }
+
  
   
 ]

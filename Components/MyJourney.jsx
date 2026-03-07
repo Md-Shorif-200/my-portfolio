@@ -4,7 +4,8 @@ import SectionTitleContainer from "./SectionTitleContainer";
 import MyEducation from "./MyEducation";
 import WorkExperience from "./WorkExperience";
 import Container from "./Container";
-import { FaCode, FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaGraduationCap } from "react-icons/fa";
+import { MdWorkHistory } from "react-icons/md";
 
 
 export default function MyJourney() {
@@ -12,10 +13,9 @@ export default function MyJourney() {
     <div className="bg_color  pt-10 ">
     
   <Container>
-         <div className=" flex flex-col  items-center w-full">
+         <div className=" flex flex-col  items-center w-full" data-aos="fade-up">
                   <div
                     className="w-[140px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
-                    // data-aos="fade-up"
                   >
                     <FaUserCircle />
                      Profile
@@ -33,23 +33,20 @@ export default function MyJourney() {
       
 
       <main className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <section 
-        //  data-aos="fade-right"
-        //           data-aos-delay="200"
-      >
- 
-
+        <section data-aos="fade-right" data-aos-delay="200">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 md:hidden flex items-center gap-2">
+            <FaGraduationCap className="text-[#21BF73]" />
+            Education
+          </h2>
           <MyEducation />
         </section>
 
-        <section
-          //  data-aos="fade-left"
-                  // data-aos-delay="400"
-        >
-        
-
-            <WorkExperience/>
-         
+        <section data-aos="fade-left" data-aos-delay="300">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 md:hidden flex items-center gap-2">
+            <MdWorkHistory className="text-[#21BF73]" />
+            Work Experience
+          </h2>
+          <WorkExperience/>
         </section>
       </main>
 

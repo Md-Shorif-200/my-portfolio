@@ -5,6 +5,8 @@ import {
   HiHome,
   HiInformationCircle,
   HiBriefcase,
+  HiFolder,
+  HiAcademicCap,
   HiMenuAlt3,
   HiX,
 } from "react-icons/hi";
@@ -16,7 +18,8 @@ const navLinks = [
   { id: "home", label: "Home", icon: <HiHome /> },
   { id: "about", label: "About", icon: <HiInformationCircle /> },
   { id: "experience", label: "Experience", icon: <HiBriefcase /> },
-  { id: "projects", label: "Projects", icon: <HiBriefcase /> },
+  // { id: "skills", label: "Skills", icon: <HiAcademicCap /> },
+  { id: "projects", label: "Projects", icon: <HiFolder /> },
   { id: "contact", label: "Contact", icon: <MdAddIcCall /> },
 ];
 
@@ -79,7 +82,7 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => handleScrollTo(link.id)}
-                className={`nav-link transition-all cursor-pointer ${
+                className={`nav-link flex items-center gap-2 transition-all cursor-pointer ${
                   activeSection === link.id
                     ? "text-[#21BF73] font-semibold"
                     : scrolled
@@ -87,6 +90,7 @@ export default function Navbar() {
                     : "text-black"
                 }`}
               >
+                <span className="text-lg">{link.icon}</span>
                 {link.label}
               </button>
             ))}

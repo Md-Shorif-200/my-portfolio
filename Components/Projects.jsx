@@ -9,10 +9,9 @@ export default function Projects() {
   return (
     <main className="w-full bg_color pt-16 pb-6">
       <Container>
-        <div className=" flex flex-col  items-center w-full">
+        <div className=" flex flex-col  items-center w-full" data-aos="fade-up">
           <div
             className="w-[140px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
-            // data-aos="fade-up"
           >
             <GoProjectSymlink />
             Projects
@@ -28,7 +27,9 @@ export default function Projects() {
             execution
           </p>
         </div>
-        <ProjectsTab />
+        <div data-aos="fade-up" data-aos-delay="200">
+          <ProjectsTab />
+        </div>
       </Container>
     </main>
   );

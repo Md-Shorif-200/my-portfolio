@@ -1,10 +1,12 @@
+import dynamic from "next/dynamic";
 import Banner from "./Banner";
-import FocusCardsSection from "./FocusCardsSection";
-import About from "./About";
-import SkillTabs from "./SkillTabs";
-import MyJourney from "./MyJourney";
-import Projects from "./Projects";
-import Contact from "./Contact";
+
+const FocusCardsSection = dynamic(() => import("./FocusCardsSection"), { ssr: true });
+const About = dynamic(() => import("./About"), { ssr: true });
+const SkillTabs = dynamic(() => import("./SkillTabs"), { ssr: true });
+const MyJourney = dynamic(() => import("./MyJourney"), { ssr: true });
+const Projects = dynamic(() => import("./Projects"), { ssr: true });
+const Contact = dynamic(() => import("./Contact"), { ssr: true });
 
 export default function Home() {
   return (
@@ -13,25 +15,25 @@ export default function Home() {
         <Banner />
       </section>
 
-      <FocusCardsSection />
+      {/* <FocusCardsSection /> */}
 
-      <section id="about">
+      <section id="about" data-aos="fade-up">
         <About />
       </section>
 
-      <SkillTabs />
-
-
-      <section id="experience">
-    
-      <MyJourney />
+      <section id="skills" data-aos="fade-up">
+        <SkillTabs />
       </section>
 
-      <section id="projects">
+      <section id="experience" data-aos="fade-up">
+        <MyJourney />
+      </section>
+
+      <section id="projects" data-aos="fade-up">
         <Projects />
       </section>
 
-      <section id="contact">
+      <section id="contact" data-aos="fade-up">
         <Contact />
       </section>
     </div>

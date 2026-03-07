@@ -78,7 +78,7 @@ export default function SkillTabs() {
       </div> */}
 
       <Container>
-        <div className="relative z-10">
+        <div className="relative z-10" data-aos="fade-up">
 
           {/* Header */}
           <div className="flex flex-col items-center mb-12">

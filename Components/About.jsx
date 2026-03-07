@@ -23,15 +23,15 @@ import { BsStars } from "react-icons/bs";
 
 export default function About() {
   return (
-    <div className="w-full  bg_color pt-20 pb-6">
+    <div className="w-full  bg_color pb-6">
       <Container>
         {/* about section */}
         <section   >
           <div className=" about_section w-full  flex flex-col lg:flex-row       gap-x-6   ">
             <div
               className="about_img  w-full lg:w-[50%] flex justify-center md:justify-start items-center  "
-              // data-aos="fade-right"
-              //   data-aos-delay="300"
+              data-aos="fade-right"
+              data-aos-delay="200"
             >
               <Lottie
                 animationData={lotteImg_2}
@@ -39,13 +39,14 @@ export default function About() {
               ></Lottie>
             </div>
 
-            <div className="about_cnt w-full lg:w-[50%] mt-8 lg:mt-0 " 
-                  // data-aos="fade-left"
-                  // data-aos-delay="300"
+            <div className="about_cnt w-full lg:w-[50%] mt-8 lg:mt-0 "
+                  data-aos="fade-left"
+                  data-aos-delay="200"
             >
               <h2
                 className="w-[130px] py-1 text-center text-md  font-semibold bg-[#21BF73]/10 rounded-full uppercase primary_color flex justify-center items-center gap-1"
-                // data-aos="fade-up"
+                data-aos="fade-up"
+                data-aos-delay="300"
               >
                 <BsStars />
                 Who I Am
@@ -53,8 +54,8 @@ export default function About() {
 
               <p
                 className="text-base text-gray-700 mt-3 text-justify "
-                // data-aos="fade-up"
-                // data-aos-delay="200"
+                data-aos="fade-up"
+                data-aos-delay="250"
               >
                 I’m a passionate web developer with over 2+ years of hands-on
                 experience, focused on building reliable and user-friendly
@@ -64,8 +65,8 @@ export default function About() {
               </p>
               <p
                 className="text-base text-gray-700 mt-3  "
-                // data-aos="fade-up"
-                // data-aos-delay="200"
+                data-aos="fade-up"
+                data-aos-delay="300"
               >
                 As a{" "}
                 <span className="text-[#21BF73] font-semibold capitalize">
@@ -79,7 +80,7 @@ export default function About() {
                 development workflows.
               </p>
 
-              <div className="banner_buttons flex flex-col sm:flex-row   lg:flex-row gap-4 my-6 md:my-8 ">
+              <div className="banner_buttons flex flex-col sm:flex-row   lg:flex-row gap-4 my-6 md:my-8 " data-aos="fade-up" data-aos-delay="350">
                 {/* <Link
                   href="#experience"
                   scroll={true}
@@ -122,8 +123,8 @@ export default function About() {
 
               <div
                 className="my_goals my-4"
-                // data-aos="fade-up"
-                // data-aos-delay="500"
+                data-aos="fade-up"
+                data-aos-delay="400"
               >
                 <p className="text-base text-gray-700 mt-3  ">
                   My goal is to master TypeScript, Nest.js and other high-demand

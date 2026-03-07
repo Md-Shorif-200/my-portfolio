@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <main className="w-full  bg_color ">
       <Container>
-        <div className="text-center py-10">
+        <div className="text-center py-10" data-aos="fade-up">
           <h1 className="text-3xl md:text-5xl font-bold primary_color">
             <span className="secondary_color"> Let’s Shape</span> Your Next Big
             Idea
@@ -26,7 +26,7 @@ export default function Contact() {
         <div className="  pt-6 pb-12 flex flex-col md:flex-row gap-10 ">
           <div
               data-aos="fade-right"
-             
+              data-aos-delay="150"
           className="md:w-1/2 lg:w-[35%]  bg-[#21BF73]  rounded-lg px-4 py-10">
             <ContactInformation />
 
@@ -70,7 +70,7 @@ export default function Contact() {
     </section>
           </div>
 
-          <div className="md:w-1/2 lg:w-[65%] ">
+          <div className="md:w-1/2 lg:w-[65%] " data-aos="fade-left" data-aos-delay="200">
             <ContactForm />
           </div>
         </div>

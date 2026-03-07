@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { FaCode, FaLayerGroup, FaUserCheck, FaRocket } from "react-icons/fa";
 import Container from "./Container";
 
@@ -34,35 +33,17 @@ const FocusCardsSection = () => {
   return (
     <div className="bg_color">
       <Container>
-        <div className="w-full  lg:pt-6 ">
-          <div className="FocusCard_secton grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"   data-aos="fade-up">
-            {cardData.map((data) => (
-              <motion.div
-                    
-                  // data-aos-delay="300"
+        <div className="w-full lg:pt-6">
+          <div className="FocusCard_secton grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            {cardData.map((data, index) => (
+              <div
                 key={data.id}
-                whileHover="hover"
-                initial="initial"
-                variants={{
-                  initial: {},
-                  hover: { y: -17 },
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className=" bg-white shadow-xs border-[1px] border-gray-300  relative overflow-hidden  rounded-xl text-center py-6 cursor-pointer group"
+                className="bg-white border border-gray-200 rounded-xl text-center py-6 cursor-pointer shadow-sm transition-all duration-300 ease-out hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.15),0_8px_16px_-8px_rgba(33,191,115,0.2)] hover:-translate-y-1"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
-                {/* 🔴 Hover Background */}
-                <motion.div
-                  variants={{
-                    initial: { width: 0 },
-                    hover: { width: "100%" },
-                  }}
-                  transition={{ duration: 0.45, ease: "easeInOut" }}
-                  className="absolute top-0 left-0 h-full bg-[#21BF73] z-0"
-                />
-
-                {/* Card Content */}
-                <div className="featurd_card relative z-10 text-black group-hover:text-white transition duration-300">
-                  <div className="  icon w-[60px] h-[60px] flex justify-center items-center m-auto rounded-full bg-white text-3xl primary_color border-[1px] border-[#21BF73]">
+                <div className="featurd_card text-gray-800">
+                  <div className="icon w-[60px] h-[60px] flex justify-center items-center m-auto rounded-full bg-white text-3xl primary_color border border-[#21BF73]">
                     {data.icon}
                   </div>
 
@@ -70,11 +51,11 @@ const FocusCardsSection = () => {
                     {data.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base leading-relaxed opacity-90 px-4">
+                  <p className="text-sm sm:text-base leading-relaxed text-gray-600 px-4">
                     {data.desc}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
