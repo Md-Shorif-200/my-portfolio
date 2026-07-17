@@ -3,7 +3,7 @@
     "id": 1,
     "category": "fullstack",
     "title": "AAryan",
-    "subTitle" : " B2B Product Inquiry & Showcase Website",
+    "subTitle": " B2B Product Inquiry & Showcase Website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture_vwo6f1.png",
     "clientTech": [
       "React",
@@ -14,17 +14,9 @@
       "Swiper.js",
       "Aos",
       "Cloudinary",
-        "firebase"
+      "firebase"
     ],
-    "serverTech": [
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Nodemailer"
-
-
-]
-,
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "Nodemailer"],
     "clientGithub": "https://github.com/Md-Shorif-200/ayira-ecommerce",
     "serverGithub": "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
     "liveLink": "https://ayira-ecommerce-1.vercel.app/",
@@ -48,7 +40,7 @@
     "id": 2,
     "category": "fullstack",
     "title": "EduSpark",
-    "subTitle" : "online course management website",
+    "subTitle": "online course management website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture-2_u5zt9z.png",
     "clientTech": [
       "React",
@@ -57,8 +49,7 @@
       "Aos",
       "sweper.js",
       "Tanstack query",
-       "firebase"
-      
+      "firebase"
     ],
     "serverTech": ["Node.js", "Express.js", "MongoDB", "stripe"],
     "clientGithub": "https://github.com/Md-Shorif-200/EduSpark-Client",
@@ -84,11 +75,18 @@
     "id": 3,
     "category": "fullstack",
     "title": "Car Doctor",
-    "subTitle" : "Car Servicing & Auto Parts Platform",
+    "subTitle": "Car Servicing & Auto Parts Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
-    "clientTech": ["React", "Next.js", "Tailwind", "shadcn ui", "Origin ui" , "Aos"],
-    "serverTech": ["Node.js", "Express.js", "MongoDB","Next Auth"],
-    "github" : "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
+    "clientTech": [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "shadcn ui",
+      "Origin ui",
+      "Aos"
+    ],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "Next Auth"],
+    "github": "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
     "liveLink": "https://car-doctor-ruby.vercel.app/",
     "description": "Car Doctor is a modern, user-friendly platform connecting car owners with reliable services and auto parts, offering a seamless experience with secure authentication via NextAuth..",
     "keyFeatures": [
@@ -106,15 +104,15 @@
       }
     ]
   },
-    {
+  {
     "id": 4,
     "category": "fullstack",
     "title": "Smart Task",
-    "subTitle" : "Task Management Web app",
+    "subTitle": "Task Management Web app",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1763805963/Capture-17_hdiotj.png",
-    "clientTech": ["React", "Next.js", "Tailwind","Aos"],
-    "serverTech": ["Node.js", "Express.js", "MongoDB","firebase"],
-    "github" : "https://github.com/Md-Shorif-200/smart-task-manager",
+    "clientTech": ["React", "Next.js", "Tailwind", "Aos"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "firebase"],
+    "github": "https://github.com/Md-Shorif-200/smart-task-manager",
     "liveLink": "https://smart-task-iota.vercel.app/",
     "description": "Smart Task Manager is a lightweight web app for organizing teams, managing projects, and assigning tasks efficiently. It helps track workload, auto-balance tasks based on capacity, and keeps a clear activity log for smooth team collaboration.",
     "keyFeatures": [
@@ -136,7 +134,7 @@
     "id": 5,
     "category": "fullstack",
     "title": "roadForge",
-    "subTitle" : "Roadmap & Feedback Platform",
+    "subTitle": "Roadmap & Feedback Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153768/Capture-4_fbmihg.png",
     "clientTech": ["React", "Tailwind", "Aos", "Tanstack query", "firebase"],
     "serverTech": ["Node.js", "Express.js", "MongoDB"],
@@ -159,7 +157,4 @@
       }
     ]
   }
-
- 
-  
 ]
