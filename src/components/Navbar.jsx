@@ -48,6 +48,19 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 pt-4 bg-transparent">
+        {/* ── Dot Grid Background with Center Fade ── */}
+ <div
+  className="absolute inset-0 -z-10 pointer-events-none"
+  style={{
+    backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+    backgroundSize: "24px 24px",
+    maskImage:
+      "radial-gradient(circle 200px at 50% 50%, transparent 0%, black 100%)",
+    WebkitMaskImage:
+      "radial-gradient(circle 200px at 50% 50%, transparent 0%, black 100%)",
+  }}
+/>
+
       <Container>
         {/* ── Nav Wrapper ── */}
         <div ref={dropdownRef} className="relative">

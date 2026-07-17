@@ -6,6 +6,7 @@ import { HiOutlineCode } from "react-icons/hi";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { TbWorldCheck } from "react-icons/tb";
 import { BsLightningCharge } from "react-icons/bs";
+import Link from "next/link";
 
 const stats = [
   {
@@ -36,24 +37,41 @@ const stats = [
 
 export default function Banner() {
   return (
-    <div className="banner w-full min-h-[90vh] flex flex-col justify-between relative bg-white dark:bg-zinc-950 overflow-hidden select-none pb-10">
+   <div
+  className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-10"
+  style={{
+    backgroundColor: "#ffffff",
+    backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+    backgroundSize: "28px 28px",
+  }}
+>
+
+  <div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    background:
+      "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
+  }}
+/>
       <Container>
         {/* ── Main Content ── */}
         <div className="flex flex-col items-center text-center gap-4 max-w-6xl mx-auto">
           {/* ── Heading ── */}
           <h1
-            className="font-black tracking-tighter uppercase leading-[0.85] text-zinc-900 dark:text-white mt-10"
+            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-10"
             data-aos="fade-up"
           >
-            <span className="block text-7xl text-ds-text">SHORIF</span>
-            <span className="block text-7xl mt-2 tracking-[1.5px] text-[#858585]">
+            <span className="block    text-5xl lg:text-7xl text-ds-text">
+              SHORIF
+            </span>
+            <span className="block    text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585]">
               UDDIN RIFAT
             </span>
           </h1>
 
           {/* ── Role ── */}
           <p
-            className="text-xl font-medium text-[#747474] dark:text-zinc-400 tracking-wider mt-6"
+            className=" text-base sm:text-lg lg:text-xl font-medium text-[#747474] dark:text-zinc-400 tracking-wider mt-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -74,8 +92,8 @@ export default function Banner() {
               <div
                 key={index}
                 className="
-                  group relative flex flex-col items-start gap-3 
-                  p-5 rounded-2xl cursor-default
+                  group relative flex flex-col items-start gap-2 min-[450px]:gap-3 
+                  p-2 min-[450px]:p-4 sm:p-5 rounded-2xl cursor-default
                   border border-zinc-100 dark:border-zinc-800/60
                   bg-zinc-50/80 dark:bg-zinc-900/50
                   backdrop-blur-sm
@@ -106,7 +124,7 @@ export default function Banner() {
                   {/* Value */}
                   <span
                     className="
-                      text-lg font-bold 
+                      text-base min-[450px]:text-lg font-bold 
                       text-zinc-800 dark:text-zinc-100
                       group-hover:text-zinc-900 dark:group-hover:text-white
                       transition-colors duration-300
@@ -149,9 +167,11 @@ export default function Banner() {
 
           {/* ── Download Resume Button ── */}
           <div data-aos="fade-up" data-aos-delay="300" className="mt-3">
-            <a
-              href="/resume.pdf"
+            <Link
+              href="https://drive.google.com/file/d/18AMVdyCwxUkdzvUnS8-iGFJaLOku2Fnj/view?usp=sharing"
               download
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 group inline-flex items-center gap-2.5
                 px-7 py-3.5 rounded-full
@@ -173,7 +193,7 @@ export default function Banner() {
                 className="transition-transform duration-300 group-hover:translate-y-0.5"
               />
               Download Resume
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
