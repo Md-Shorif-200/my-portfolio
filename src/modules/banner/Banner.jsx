@@ -17,7 +17,7 @@ const stats = [
   },
   {
     icon: <TbWorldCheck size={22} />,
-    value: "4+ Projects",
+    value: "5+ Projects",
     label: "Real World",
     description: "Production-ready applications",
   },
@@ -37,41 +37,42 @@ const stats = [
 
 export default function Banner() {
   return (
-   <div
-  className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-10"
-  style={{
-    backgroundColor: "#ffffff",
-    backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
-    backgroundSize: "28px 28px",
-  }}
->
+    <div
+      className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-8"
+      style={{
+        backgroundColor: "#ffffff",
+        backgroundImage:
+          "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+      }}
+    >
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
+        }}
+      />
 
-  <div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    background:
-      "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
-  }}
-/>
       <Container>
         {/* ── Main Content ── */}
-        <div className="flex flex-col items-center text-center gap-4 max-w-6xl mx-auto">
+        <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
           {/* ── Heading ── */}
           <h1
-            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-10"
+            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6"
             data-aos="fade-up"
           >
-            <span className="block    text-5xl lg:text-7xl text-ds-text">
+            <span className="block text-5xl lg:text-7xl text-ds-text">
               SHORIF
             </span>
-            <span className="block    text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585]">
+            <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585]">
               UDDIN RIFAT
             </span>
           </h1>
 
           {/* ── Role ── */}
           <p
-            className=" text-base sm:text-lg lg:text-xl font-medium text-[#747474] dark:text-zinc-400 tracking-wider mt-6"
+            className="text-base sm:text-lg font-medium text-[#747474] dark:text-zinc-400 tracking-wider mt-8"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -84,16 +85,15 @@ export default function Banner() {
 
           {/* ── Stats Cards ── */}
           <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-4xl mt-4"
+            className="grid grid-cols-3  min-[450px]:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="
-                  group relative flex flex-col items-start gap-2 min-[450px]:gap-3 
-                  p-2 min-[450px]:p-4 sm:p-5 rounded-2xl cursor-default
+                className={` group relative flex items-center gap-3 min-[450px]gap-2 sm:gap-3
+                  p-3 min-[450px]:p-2 sm:p-3 rounded-xl cursor-default
                   border border-zinc-100 dark:border-zinc-800/60
                   bg-zinc-50/80 dark:bg-zinc-900/50
                   backdrop-blur-sm
@@ -103,28 +103,27 @@ export default function Banner() {
                   hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]
                   dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)]
                   hover:bg-white dark:hover:bg-zinc-900
-                "
+                  overflow-hidden ${stat.value === "Clean Code" ?  "hidden lg:flex" : "flex"}`}
               >
-                {/* Top row: icon + value */}
-                <div className="flex items-center justify-between w-full">
-                  {/* Icon */}
-                  <span
-                    className="
-                      p-2 rounded-lg
-                      bg-zinc-100 dark:bg-zinc-800
-                      text-zinc-500 dark:text-zinc-400
-                      group-hover:bg-zinc-900 dark:group-hover:bg-white
-                      group-hover:text-white dark:group-hover:text-zinc-900
-                      transition-all duration-300
-                    "
-                  >
-                    {stat.icon}
-                  </span>
+                {/* Icon (Left side) */}
+                <span
+                  className="
+                    p-2.5  min-[450px]:p-1.5 sm:p-2.5  rounded-lg shrink-0
+                    bg-zinc-100 dark:bg-zinc-800
+                    text-zinc-500 dark:text-zinc-400
+                    group-hover:bg-zinc-900 dark:group-hover:bg-white
+                    group-hover:text-white dark:group-hover:text-zinc-900
+                    transition-all duration-300 hidden min-[450px]:block
+                  "
+                >
+                  {stat.icon}
+                </span>
 
-                  {/* Value */}
+                {/* Main Focus: Value & Label */}
+                <div className="flex flex-col text-left">
                   <span
                     className="
-                      text-base min-[450px]:text-lg font-bold 
+                      text-base sm:text-lg font-bold leading-none
                       text-zinc-800 dark:text-zinc-100
                       group-hover:text-zinc-900 dark:group-hover:text-white
                       transition-colors duration-300
@@ -132,26 +131,18 @@ export default function Banner() {
                   >
                     {stat.value}
                   </span>
-                </div>
-
-                {/* Label + Description */}
-                <div className="text-left">
-                  <p
+                  <span
                     className="
-                      text-base font-semibold 
-                      text-zinc-700 dark:text-zinc-300
-                      group-hover:text-zinc-900 dark:group-hover:text-white
+                      text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5
+                      group-hover:text-zinc-700 dark:group-hover:text-zinc-200
                       transition-colors duration-300
                     "
                   >
                     {stat.label}
-                  </p>
-                  <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5 leading-relaxed">
-                    {stat.description}
-                  </p>
+                  </span>
                 </div>
 
-                {/* Subtle bottom accent line on hover */}
+                {/* Bottom accent line on hover */}
                 <span
                   className="
                     absolute bottom-0 left-1/2 -translate-x-1/2
@@ -166,7 +157,7 @@ export default function Banner() {
           </div>
 
           {/* ── Download Resume Button ── */}
-          <div data-aos="fade-up" data-aos-delay="300" className="mt-3">
+          <div data-aos="fade-up" data-aos-delay="300" className="mt-2">
             <Link
               href="https://drive.google.com/file/d/18AMVdyCwxUkdzvUnS8-iGFJaLOku2Fnj/view?usp=sharing"
               download
@@ -200,29 +191,30 @@ export default function Banner() {
 
       {/* ── Scroll Mouse Icon ── */}
       <div
-        className="flex flex-col items-center gap-2 mt-10 opacity-60"
-        data-aos="fade-up"
-        data-aos-delay="400"
+        className="flex flex-col items-center gap-2  opacity-60 hidden min-[450px]:flex mt-3 xl:mt-0"
+        // data-aos="fade-up"
+        // data-aos-delay="400"
       >
         {/* Mouse SVG */}
         <div
           className="
-            w-6 h-10 rounded-full border-2 
-            border-zinc-400 dark:border-zinc-600 
+            w-6 h-10 rounded-full border-2
+            border-zinc-400 dark:border-zinc-600
             flex justify-center pt-1.5
-            relative
+            relative 
           "
         >
           {/* Scroll wheel dot - animated */}
           <span
             className="
-              w-1 h-2 bg-zinc-400 dark:bg-zinc-500 
+              w-1 h-2 bg-zinc-400 dark:bg-zinc-500
               rounded-full
               animate-bounce
             "
             style={{ animationDuration: "1.5s" }}
           />
         </div>
+
         {/* Scroll Text */}
         <p className="text-[10px] uppercase tracking-[3px] text-zinc-400 dark:text-zinc-600 font-medium">
           Scroll

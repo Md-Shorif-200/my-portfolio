@@ -1,5 +1,8 @@
 // import dynamic from "next/dynamic";
+import About from "../modules/about/About";
+import EducationAndCertificates from "../modules/about/education/EducationAndCertificates";
 import Banner from "../modules/banner/Banner";
+import MyJourney from "./MyJourney";
 
 // const FocusCardsSection = dynamic(() => import("./FocusCardsSection"), { ssr: true });
 // const About = dynamic(() => import("./About"), { ssr: true });
@@ -15,27 +18,29 @@ export default function Home() {
         <Banner />
       </section>
 
-      {/* <FocusCardsSection /> */}
+      <About />
 
-      {/* <section id="about" data-aos="fade-up">
-        <About />
-      </section>
+      <EducationAndCertificates/>
 
+      {/* <MyJourney /> */}
+
+
+      {/* 
       <section id="skills" data-aos="fade-up">
         <SkillTabs />
       </section>
 
       <section id="experience" data-aos="fade-up">
-        <MyJourney />
       </section>
-
+      
       <section id="projects" data-aos="fade-up">
         <Projects />
       </section>
 
       <section id="contact" data-aos="fade-up">
         <Contact />
-      </section> */}
+      </section> 
+      */}
     </div>
   );
 }

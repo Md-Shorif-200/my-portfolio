@@ -5,7 +5,9 @@
 
 html {
   scroll-behavior: smooth;
+
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -86,7 +88,7 @@ html {
   --ds-ring: #0A0A0A;
   --ds-text: var(--color-text);
   --ds-muted: #f7f8fa;
-  --ds-muted-foreground:  #4b5563; 
+  --ds-muted-foreground: #4b5563; 
 }
 
 .dark {
@@ -251,22 +253,22 @@ html {
   opacity: 1;
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
     body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
-body {
+/* body {
   background-color: var(--color-page-bg);
   color: var(--color-text);
   transition: background-color 0.25s ease, color 0.25s ease;
-}
+} */
 
-.dark .bg-white {
+/* .dark .bg-white {
   background-color: var(--color-surface) !important;
 }
 
@@ -306,7 +308,7 @@ body {
 .dark .shadow-lg,
 .dark .shadow-xl {
   box-shadow: 0 10px 30px var(--color-shadow) !important;
-}
+} */
 
 
 @layer utilities {
@@ -456,5 +458,24 @@ pre {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3fd694, #2bc77d);
 }
+
+
+/* global.css */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
 
 
