@@ -1,7 +1,7 @@
 // import dynamic from "next/dynamic";
 import About from "../modules/about/About";
-import EducationAndCertificates from "../modules/about/education/EducationAndCertificates";
 import Banner from "../modules/banner/Banner";
+import EducationAndCertifications from "../modules/education/EducationAndCertifications";
 import MyJourney from "./MyJourney";
 
 // const FocusCardsSection = dynamic(() => import("./FocusCardsSection"), { ssr: true });
@@ -20,7 +20,7 @@ export default function Home() {
 
       <About />
 
-      <EducationAndCertificates/>
+      <EducationAndCertifications/>
 
       {/* <MyJourney /> */}
 

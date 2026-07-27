@@ -1,4 +1,4 @@
-"use client";
+
 
 import { GraduationCap, BookOpen, Award, Calendar, Building2, CheckCircle2 } from 'lucide-react';
 import Container from '@/src/components/Container';
@@ -10,17 +10,16 @@ const educationData = [
     year: '2019 - 2023',
     title: 'Diploma In Computer Science & Technology',
     institution: 'Chattogram Polytechnic Institute',
-    description: 'Focused on core science and mathematics with an emphasis on introductory computer science.',
+    description: 'Acquired practical and theoretical skills in programming, database management, networking, and software development through hands-on projects.',
     icon: GraduationCap,
   },
   {
     year: '2014 - 2019',
-    title: "SSC(Science)",
-    institution: 'A M High School',
-    description: 'Specialized in Software Engineering, algorithms, data structures, and web development.',
+    title: "SSC-Science",
+    institution: 'Abdul Motaleb High School',
+    description: 'Built a strong foundation in core science and analytical thinking, fostering a keen interest in technical and computer studies.',
     icon: BookOpen,
   },
-
 ];
 
 // Certification Data (Replaced Experience)
@@ -29,14 +28,14 @@ const certificationData = [
     year: '2024',
     title: 'Complete Web Development',
     institution: 'Programming Hero',
-    description: 'Advanced React patterns, state management, and responsive web design practices.',
+    description: 'Completed a full-stack web development program covering the MERN stack, TypeScript, and Next.js, with hands-on projects involving frontend-backend integration, REST APIs, and authentication systems.',
     icon: CheckCircle2,
   },
   {
     year: '2023',
     title: 'Responsive Web Design',
     institution: 'Creative It Institute',
-    description: 'Validated expertise in designing distributed systems and cloud infrastructure.',
+    description: 'Completed a hands-on program in responsive web design using HTML5, CSS3, Bootstrap, Tailwind CSS, JavaScript, jQuery, and SCSS, along with Git/GitHub, Figma, and Photoshop for design and version control.',
     icon: CheckCircle2,
   },
  
@@ -50,7 +49,7 @@ const TimelineItem = ({ item, isLast }) => {
     <div className="group relative flex gap-4 pb-8 h-full">
       {/* Icon Node & Vertical Connector Line */}
       <div className="flex flex-col items-center">
-        <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors duration-300 group-hover:bg-neutral-900 group-hover:text-white">
+        <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-ds-muted-foreground transition-colors duration-300 group-hover:bg-ds-primary group-hover:text-ds-secondary">
           <Icon size={16} />
         </div>
 
@@ -62,7 +61,7 @@ const TimelineItem = ({ item, isLast }) => {
       {/* Minimalist Light Gray Content Card - Flex-col & h-full added */}
       <div className="flex flex-1 flex-col justify-between rounded-xl bg-gray-50 p-5 border border-gray-100 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-neutral-100/90 group-hover:shadow-sm">
         <div>
-          <div className="mb-2 flex flex-wrap items-center gap-2 text-xs font-medium text-neutral-500">
+          <div className="mb-2 flex flex-wrap items-center gap-2 text-xs font-medium text-ds-muted-foreground">
             <span className="flex items-center gap-1">
               <Calendar size={12} />
               {item.year}
@@ -74,11 +73,11 @@ const TimelineItem = ({ item, isLast }) => {
             </span>
           </div>
 
-          <h3 className="text-base font-semibold text-neutral-900 transition-colors duration-300">
+          <h3 className="text-base font-semibold text-ds-primary transition-colors duration-300">
             {item.title}
           </h3>
 
-          <p className="mt-1.5 text-xs leading-relaxed text-neutral-600">
+          <p className="mt-1.5 text-sm leading-relaxed text-ds-muted-foreground">
             {item.description}
           </p>
         </div>
