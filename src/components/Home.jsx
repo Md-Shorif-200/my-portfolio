@@ -2,6 +2,8 @@
 import About from "../modules/about/About";
 import Banner from "../modules/banner/Banner";
 import EducationAndCertifications from "../modules/education/EducationAndCertifications";
+import MyExpertise from "../modules/my-expertise/MyExpertise";
+import MySkills from "../modules/skills/MySkills";
 import MyJourney from "./MyJourney";
 
 // const FocusCardsSection = dynamic(() => import("./FocusCardsSection"), { ssr: true });
@@ -21,6 +23,10 @@ export default function Home() {
       <About />
 
       <EducationAndCertifications/>
+
+       <MyExpertise/>
+
+        <MySkills/>
 
       {/* <MyJourney /> */}
 

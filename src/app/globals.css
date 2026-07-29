@@ -77,7 +77,7 @@ html {
   --color-shadow-accent: rgba(33, 191, 115, 0.2); */
 
   --ds-background: white;
-  --ds-foreground: #0A0A0A;
+  --ds-foreground: #DFDFDF;
   --ds-card: #ffffff;
   --ds-card-foreground: #0A0A0A;
   --ds-primary: #0A0A0A;
@@ -253,62 +253,6 @@ html {
   opacity: 1;
 }
 
-/* @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-    body {
-    @apply bg-background text-foreground;
-  }
-} */
-
-/* body {
-  background-color: var(--color-page-bg);
-  color: var(--color-text);
-  transition: background-color 0.25s ease, color 0.25s ease;
-} */
-
-/* .dark .bg-white {
-  background-color: var(--color-surface) !important;
-}
-
-.dark .text-gray-700 {
-  color: var(--color-text-muted) !important;
-}
-
-.dark .text-gray-800 {
-  color: var(--color-text) !important;
-}
-
-.dark .text-gray-900 {
-  color: var(--color-text) !important;
-}
-
-.dark .text-gray-600,
-.dark .text-gray-500 {
-  color: var(--color-text-soft) !important;
-}
-
-.dark .border-gray-100,
-.dark .border-gray-200,
-.dark .border-gray-300 {
-  border-color: var(--color-border) !important;
-}
-
-.dark .bg-gray-50,
-.dark .bg-gray-100 {
-  background-color: var(--color-surface-muted) !important;
-}
-
-.dark .bg-gray-900 {
-  background-color: var(--color-surface) !important;
-}
-
-.dark .shadow-md,
-.dark .shadow-lg,
-.dark .shadow-xl {
-  box-shadow: 0 10px 30px var(--color-shadow) !important;
-} */
 
 
 @layer utilities {
@@ -331,17 +275,7 @@ pre {
   font-size: 14px;
 }
 
-/* @media (min-width : 370px ) and (max-width : 470px) {
-    .banner {
-        @apply h-[1150px]
-    }
-} 
 
-@media (min-width : 471px ) and (max-width : 639px) {
-    .banner {
-        @apply h-[1100px]
-    }
-} */
 
 @media (min-width : 350px ) and (max-width : 449px) {
     .banner  .banner_img_section {
@@ -380,25 +314,7 @@ pre {
 
 
 
-/* @media (min-width : 400px ) and (max-width : 500px) {
-    .skill_tab {
-        @apply gap-4
-    }
-    .skill_tab_cnt {
-      @apply px-4
-    }
-}
 
-
-@media (min-width : 501px ) and (max-width : 639px) {
-    .skill_tab {
-        @apply gap-6
-    }
-
-        .skill_tab_cnt {
-      @apply px-6
-    }
-} */
 
 
 .Techstack_Div_1 {
@@ -475,6 +391,13 @@ pre {
 }
 
 
+.skill_Card_Box_Shadow {
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.skill_card_pill_box_shadow {
+  
+}
 
 
 
