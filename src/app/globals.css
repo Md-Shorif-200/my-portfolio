@@ -86,7 +86,7 @@ html {
   --ds-border: #e5e7eb;
   --ds-input: #f7f8fa;
   --ds-ring: #0A0A0A;
-  --ds-text: var(--color-text);
+  --ds-text: #0A0A0A;
   --ds-muted: #f7f8fa;
   --ds-muted-foreground: #4b5563; 
 }
