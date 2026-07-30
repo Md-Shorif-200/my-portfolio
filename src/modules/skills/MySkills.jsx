@@ -63,9 +63,17 @@ const skillCategories = [
         icon: "simple-icons:nextdotjs",
         className: "text-black dark:text-white",
       },
+        { name: "Firebase", icon: "selfhst:firebase" },
       { name: "JWT", icon: "logos:jwt-icon" },
 
       { name: "Nodemailer", icon: "lucide:mail", className: "text-[#22B573]" },
+      { name: "Stripe", icon: "logos:stripe" },
+
+      {
+        name: "Role-Based Access Control",
+        icon: "lucide:user-check",
+        className: "text-[#10B981]",
+      },
       {
         name: "Modular Architecture",
         icon: "lucide:code-2",
@@ -82,7 +90,7 @@ const skillCategories = [
     rows: 6,
     skills: [
       { name: "MongoDB", icon: "devicon:mongodb" },
-      { name: "Firebase", icon: "selfhst:firebase" },
+    
       { name: "Redis", icon: "devicon:redis" },
     ],
   },
@@ -94,8 +102,8 @@ const skillCategories = [
     span: "sm:col-span-1 lg:col-span-1",
     rows: 6,
     skills: [
-      { name: "Vercel", icon: "ion:logo-vercel" },
-      { name: "Docker", icon: "simple-icons:vercel", className: "text-black" },
+      { name: "Vercel", icon: "simple-icons:vercel", className: "text-black" },
+      { name: "Docker", icon: "material-icon-theme:docker", className: "" },
       { name: "AWS", icon: "logos:aws" },
       { name: "CI/CD", icon: "devicon:githubactions" },
     ],
@@ -110,8 +118,8 @@ const skillCategories = [
     skills: [
       { name: "Git", icon: "logos:git-icon" },
       { name: "GitHub", icon: "mdi:github", className: "text-black" },
-      { name: "Figma", icon: "logos:figma" },
-      { name: "Photoshop", icon: "logos:adobe-photoshop" },
+      { name: "Figma To HTML", icon: "logos:figma" },
+      { name: "PSD To HTML", icon: "logos:adobe-photoshop" },
       { name: "Postman", icon: "logos:postman-icon" },
       { name: "Swagger", icon: "logos:swagger" },
     ],
@@ -162,8 +170,9 @@ function SkillPill({ skill }) {
 function SkillCard({ category }) {
   return (
     <div
-      className={`${category.span} group flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ds-primary/10 skill_Card_Box_Shadow`}
-      style={{ gridRow: `span ${category.rows || 6}` }}
+
+      className={`${category.span} skill-card group flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ds-primary/10 skill_Card_Box_Shadow`}
+      style={{ "--row-span": category.rows || 6 }}
     >
       <div className="mb-6 flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-ds-foreground bg-ds-foreground text-ds-primary transition-all duration-300 group-hover:bg-black group-hover:text-ds-secondary dark:group-hover:bg-white dark:group-hover:text-black">
@@ -195,7 +204,7 @@ export default function Skills() {
           title="Technical Expertise"
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[30px]">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min ">
           {skillCategories.map((category) => (
             <SkillCard key={category.title} category={category} />
           ))}

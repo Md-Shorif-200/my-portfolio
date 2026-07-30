@@ -58,17 +58,17 @@ export default function Banner() {
         {/* ── Main Content ── */}
         <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
           {/* ── Heading ── */}
-          <h1
-            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6"
-            data-aos="fade-up"
-          >
-            <span className="block text-5xl lg:text-7xl text-ds-text">
-              SHORIF
-            </span>
-            <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585]">
-              UDDIN RIFAT
-            </span>
-          </h1>
+      <h1
+  className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6 relative"
+  data-aos="fade-up"
+>
+  <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
+    SHORIF
+  </span>
+  <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
+    UDDIN RIFAT
+  </span>
+</h1>
 
           {/* ── Role ── */}
           <p
@@ -81,6 +81,8 @@ export default function Banner() {
             MERN Stack Specialist{" "}
             <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
             Tech Enthusiast
+            {/* <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
+            Frontend Developer */}
           </p>
 
           {/* ── Stats Cards ── */}

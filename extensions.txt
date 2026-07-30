@@ -1,0 +1,16 @@
+aaron-bond.better-comments
+bradlc.vscode-tailwindcss
+burkeholland.simple-react-snippets
+christian-kohler.path-intellisense
+codeium.codeium
+dbaeumer.vscode-eslint
+dsznajder.es7-react-js-snippets
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+pkief.material-icon-theme
+rangav.vscode-thunder-client
+redis.redis-for-vscode
+ritwickdey.liveserver
+sleistner.vscode-fileutils
+steoates.autoimport
+xabikos.javascriptsnippets

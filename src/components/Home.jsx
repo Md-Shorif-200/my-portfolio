@@ -1,17 +1,10 @@
-// import dynamic from "next/dynamic";
+// app/page.jsx (or wherever Home is)
 import About from "../modules/about/About";
 import Banner from "../modules/banner/Banner";
 import EducationAndCertifications from "../modules/education/EducationAndCertifications";
+import Experience from "../modules/experience/Experience";
 import MyExpertise from "../modules/my-expertise/MyExpertise";
 import MySkills from "../modules/skills/MySkills";
-import MyJourney from "./MyJourney";
-
-// const FocusCardsSection = dynamic(() => import("./FocusCardsSection"), { ssr: true });
-// const About = dynamic(() => import("./About"), { ssr: true });
-// const SkillTabs = dynamic(() => import("./SkillTabs"), { ssr: true });
-// const MyJourney = dynamic(() => import("./MyJourney"), { ssr: true });
-// const Projects = dynamic(() => import("./Projects"), { ssr: true });
-// const Contact = dynamic(() => import("./Contact"), { ssr: true });
 
 export default function Home() {
   return (
@@ -20,33 +13,25 @@ export default function Home() {
         <Banner />
       </section>
 
-      <About />
-
-      <EducationAndCertifications/>
-
-       <MyExpertise/>
-
-        <MySkills/>
-
-      {/* <MyJourney /> */}
-
-
-      {/* 
-      <section id="skills" data-aos="fade-up">
-        <SkillTabs />
+      <section id="about">
+        <About />
       </section>
 
-      <section id="experience" data-aos="fade-up">
-      </section>
-      
-      <section id="projects" data-aos="fade-up">
-        <Projects />
+   
+        <EducationAndCertifications />
+    
+
+    
+        <MyExpertise />
+     
+
+      <section id="skills">
+        <MySkills />
       </section>
 
-      <section id="contact" data-aos="fade-up">
-        <Contact />
-      </section> 
-      */}
+      <section id="experience">
+        <Experience />
+      </section>
     </div>
   );
 }

@@ -1,63 +1,66 @@
 "use client";
 
-import Link from "next/link";
 import {
   House,
   Info,
-  FileText,
-  Users,
+  GraduationCap,
+  Code2,
+  Layers,
+  Briefcase,
 } from "lucide-react";
 
-// ── Flattened Navigation Links ─────────────────────────────────
 const navLinks = [
-  { label: "Home", href: "/", icon: House },
-  { label: "About", href: "/about", icon: Info },
-  { label: "RFQs", href: "/rfqs", icon: FileText },
-  { label: "Suppliers", href: "/suppliers", icon: Users },
+  { label: "Home", href: "#home", icon: House },
+  { label: "About", href: "#about", icon: Info },
+  { label: "Skills", href: "#skills", icon: Layers },
+  { label: "Experience", href: "#experience", icon: Briefcase },
+  // { label: "Education", href: "#education", icon: GraduationCap },
+  // { label: "Expertise", href: "#expertise", icon: Code2 },
 ];
 
-// ───────────────────────────────────────────────────────────────
-const NavLinks = ({ currentPath = "/" }) => {
-
-  const renderNavLink = (
-    link,
-    index
-  ) => {
-    const isActive = currentPath === link.href;
-    const Icon = link.icon;
-
-    return (
-      <Link
-        key={index}
-        href={link.href}
-        className={`
-          relative px-4 py-1.5 rounded-3xl text-sm font-medium
-          transition-all duration-300 ease-out group
-          flex flex-col items-start
-          ${
-            isActive
-              ? "text-black bg-[#E7E7E7] border border-black/10 tracking-widest font-semibold"
-              : "text-black  hover:-translate-y-0.5 hover:tracking-[1.5px]"
-          }
-        `}
-      >
-        {/* Content Wrapper */}
-        <span className="flex items-center gap-1.5">
-          <Icon
-            size={13}
-            className={`transition-all duration-300 ${
-              isActive ? "scale-110" : "group-hover:scale-110"
-            }`}
-          />
-          <span>{link.label}</span>
-        </span>
-      </Link>
-    );
+const NavLinks = ({ currentSection = "home", onLinkClick }) => {
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    onLinkClick?.(id);
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-2">
-      {navLinks.map(renderNavLink)}
+    <div className="flex flex-col lg:flex-row gap-1.5">
+      {navLinks.map((link) => {
+        const isActive = currentSection === link.href.replace("#", "");
+        const Icon = link.icon;
+
+        return (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={(e) => handleClick(e, link.href)}
+            className={`
+              relative flex items-center gap-1.5
+              px-3.5 py-1.5 rounded-full text-sm font-medium
+              transition-all duration-300 ease-out
+              ${
+                isActive
+                  ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
+                  : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
+              }
+            `}
+          >
+            <Icon
+              size={14}
+              className={`transition-transform duration-300 ${
+                isActive ? "scale-110" : "group-hover:scale-110"
+              }`}
+            />
+            <span>{link.label}</span>
+          </a>
+        );
+      })}
     </div>
   );
 };
