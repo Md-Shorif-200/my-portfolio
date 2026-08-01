@@ -7,15 +7,17 @@ import {
   Code2,
   Layers,
   Briefcase,
+  Mails,
+  Sparkles,
 } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home", icon: House },
   { label: "About", href: "#about", icon: Info },
-  { label: "Skills", href: "#skills", icon: Layers },
+  { label: "Skills", href: "#skills", icon: Sparkles },
   { label: "Experience", href: "#experience", icon: Briefcase },
-  // { label: "Education", href: "#education", icon: GraduationCap },
-  // { label: "Expertise", href: "#expertise", icon: Code2 },
+  { label: "Projects", href: "#featured_project", icon: Layers },
+  // { label: "Contact", href: "#contact", icon: Mails },
 ];
 
 const NavLinks = ({ currentSection = "home", onLinkClick }) => {

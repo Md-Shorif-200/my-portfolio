@@ -4,6 +4,7 @@ import Banner from "../modules/banner/Banner";
 import EducationAndCertifications from "../modules/education/EducationAndCertifications";
 import Experience from "../modules/experience/Experience";
 import MyExpertise from "../modules/my-expertise/MyExpertise";
+import FeaturedProject from "../modules/projects/FeaturedProject";
 import MySkills from "../modules/skills/MySkills";
 
 export default function Home() {
@@ -31,6 +32,10 @@ export default function Home() {
 
       <section id="experience">
         <Experience />
+      </section>
+
+      <section id="featured_project">
+        <FeaturedProject />
       </section>
     </div>
   );

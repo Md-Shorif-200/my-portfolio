@@ -12,8 +12,9 @@ const sections = [
   "about",
   "skills",
   "experience",
-  // "education",
-  // "expertise",
+  "featured_project",
+  // "contact"
+ 
 ];
 
 const mobileNavLinks = [
@@ -21,8 +22,8 @@ const mobileNavLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  // { label: "Education", href: "#education" },
-  // { label: "Expertise", href: "#expertise" },
+  { label: "Projects", href: "#featured_project"},
+  // { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
