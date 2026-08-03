@@ -1,6 +1,6 @@
 import React from "react";
 import { Briefcase, Building2, Laptop, Calendar } from "lucide-react";
-import Container from "@/src/components/Container";
+import Container from "@/components/Container";
 import ExperienceTitle from "./ExperienceTitle";
 
 const experiences = [

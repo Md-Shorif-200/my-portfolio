@@ -8,8 +8,8 @@ import {
   // ArrowUpRight,
   Blocks
 } from 'lucide-react';
-import Container from '@/src/components/Container';
-import SectionTitle from '@/src/components/common/SectionTitle';
+import Container from "@/components/Container";
+import SectionTitle from "@/components/common/SectionTitle";
 
 const MyExpertise = () => {
   return (

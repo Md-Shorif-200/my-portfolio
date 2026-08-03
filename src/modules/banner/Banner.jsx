@@ -1,39 +1,12 @@
 "use client";
 
 import Container from "../../components/Container";
-import { FiDownload } from "react-icons/fi";
-import { HiOutlineCode } from "react-icons/hi";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { TbWorldCheck } from "react-icons/tb";
-import { BsLightningCharge } from "react-icons/bs";
-import Link from "next/link";
 
-const stats = [
-  {
-    icon: <MdOutlineWorkOutline size={22} />,
-    value: "2+ Years",
-    label: "Experience",
-    description: "Professional web development",
-  },
-  {
-    icon: <TbWorldCheck size={22} />,
-    value: "5+ Projects",
-    label: "Real World",
-    description: "Production-ready applications",
-  },
-  {
-    icon: <HiOutlineCode size={22} />,
-    value: "Clean Code",
-    label: "Always",
-    description: "Readable & maintainable code",
-  },
-  {
-    icon: <BsLightningCharge size={22} />,
-    value: "Remote",
-    label: "Friendly",
-    description: "Available globally, anytime",
-  },
-];
+import BannerStatsCard from "./BannerStatsCard";
+import ResumePreviewModal from "./ResumePreviewModal"; // Adjust path as needed
+import ResumeDownloadButton from "./download/ResumeDownloadButton";
+
+
 
 export default function Banner() {
   return (
@@ -41,16 +14,14 @@ export default function Banner() {
       className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-8"
       style={{
         backgroundColor: "#ffffff",
-        backgroundImage:
-          "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
         backgroundSize: "28px 28px",
       }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
+          background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
         }}
       />
 
@@ -58,17 +29,17 @@ export default function Banner() {
         {/* ── Main Content ── */}
         <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
           {/* ── Heading ── */}
-      <h1
-  className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6 relative"
-  data-aos="fade-up"
->
-  <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
-    SHORIF
-  </span>
-  <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
-    UDDIN RIFAT
-  </span>
-</h1>
+          <h1
+            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6 relative"
+            data-aos="fade-up"
+          >
+            <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
+              SHORIF
+            </span>
+            <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
+              UDDIN RIFAT
+            </span>
+          </h1>
 
           {/* ── Role ── */}
           <p
@@ -81,143 +52,28 @@ export default function Banner() {
             MERN Stack Specialist{" "}
             <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
             Tech Enthusiast
-            {/* <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
-            Frontend Developer */}
           </p>
 
-          {/* ── Stats Cards ── */}
-          <div
-            className="grid grid-cols-3  min-[450px]:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={` group relative flex items-center gap-3 min-[450px]gap-2 sm:gap-3
-                  p-3 min-[450px]:p-2 sm:p-3 rounded-xl cursor-default
-                  border border-zinc-100 dark:border-zinc-800/60
-                  bg-zinc-50/80 dark:bg-zinc-900/50
-                  backdrop-blur-sm
-                  transition-all duration-300 ease-out
-                  hover:-translate-y-1
-                  hover:border-zinc-300 dark:hover:border-zinc-600
-                  hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]
-                  dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)]
-                  hover:bg-white dark:hover:bg-zinc-900
-                  overflow-hidden ${stat.value === "Clean Code" ?  "hidden lg:flex" : "flex"}`}
-              >
-                {/* Icon (Left side) */}
-                <span
-                  className="
-                    p-2.5  min-[450px]:p-1.5 sm:p-2.5  rounded-lg shrink-0
-                    bg-zinc-100 dark:bg-zinc-800
-                    text-zinc-500 dark:text-zinc-400
-                    group-hover:bg-zinc-900 dark:group-hover:bg-white
-                    group-hover:text-white dark:group-hover:text-zinc-900
-                    transition-all duration-300 hidden min-[450px]:block
-                  "
-                >
-                  {stat.icon}
-                </span>
-
-                {/* Main Focus: Value & Label */}
-                <div className="flex flex-col text-left">
-                  <span
-                    className="
-                      text-base sm:text-lg font-bold leading-none
-                      text-zinc-800 dark:text-zinc-100
-                      group-hover:text-zinc-900 dark:group-hover:text-white
-                      transition-colors duration-300
-                    "
-                  >
-                    {stat.value}
-                  </span>
-                  <span
-                    className="
-                      text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5
-                      group-hover:text-zinc-700 dark:group-hover:text-zinc-200
-                      transition-colors duration-300
-                    "
-                  >
-                    {stat.label}
-                  </span>
-                </div>
-
-                {/* Bottom accent line on hover */}
-                <span
-                  className="
-                    absolute bottom-0 left-1/2 -translate-x-1/2
-                    h-[2px] w-0 rounded-full
-                    bg-zinc-800 dark:bg-white
-                    group-hover:w-3/4
-                    transition-all duration-500 ease-out
-                  "
-                />
-              </div>
-            ))}
+          <div>
+            <BannerStatsCard />
           </div>
 
-          {/* ── Download Resume Button ── */}
+          {/* ── Resume Modal Trigger ── */}
           <div data-aos="fade-up" data-aos-delay="300" className="mt-2">
-            <Link
-              href="https://drive.google.com/file/d/18AMVdyCwxUkdzvUnS8-iGFJaLOku2Fnj/view?usp=sharing"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                group inline-flex items-center gap-2.5
-                px-7 py-3.5 rounded-full
-                bg-zinc-900 dark:bg-white
-                text-white dark:text-zinc-900
-                text-sm font-semibold tracking-wide
-                border border-transparent
-                transition-all duration-300 ease-out
-                hover:bg-transparent
-                hover:border-zinc-900 dark:hover:border-white
-                hover:text-zinc-900 dark:hover:text-white
-                hover:shadow-[0_4px_20px_rgba(0,0,0,0.10)]
-                dark:hover:shadow-[0_4px_20px_rgba(255,255,255,0.08)]
-                active:scale-95
-              "
-            >
-              <FiDownload
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-y-0.5"
-              />
-              Download Resume
-            </Link>
+           {/* <ResumeDownloadButton /> */}
+           <ResumePreviewModal />
           </div>
         </div>
       </Container>
 
       {/* ── Scroll Mouse Icon ── */}
-      <div
-        className="flex flex-col items-center gap-2  opacity-60 hidden min-[450px]:flex mt-3 xl:mt-0"
-        // data-aos="fade-up"
-        // data-aos-delay="400"
-      >
-        {/* Mouse SVG */}
-        <div
-          className="
-            w-6 h-10 rounded-full border-2
-            border-zinc-400 dark:border-zinc-600
-            flex justify-center pt-1.5
-            relative 
-          "
-        >
-          {/* Scroll wheel dot - animated */}
+      <div className="flex flex-col items-center gap-2 opacity-60 hidden min-[450px]:flex mt-3 xl:mt-0">
+        <div className="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center pt-1.5 relative">
           <span
-            className="
-              w-1 h-2 bg-zinc-400 dark:bg-zinc-500
-              rounded-full
-              animate-bounce
-            "
+            className="w-1 h-2 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-bounce"
             style={{ animationDuration: "1.5s" }}
           />
         </div>
-
-        {/* Scroll Text */}
         <p className="text-[10px] uppercase tracking-[3px] text-zinc-400 dark:text-zinc-600 font-medium">
           Scroll
         </p>

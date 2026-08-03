@@ -6,18 +6,27 @@ export const ProjectsData = [
     subTitle: " B2B Product Inquiry & Showcase Website",
     image:
       "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture_vwo6f1.png",
-    clientTech: [
-      "React",
-      "Next.js",
-      "Tailwind",
-      "Tiptap Editor",
-      "Chart.js",
-      "Swiper.js",
-      "Aos",
-      "Cloudinary",
-      "firebase",
-    ],
-    serverTech: ["Node.js", "Express.js", "MongoDB", "Nodemailer"],
+
+    techStack: {
+      techStackPrev: ["JavaScript","Next.js","Tiptap","Express.js","MongoDB"],
+      techStackFull: [
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Tiptap Editor",
+        "Chart.js",
+        "Swiper.js",
+        "Aos",
+        "Cloudinary",
+        "firebase",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Nodemailer",
+      ],
+    },
+
     clientGithub: "https://github.com/Md-Shorif-200/ayira-ecommerce",
     serverGithub: "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
     liveLink: "https://ayira-ecommerce-1.vercel.app/",
@@ -40,12 +49,12 @@ export const ProjectsData = [
           "Dynamic order form with Nodemailer integration for instant email notifications and manual order processing.",
       },
     ],
-    contributions: [
-      {
-        organization: "Bigmode Technologies",
-        role: "Web Developer",
-      },
-    ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Web Developer",
+      description:
+        "Customers can browse and filter products across multiple categories with server-side pagination. Each product shows details like  fabric, color, and production process. The admin dashboard manages products, orders, and users with full control ",
+    },
   },
   {
     id: "1717430400456",

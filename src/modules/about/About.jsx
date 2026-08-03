@@ -3,8 +3,11 @@
 import Link from "next/link";
 import { Github, Linkedin, Facebook } from "lucide-react";
 import AboutImage from "./AboutImage"; // Make sure the path matches your project structure
-import SectionTitle from "@/src/components/common/SectionTitle";
-import Container from "@/src/components/Container";
+
+
+import Container from "@/components/Container";
+import SectionTitle from "@/components/common/SectionTitle";
+
 
 // ── Social links data (using lucide-react) ──
 const socialLinks = [

@@ -1,8 +1,8 @@
 
 
 import { GraduationCap, BookOpen, Award, Calendar, Building2, CheckCircle2 } from 'lucide-react';
-import Container from '@/src/components/Container';
-import SectionTitle from '@/src/components/common/SectionTitle';
+import Container from "@/components/Container";
+import SectionTitle from '@/components/common/SectionTitle';
 
 // Education Data
 const educationData = [

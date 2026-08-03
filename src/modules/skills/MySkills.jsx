@@ -2,8 +2,8 @@
 
 import { Icon } from "@iconify/react";
 
-import SectionTitle from "@/src/components/common/SectionTitle";
-import Container from "@/src/components/Container";
+import SectionTitle from "@/components/common/SectionTitle";
+import Container from "@/components/Container";
 
 // ---- All skill data lives here. ----
 const skillCategories = [
