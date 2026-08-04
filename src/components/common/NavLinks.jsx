@@ -17,7 +17,7 @@ const navLinks = [
   { label: "Skills", href: "#skills", icon: Sparkles },
   { label: "Experience", href: "#experience", icon: Briefcase },
   { label: "Projects", href: "#featured_project", icon: Layers },
-  // { label: "Contact", href: "#contact", icon: Mails },
+  { label: "Contact", href: "#contact", icon: Mails },
 ];
 
 const NavLinks = ({ currentSection = "home", onLinkClick }) => {

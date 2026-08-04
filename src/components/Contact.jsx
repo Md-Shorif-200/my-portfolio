@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "./Container";
 import FeaturedSection from "./FeaturedSection";
-import ContactInformation from "./ContactInformation";
-import ContactForm from "./ContactForm";
+import ContactInformation from "../modules/contact/ContactInformation";
+import ContactForm from "../modules/contact/ContactForm";
 import Link from "next/link";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";

@@ -1,7 +1,7 @@
 "use server";
 
+import { dbCollection, dbConnect } from "@/lib/mongodb";
 import nodemailer from "nodemailer";
-import { dbCollection, dbConnect } from "../../lib/mongodb";
 
 export const contactFormAction = async (prevState, formData) => {
   const { name, email, phone, message } = Object.fromEntries(

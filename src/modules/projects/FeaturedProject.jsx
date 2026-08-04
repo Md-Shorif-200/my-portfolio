@@ -5,6 +5,8 @@ import Container from "@/components/Container";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "@/components/common/SectionTitle";
 import { ProjectsData } from "@/data/project/projects-data";
+import PrimaryButton from "@/components/common/PrimaryButton";
+import { ArrowUpRight } from "lucide-react";
 
 const BG_IMAGE = "/image/projects/project-img-1.webp";
 
@@ -68,7 +70,7 @@ const FeaturedProject = () => {
         <div className="relative z-10 py-14">
           <Container>
             {/* Project list */}
-            <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-30">
               {featuredProjects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}
@@ -76,6 +78,11 @@ const FeaturedProject = () => {
           </Container>
         </div>
       </div>
+
+           <div className="w-full flex justify-center items-center mt-10">
+             <PrimaryButton href="/projects" content="View All Projects" icon={ArrowUpRight} />
+           </div>
+
     </section>
   );
 };

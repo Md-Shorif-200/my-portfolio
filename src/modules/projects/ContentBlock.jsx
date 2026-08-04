@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Eye, Github } from "lucide-react";
 import ContributionBadges from "./ContributionBadges";
 import TechBadges from "./TechBadges";
 
 import ProjectDetailsSheet from "./ProjectDetails/ProjectDetailsSheet";
 import PrimaryButton from "@/components/common/PrimaryButton";
+import SecondaryButton from "@/components/common/SecondaryButton";
 
 const ContentBlock = ({ project, accent, index }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
@@ -47,18 +48,9 @@ const ContentBlock = ({ project, accent, index }) => {
           targetBlank={true}
         />
 
-        {/* view details button */}
-        <button
-          type="button"
-          onClick={() => setDetailsOpen(true)}
-          className="group inline-flex items-center gap-2 text-sm font-semibold text-black border border-black rounded-full px-5 py-3 hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer"
-        >
-          View Details
-          <ArrowUpRight
-            size={16}
-            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-          />
-        </button>
+         <SecondaryButton type="button"   onClick={() => setDetailsOpen(true)} content="View Details" icon={Eye}  />
+
+        
       </div>
 
       <ProjectDetailsSheet

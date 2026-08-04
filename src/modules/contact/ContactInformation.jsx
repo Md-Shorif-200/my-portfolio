@@ -27,31 +27,20 @@ const contactInfo = [
 
 const ContactInformation = () => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-6">
       {contactInfo.map((item) => {
         const Icon = item.icon;
 
-        const CardContent = (
-          <div
-            className=" w-full flex    rounded-2xl "
-          >
-            {/* Icon */}
-         <div className="w-[20%]  ">
-                <div
-              className="w-12 h-12 flex items-center justify-center rounded-full
-              bg-surface text-heading
-              group-hover:scale-110 transition-transform duration-300"
-            >
-              <Icon className="text-xl" />
+        const content = (
+          <div className="flex items-start gap-4 group">
+            <div className="w-11 h-11 shrink-0 rounded-full bg-white/10 group-hover:bg-emerald-500 flex items-center justify-center text-white transition-colors duration-300">
+              <Icon className="text-lg" />
             </div>
-         </div>
-
-            {/* Text */}
-            <div className="w-[80%] flex flex-col">
-              <p className="text-white font-semibold leading-tight text-base sm:text-lg">
+            <div>
+              <p className="text-white font-semibold text-base leading-tight">
                 {item.title}
               </p>
-              <p className="text-base text-white/70 ">{item.subtitle}</p>
+              <p className="text-white/60 text-sm mt-1">{item.subtitle}</p>
             </div>
           </div>
         );
@@ -62,12 +51,12 @@ const ContactInformation = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="focus:outline-none"
+            className="focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-lg"
           >
-            {CardContent}
+            {content}
           </a>
         ) : (
-          <div key={item.id}>{CardContent}</div>
+          <div key={item.id}>{content}</div>
         );
       })}
     </div>

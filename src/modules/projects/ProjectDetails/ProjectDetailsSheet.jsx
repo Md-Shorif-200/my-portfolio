@@ -47,6 +47,9 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
         "
       >
                 <DetaislSheetBanner project={project} />
+
+
+                
        
 
         {/* ── Content area ── */}

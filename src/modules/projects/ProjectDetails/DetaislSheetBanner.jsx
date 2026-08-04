@@ -2,8 +2,7 @@ import Image from "next/image";
 
 
 import {
-  Sheet,
-  SheetContent,
+
   SheetHeader,
   SheetTitle,
 } from "../../../../components/ui/sheet";
