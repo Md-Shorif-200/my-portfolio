@@ -125,9 +125,9 @@ const MyExpertise = () => {
         </div>
 
         {/* ── Card 5: Innovative Solutions ── */}
-        {/* <div className="group relative bg-gradient-to-br from-amber-50 via-white to-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100">
+        {/* <div className="group relative bg-gradient-to-br from-emerald-50 via-white to-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100">
 
-          <div className="absolute right-4 bottom-4 opacity-[0.08] pointer-events-none text-amber-900">
+          <div className="absolute right-4 bottom-4 opacity-[0.08] pointer-events-none text-emerald-900">
             <Lightbulb size={90} strokeWidth={1.5} />
           </div>
 

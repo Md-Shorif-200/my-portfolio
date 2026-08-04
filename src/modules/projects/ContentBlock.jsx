@@ -48,7 +48,7 @@ const ContentBlock = ({ project, accent, index }) => {
           targetBlank={true}
         />
 
-         <SecondaryButton type="button"   onClick={() => setDetailsOpen(true)} content="View Details" icon={Eye}  />
+         <SecondaryButton type="button"   onClick={() => setDetailszOpen(true)} content="View Details" icon={Eye}  />
 
         
       </div>

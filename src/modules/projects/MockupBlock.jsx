@@ -68,7 +68,7 @@ const MockupBlock = ({ project, accent, hovered }) => {
         </div>
       )}
 
-      {project.isRealWorld && (
+      {project.isLive && (
 
 
 
@@ -86,7 +86,7 @@ const MockupBlock = ({ project, accent, hovered }) => {
 
     {/* Label */}
     <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-[10px] font-bold uppercase tracking-widest text-transparent">
-      Real World
+      Live Project
     </span>
   </div>
 )}

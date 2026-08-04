@@ -30,7 +30,7 @@ const DetaislSheetBanner = ({project}) => {
   <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent" />
 
   {/* Badges */}
-  {(project?.category || project?.isRealWorld) && (
+  {(project?.category || project?.isLive) && (
     <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
       {/* Category badge */}
       {project?.category && (
@@ -51,7 +51,7 @@ const DetaislSheetBanner = ({project}) => {
       )}
 
       {/* Live Project badge */}
-      {project.isRealWorld && (
+      {project.isLive && (
         <div
           className="z-10 flex items-center gap-1.5 rounded-full
             text-[10px] font-semibold tracking-widest uppercase
@@ -67,7 +67,7 @@ const DetaislSheetBanner = ({project}) => {
 
           {/* Label */}
           <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-[10px] font-bold uppercase tracking-widest text-transparent">
-            Real World
+            Live Project
           </span>
         </div>
       )}

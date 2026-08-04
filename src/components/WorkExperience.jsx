@@ -131,7 +131,7 @@ export default function WorkExperience() {
                         bg-primary-soft text-primary border border-primary/20
                         rounded-full shadow-sm
                         transition-all duration-300
-                        hover:bg-amber-100 hover:scale-105"
+                        hover:bg-emerald-100 hover:scale-105"
                       >
                         {work.employmentType}
                       </span>

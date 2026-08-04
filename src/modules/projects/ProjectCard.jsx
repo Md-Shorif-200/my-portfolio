@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useState } from "react";
 import ContentBlock from "./ContentBlock";
 import MockupBlock from "./MockupBlock";
