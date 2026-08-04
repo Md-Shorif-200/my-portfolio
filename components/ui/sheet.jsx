@@ -60,9 +60,9 @@ function SheetContent({
         className={cn(
           "fixed z-50 flex flex-col gap-4 bg-background shadow-lg transition ease-in-out data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:animate-in data-[state=open]:duration-500",
           side === "right" &&
-            "inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
+            "inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right ",
           side === "left" &&
-            "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+            "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left ",
           side === "top" &&
             "inset-x-0 top-0 h-auto border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
           side === "bottom" &&
@@ -71,13 +71,33 @@ function SheetContent({
         )}
         {...props}>
         {children}
-        {showCloseButton && (
-          <SheetPrimitive.Close
-            className="absolute top-4 right-4 rounded-xs opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none data-[state=open]:bg-secondary">
-            <XIcon className="size-4" />
-            <span className="sr-only">Close</span>
-          </SheetPrimitive.Close>
-        )}
+       {showCloseButton && (
+  <SheetPrimitive.Close
+    className="
+      absolute top-3.5 right-3.5 z-50
+      flex items-center justify-center
+      h-8 w-8 rounded-full
+      bg-white/80  
+      text-black
+      border border-gray-100
+      shadow-sm
+      backdrop-blur-md
+      transition-all duration-200 ease-out
+      hover:scale-105 active:scale-95
+      focus:outline-none focus:ring-2 focus:ring-black/10
+      group cursor-pointer
+    "
+  >
+    <XIcon
+      className="
+        h-3.5 w-3.5
+        transition-transform duration-200
+        group-hover:rotate-90
+      "
+    />
+    <span className="sr-only">Close</span>
+  </SheetPrimitive.Close>
+)}
       </SheetPrimitive.Content>
     </SheetPortal>
   );

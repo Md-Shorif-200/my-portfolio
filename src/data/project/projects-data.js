@@ -2,6 +2,7 @@ export const ProjectsData = [
   {
     id: "1717430400123",
     category: "fullstack",
+    isRealWorld: true,
     title: "AAryan",
     subTitle: " B2B Product Inquiry & Showcase Website",
     image:

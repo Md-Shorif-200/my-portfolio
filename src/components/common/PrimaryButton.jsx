@@ -7,7 +7,7 @@ const PrimaryButton = ({
   icon: Icon = ArrowUpRight,
   targetBlank,
   isDownloadable,
-  onClick, // 👈 onClick যুক্ত করা হয়েছে
+  onClick, 
 }) => {
   const baseClasses =
     "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:gap-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.18)] cursor-pointer";

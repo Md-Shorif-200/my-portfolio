@@ -68,18 +68,28 @@ const MockupBlock = ({ project, accent, hovered }) => {
         </div>
       )}
 
-      {/* Floating live badge – top left */}
-      <div
-        className={`absolute -top-4 z-10 flex items-center gap-2 rounded-full border border-white bg-white px-4 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.10)] transition-all duration-500 ${
-          hovered ? "-left-3" : "-left-5"
-        }`}
-      >
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-        </span>
-        <span className="text-[11px] font-semibold text-black/60">Live</span>
-      </div>
+      {project.isRealWorld && (
+
+
+
+  <div
+    className={`absolute -top-3.5 z-10 flex items-center gap-1.5 rounded-full border border-emerald-100 bg-white px-3 py-1.5 shadow-[0_4px_20px_rgba(16,185,129,0.15)] backdrop-blur-sm transition-all duration-500 ease-out ${
+      hovered ? "-left-2" : "-left-4"
+    }`}
+  >
+    {/* Animated dot */}
+    <span className="relative flex h-2 w-2 shrink-0">
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+    </span>
+
+
+    {/* Label */}
+    <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-[10px] font-bold uppercase tracking-widest text-transparent">
+      Real World
+    </span>
+  </div>
+)}
     </div>
   );
 };
