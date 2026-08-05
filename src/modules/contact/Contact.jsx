@@ -3,6 +3,7 @@ import { FaFacebook, FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import ContactInformation from "./ContactInformation";
 import ContactForm from "./ContactForm";
+import Container from "@/components/Container";
 
 const socials = [
   { icon: FaFacebook, href: "https://web.facebook.com/shorif.web.dev", label: "Facebook" },
@@ -12,8 +13,8 @@ const socials = [
 
 export default function Contact() {
   return (
-    <main className="w-full bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-20 md:py-28">
+    <main className="w-full bg-white my-20">
+      <Container>
         {/* Header */}
         <div className="text-center mb-16">
           <div className=" ">
@@ -62,7 +63,7 @@ export default function Contact() {
             <ContactForm />
           </div>
         </div>
-      </div>
+      </Container>
     </main>
   );
 }
