@@ -10,6 +10,8 @@ import {
   Mails,
   Sparkles,
 } from "lucide-react";
+// Next.js এর হুক ইমপোর্ট করুন
+import { usePathname, useRouter } from "next/navigation"; 
 
 const navLinks = [
   { label: "Home", href: "#home", icon: House },
@@ -21,13 +23,24 @@ const navLinks = [
 ];
 
 const NavLinks = ({ currentSection = "home", onLinkClick }) => {
+  const pathname = usePathname(); // বর্তমান রাউট চেক করার জন্য
+  const router = useRouter(); // অন্য পেজে পাঠানোর জন্য
+
   const handleClick = (e, href) => {
     e.preventDefault();
     const id = href.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (pathname === "/") {
+      // যদি হোম পেজে থাকে, তবে শুধু স্ক্রল করবে
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // যদি অন্য পেজে থাকে, তবে হোম পেজে রিডাইরেক্ট করবে
+      router.push(`/${href}`);
     }
+    
     onLinkClick?.(id);
   };
 
@@ -40,14 +53,14 @@ const NavLinks = ({ currentSection = "home", onLinkClick }) => {
         return (
           <a
             key={link.href}
-            href={link.href}
+            href={pathname === "/" ? link.href : `/${link.href}`}
             onClick={(e) => handleClick(e, link.href)}
             className={`
               relative flex items-center gap-1.5
               px-3.5 py-1.5 rounded-full text-sm font-medium
               transition-all duration-300 ease-out
               ${
-                isActive
+                isActive && pathname === "/"
                   ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
                   : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
               }
@@ -56,7 +69,7 @@ const NavLinks = ({ currentSection = "home", onLinkClick }) => {
             <Icon
               size={14}
               className={`transition-transform duration-300 ${
-                isActive ? "scale-110" : "group-hover:scale-110"
+                isActive && pathname === "/" ? "scale-110" : "group-hover:scale-110"
               }`}
             />
             <span>{link.label}</span>

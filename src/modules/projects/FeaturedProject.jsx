@@ -48,7 +48,7 @@ function ViewAllProjectsLink({ href = "#" }) {
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-2 text-base sm:text-lg font-medium text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
+      className="group inline-flex items-center gap-2 text-bas font-medium text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
     >
       <span className="relative">
         View All Projects

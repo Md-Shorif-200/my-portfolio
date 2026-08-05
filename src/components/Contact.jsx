@@ -9,7 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 export default function Contact() {
   return (
-    <main className="w-full  bg_color ">
+    <main className="w-full   ">
       <Container>
         <div className="text-center py-10" data-aos="fade-up">
           <h1 className="text-3xl md:text-5xl font-bold primary_color">
@@ -27,7 +27,7 @@ export default function Contact() {
           <div
               data-aos="fade-up"
               data-aos-delay="150"
-          className="md:w-1/2 lg:w-[35%] bg-primary rounded-lg px-4 py-10">
+          className="md:w-1/2 lg:w-[35%] bg-white rounded-lg px-4 py-10">
             <ContactInformation />
 
 

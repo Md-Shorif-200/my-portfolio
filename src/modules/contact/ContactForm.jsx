@@ -7,9 +7,8 @@ import { useActionState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { ImSpinner9 } from "react-icons/im";
 
-// one shared style for every input, so they all stay in sync
 const inputStyle =
-  "w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition-colors duration-200";
+  "w-full px-4 py-3.5 rounded-xl border border-black/10 bg-white text-black placeholder:text-black/35 focus:outline-none focus:ring-2 focus:ring-black/80 focus:border-black transition-all duration-200";
 
 const ContactForm = () => {
   const [state, formAction, isPending] = useActionState(
@@ -33,11 +32,18 @@ const ContactForm = () => {
   return (
     <form
       action={formAction}
-      className="flex flex-col gap-4 bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm"
+      className="flex flex-col gap-4 h-full bg-white border border-black/10 rounded-2xl p-6 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4"
-      //  data-aos="fade-up"
-       >
+      <div>
+        <h2 className="text-black text-xs font-semibold uppercase tracking-widest mb-1">
+          Send a Message
+        </h2>
+        <p className="text-black/40 text-sm">
+          Fill out the form below and I&rsquo;ll get back to you shortly.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           type="text"
           name="name"
@@ -63,22 +69,17 @@ const ContactForm = () => {
         title="Enter a valid phone number (digits, optional + and - only)"
         className={inputStyle}
         required
-        // data-aos="fade-up"
-        // data-aos-delay="100"
       />
 
       <textarea
         name="message"
         placeholder="Tell me about your project, ideas, or just say hello!"
-        className={`${inputStyle} resize-none`}
-        rows={5}
+        className={`${inputStyle} resize-none flex-1 min-h-[140px]`}
         maxLength={2000}
         required
-        // data-aos="fade-up"
-        // data-aos-delay="200"
       />
 
-      <div className="flex justify-end">
+      <div className="flex justify-end pt-1">
         <PrimaryButton
           type="submit"
           disabled={isPending}

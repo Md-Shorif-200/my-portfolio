@@ -164,7 +164,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
                 whileTap={{ scale: 0.98 }}
                 className="flex-1"
               >
-                <PrimaryBtn href={project.liveLink} label="Live Demo">
+                <PrimaryBtn href={project.liveLink} label="Visit Website">
                   <ExternalLink className="w-4 h-4" />
                 </PrimaryBtn>
               </motion.div>

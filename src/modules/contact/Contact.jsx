@@ -4,70 +4,61 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import ContactInformation from "./ContactInformation";
 import ContactForm from "./ContactForm";
 
+const socials = [
+  { icon: FaFacebook, href: "https://web.facebook.com/shorif.web.dev", label: "Facebook" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/md-shorif-375533275/", label: "LinkedIn" },
+  { icon: FaGithub, href: "https://github.com/Md-Shorif-200", label: "GitHub" },
+];
+
 export default function Contact() {
   return (
     <main className="w-full bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-4 py-20 md:py-28">
         {/* Header */}
-        <div className="text-center mb-14" >
-          <p className="text-emerald-500 font-semibold text-sm tracking-widest uppercase mb-3">
-            Get In Touch
-          </p>
-          <h1 className="text-3xl md:text-5xl font-bold text-black">
-            Let’s Shape <span className="text-emerald-500">Your Next</span> Big Idea
+        <div className="text-center mb-16">
+          <div className=" ">
+   
+            <span className="text-black font-semibold text-xs tracking-widest uppercase">
+              Get In Touch
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-black tracking-tight leading-tight">
+            Let&rsquo;s Shape Your Next Big Idea
           </h1>
-          <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Your ideas deserve more than imagination — let’s build them into reality.
+          <p className="text-black/50 mt-4 max-w-xl mx-auto text-base md:text-lg">
+            Your ideas deserve more than imagination — let&rsquo;s build them into reality.
           </p>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col md:flex-row gap-8">
+        {/* Content — equal height via grid items-stretch */}
+        <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-stretch">
           {/* Left: info card */}
-          <div
-            // data-aos="fade-up"
-            // data-aos-delay="150"
-            className="md:w-2/5 bg-black rounded-2xl px-6 py-10"
-          >
+          <div className="md:col-span-2 flex flex-col h-full bg-white border border-black/10 rounded-2xl px-6 py-8 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300">
             <ContactInformation />
 
-            <div className="mt-10 pt-8 border-t border-white/10">
-              <h2 className="text-white text-sm font-semibold uppercase tracking-wide mb-4">
-                Let’s Connect
+            <div className="mt-auto pt-8">
+              <h2 className="text-black text-xs font-semibold uppercase tracking-widest mb-4">
+                Let&rsquo;s Connect
               </h2>
               <div className="flex gap-3">
-                <Link
-                  href="https://web.facebook.com/shorif.web.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center text-white transition-colors duration-300"
-                >
-                  <FaFacebook />
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/md-shorif-375533275/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center text-white transition-colors duration-300"
-                >
-                  <FaLinkedinIn />
-                </Link>
-                <Link
-                  href="https://github.com/Md-Shorif-200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center text-white transition-colors duration-300"
-                >
-                  <FaGithub />
-                </Link>
+                {socials.map(({ icon: Icon, href, label }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-black hover:bg-black hover:text-white hover:border-black hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    <Icon className="text-base" />
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Right: form */}
-          <div className="md:w-3/5" 
-          // data-aos="fade-up" data-aos-delay="200"
-          >
+          <div className="md:col-span-3 flex flex-col h-full">
             <ContactForm />
           </div>
         </div>

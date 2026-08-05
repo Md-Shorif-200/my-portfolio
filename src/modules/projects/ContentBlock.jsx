@@ -29,8 +29,8 @@ const ContentBlock = ({ project, accent, index }) => {
       </div>
 
       {/* Description */}
-      <p className="mt-6 max-w-[480px] text-[14.5px] leading-[1.75] text-black/70">
-        {project?.contributions?.description}
+      <p className="mt-6 max-w-[480px] text-[14.5px] leading-[1.75] text-black/70 line-clamp-4">
+        {project?.description}
       </p>
 
       {/* Tech Stack */}
@@ -48,7 +48,7 @@ const ContentBlock = ({ project, accent, index }) => {
           targetBlank={true}
         />
 
-         <SecondaryButton type="button"   onClick={() => setDetailszOpen(true)} content="View Details" icon={Eye}  />
+         <SecondaryButton type="button"   onClick={() => setDetailsOpen(true)} content="View Details" icon={Eye}  />
 
         
       </div>

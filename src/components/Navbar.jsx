@@ -6,6 +6,7 @@ import Container from "./Container";
 import NavLinks from "./common/NavLinks";
 import Logo from "./common/Logo";
 import { Moon, Sun, Menu, X } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 const sections = [
   "home",
@@ -31,6 +32,8 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("home");
   const dropdownRef = useRef(null);
+  const pathname = usePathname(); // যুক্ত করুন
+  const router = useRouter(); // যুক্ত করুন
 
   // Scroll detection for navbar background
   useEffect(() => {
@@ -39,8 +42,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll spy – active section
+ // Scroll spy – active section
   useEffect(() => {
+   
+    if (pathname !== "/") {
+      return; 
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -55,13 +63,18 @@ const Navbar = () => {
       }
     );
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    const timer = setTimeout(() => {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    }, 100);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      clearTimeout(timer); 
+      observer.disconnect(); 
+    };
+  }, [pathname]);
 
   // Close mobile menu on outside click
   useEffect(() => {
@@ -76,13 +89,20 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [mobileOpen]);
 
-  const handleMobileClick = (href) => {
+ const handleMobileClick = (href) => {
     const id = href.replace("#", "");
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    
+    if (pathname === "/") {
+      // হোম পেজে থাকলে স্ক্রল করবে
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // অন্য পেজে থাকলে হোম পেজে পাঠাবে
+      router.push(`/${href}`);
     }
-    setMobileOpen(false);
+    setMobileOpen(false); // মেন্যু বন্ধ করবে
   };
 
   return (
