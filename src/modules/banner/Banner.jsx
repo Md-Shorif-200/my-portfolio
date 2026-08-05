@@ -1,0 +1,83 @@
+"use client";
+
+import Container from "../../components/Container";
+
+import BannerStatsCard from "./BannerStatsCard";
+import ResumePreviewModal from "./ResumePreviewModal"; // Adjust path as needed
+import ResumeDownloadButton from "./download/ResumeDownloadButton";
+
+
+
+export default function Banner() {
+  return (
+    <div
+      className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-8"
+      style={{
+        backgroundColor: "#ffffff",
+        backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+        backgroundSize: "28px 28px",
+      }}
+    >
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
+        }}
+      />
+
+      <Container>
+        {/* ── Main Content ── */}
+        <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
+          {/* ── Heading ── */}
+          <h1
+            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6 relative"
+            data-aos="fade-up"
+          >
+            <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
+              SHORIF
+            </span>
+            <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
+              UDDIN RIFAT
+            </span>
+          </h1>
+
+          {/* ── Role ── */}
+          <p
+            className="text-base sm:text-lg font-medium text-[#747474] dark:text-zinc-400 tracking-wider mt-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Web Developer{" "}
+            <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
+            MERN Stack Specialist{" "}
+            <span className="text-zinc-300 dark:text-zinc-700 mx-1">|</span>{" "}
+            Tech Enthusiast
+          </p>
+
+          <div>
+            <BannerStatsCard />
+          </div>
+
+          {/* ── Resume Modal Trigger ── */}
+          <div data-aos="fade-up" data-aos-delay="300" className="mt-2">
+           {/* <ResumeDownloadButton /> */}
+           <ResumePreviewModal />
+          </div>
+        </div>
+      </Container>
+
+      {/* ── Scroll Mouse Icon ── */}
+      <div className="flex flex-col items-center gap-2 opacity-60 hidden min-[450px]:flex mt-3 xl:mt-0">
+        <div className="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center pt-1.5 relative">
+          <span
+            className="w-1 h-2 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-bounce"
+            style={{ animationDuration: "1.5s" }}
+          />
+        </div>
+        <p className="text-[10px] uppercase tracking-[3px] text-zinc-400 dark:text-zinc-600 font-medium">
+          Scroll
+        </p>
+      </div>
+    </div>
+  );
+}

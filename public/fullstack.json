@@ -3,7 +3,7 @@
     "id": 1,
     "category": "fullstack",
     "title": "AAryan",
-    "subTitle" : " B2B Product Inquiry & Showcase Website",
+    "subTitle": " B2B Product Inquiry & Showcase Website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture_vwo6f1.png",
     "clientTech": [
       "React",
@@ -14,17 +14,9 @@
       "Swiper.js",
       "Aos",
       "Cloudinary",
-        "firebase"
+      "firebase"
     ],
-    "serverTech": [
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Nodemailer"
-
-
-]
-,
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "Nodemailer"],
     "clientGithub": "https://github.com/Md-Shorif-200/ayira-ecommerce",
     "serverGithub": "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
     "liveLink": "https://ayira-ecommerce-1.vercel.app/",
@@ -48,7 +40,7 @@
     "id": 2,
     "category": "fullstack",
     "title": "EduSpark",
-    "subTitle" : "online course management website",
+    "subTitle": "online course management website",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture-2_u5zt9z.png",
     "clientTech": [
       "React",
@@ -57,8 +49,7 @@
       "Aos",
       "sweper.js",
       "Tanstack query",
-       "firebase"
-      
+      "firebase"
     ],
     "serverTech": ["Node.js", "Express.js", "MongoDB", "stripe"],
     "clientGithub": "https://github.com/Md-Shorif-200/EduSpark-Client",
@@ -84,11 +75,18 @@
     "id": 3,
     "category": "fullstack",
     "title": "Car Doctor",
-    "subTitle" : "Car Servicing & Auto Parts Platform",
+    "subTitle": "Car Servicing & Auto Parts Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
-    "clientTech": ["React", "Next.js", "Tailwind", "shadcn ui", "Origin ui" , "Aos"],
-    "serverTech": ["Node.js", "Express.js", "MongoDB","Next Auth"],
-    "github" : "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
+    "clientTech": [
+      "React",
+      "Next.js",
+      "Tailwind",
+      "shadcn ui",
+      "Origin ui",
+      "Aos"
+    ],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "Next Auth"],
+    "github": "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
     "liveLink": "https://car-doctor-ruby.vercel.app/",
     "description": "Car Doctor is a modern, user-friendly platform connecting car owners with reliable services and auto parts, offering a seamless experience with secure authentication via NextAuth..",
     "keyFeatures": [
@@ -106,15 +104,15 @@
       }
     ]
   },
-    {
+  {
     "id": 4,
     "category": "fullstack",
     "title": "Smart Task",
-    "subTitle" : "Task Management Web app",
+    "subTitle": "Task Management Web app",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1763805963/Capture-17_hdiotj.png",
-    "clientTech": ["React", "Next.js", "Tailwind","Aos"],
-    "serverTech": ["Node.js", "Express.js", "MongoDB","firebase"],
-    "github" : "https://github.com/Md-Shorif-200/smart-task-manager",
+    "clientTech": ["React", "Next.js", "Tailwind", "Aos"],
+    "serverTech": ["Node.js", "Express.js", "MongoDB", "firebase"],
+    "github": "https://github.com/Md-Shorif-200/smart-task-manager",
     "liveLink": "https://smart-task-iota.vercel.app/",
     "description": "Smart Task Manager is a lightweight web app for organizing teams, managing projects, and assigning tasks efficiently. It helps track workload, auto-balance tasks based on capacity, and keeps a clear activity log for smooth team collaboration.",
     "keyFeatures": [
@@ -136,7 +134,7 @@
     "id": 5,
     "category": "fullstack",
     "title": "roadForge",
-    "subTitle" : "Roadmap & Feedback Platform",
+    "subTitle": "Roadmap & Feedback Platform",
     "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153768/Capture-4_fbmihg.png",
     "clientTech": ["React", "Tailwind", "Aos", "Tanstack query", "firebase"],
     "serverTech": ["Node.js", "Express.js", "MongoDB"],
@@ -158,8 +156,112 @@
         "feature": "Roadmap items can be filtered by status like 'Planned', 'In Progress , or 'Completed' to ensure better clarity and smoother navigation."
       }
     ]
-  }
+  },
+   {
+    "id": "1717430401678",
+    "category": "frontend",
+    "title": "AMYRAH",
+    "subTitle" : "AI Research & Services Website",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1772908627/amyra_fic7du.webp",
+    "clientTech": ["TypeScript", "Next.js","Tailwind","Framer Motion","Aos","sweper.js"],
+    "serverTech": [],
+      "github" : "",
+    "liveLink": "https://amayrahrnd.com/",
+    "description": "AMYRAH (Advanced Machine Intelligence & Yield-Driven Research for All-Scale Horizon) is a research-driven AI platform focused on developing and validating intelligent solutions. The website highlights its core offerings, including AI Proof-of-Concept (PoC) services, practical training programs, and research-based intellectual property assets. It aims to help organizations and researchers turn real-world data into effective AI applications. Currently, the website is static, with plans to evolve into a fully dynamic platform in the future.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      }
+    ]
+  },
+  {
+    "id": "1717430401901",
+    "category": "frontend",
+    "title": "Swat Babymall",
+    "subTitle" : "Modern Baby Shopping Platform",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277349/Capture-8-min_its4zm.png",
+    "clientTech": ["React", "Tailwind", "React Router", "React Select", "daisy ui"],
+    "serverTech": [],
+      "github" : "https://github.com/Md-Shorif-200/swat-babymall",
+    "liveLink": "https://swat-babymall.vercel.app/",
+    "description": "Swat BabyMall is a modern, responsive e-commerce site for baby essentials, featuring a clean, interactive interface. The front-end is complete, with backend and order processing planned for future updates.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      }
+    ]
+  },
 
  
-  
+ 
+  {
+    "id": "1717430402234",
+    "category": "frontend",
+    "title": "gyan",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-11-min_menqgq.png",
+    "clientTech": ["html","css","bootstrap","javascript","jquery","slick slider"],
+    "serverTech": [],
+    "github" : "https://github.com/Md-Shorif-200/gyan-course-website",
+     "liveLink": "https://gyan-online-course.netlify.app/",
+    "description": "gyan is a beautifully designed, fully responsive and  static website that showcases online courses with a modern look and smooth browsing experience.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title": "",
+        "feature": ""
+      }
+    ]
+  },
+ 
+   {
+    "id": "1717430402567",
+    "category": "frontend",
+    "title": "Rinterio",
+    "subTitle" : "",
+    "image": "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-13-min_guwcul.png",
+    "clientTech": ["html","css","Tailwind","daisy ui"],
+    "serverTech": [],
+    "github" : "https://github.com/Md-Shorif-200/ph-assignment-3",
+    "liveLink": "https://rinterio-200.netlify.app/",
+    "description": "This is a beautifully designed, fully responsive website where users can explore various luxurious and elegant apartments.",
+    "keyFeatures": [
+      {
+        "title": "",
+        "feature":""
+      },
+      {
+        "title": "",
+        "feature": ""
+      },
+      {
+        "title":"",
+        "feature": ""
+      }
+    ]
+  }
 ]
