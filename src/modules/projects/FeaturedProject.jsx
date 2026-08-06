@@ -48,7 +48,7 @@ function ViewAllProjectsLink({ href = "#" }) {
   return (
     <Link
       href={href}
-      className="group inline-flex items-center gap-2 text-bas font-medium text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
+      className="group inline-flex items-center gap-2 text-base font-medium text-emerald-500 hover:text-emerald-600 transition-colors duration-300"
     >
       <span className="relative">
         View All Projects
@@ -64,8 +64,8 @@ const FeaturedProject = () => {
 
   return (
     <section>
-      <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-12 lg:px-14 xl:px-0">
-        <div className="flex items-center justify-between flex-wrap gap-4">
+      <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-12 lg:px-14 xl:px-0 mb-6 lg:mb-0">
+        <div className="flex items-center justify-between flex-wrap gap-1 ">
           <SectionTitle
             align="left"
             badgeText="My Work"

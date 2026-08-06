@@ -1,4 +1,4 @@
-// app/page.jsx (or wherever Home is)
+// app/page.jsx
 import Contact from "@/modules/contact/Contact";
 import About from "../modules/about/About";
 import Banner from "../modules/banner/Banner";
@@ -11,35 +11,32 @@ import MySkills from "../modules/skills/MySkills";
 export default function Home() {
   return (
     <div>
-      <section id="home">
+      <section id="home" className="scroll-mt-20">
         <Banner />
       </section>
 
-      <section id="about">
+      <section id="about" className="scroll-mt-10 sm:scroll-mt-20">
         <About />
       </section>
 
-   
         <EducationAndCertifications />
-    
 
-    
         <MyExpertise />
-     
+      
 
-      <section id="skills">
+      <section id="skills" className="scroll-mt-20">
         <MySkills />
       </section>
 
-      <section id="experience">
+      <section id="experience" className="scroll-mt-28">
         <Experience />
       </section>
 
-      <section id="featured_project">
+      <section id="featured_project" className="scroll-mt-28">
         <FeaturedProject />
       </section>
 
-      <section id="contact">
+      <section id="contact" className="scroll-mt-20">
         <Contact />
       </section>
     </div>

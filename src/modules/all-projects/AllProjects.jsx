@@ -20,6 +20,13 @@ const AllProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
+  // Force scroll to top on mount (fixes scrollbar not starting at top on route change)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
   // Simulates fetch latency — swap for real data fetching when ready
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 700);
