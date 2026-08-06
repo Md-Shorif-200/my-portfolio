@@ -15,7 +15,6 @@ const sections = [
   "experience",
   "featured_project",
   "contact"
- 
 ];
 
 const mobileNavLinks = [
@@ -32,21 +31,18 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("home");
   const dropdownRef = useRef(null);
-  const pathname = usePathname(); // যুক্ত করুন
-  const router = useRouter(); // যুক্ত করুন
+  const pathname = usePathname();
+  const router = useRouter();
 
-  // Scroll detection for navbar background
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- // Scroll spy – active section
   useEffect(() => {
-   
     if (pathname !== "/") {
-      return; 
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -71,12 +67,11 @@ const Navbar = () => {
     }, 100);
 
     return () => {
-      clearTimeout(timer); 
-      observer.disconnect(); 
+      clearTimeout(timer);
+      observer.disconnect();
     };
   }, [pathname]);
 
-  // Close mobile menu on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -89,29 +84,40 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [mobileOpen]);
 
- const handleMobileClick = (href) => {
+  const handleMobileClick = (href) => {
     const id = href.replace("#", "");
-    
+
     if (pathname === "/") {
-      // হোম পেজে থাকলে স্ক্রল করবে
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      // অন্য পেজে থাকলে হোম পেজে পাঠাবে
       router.push(`/${href}`);
     }
-    setMobileOpen(false); // মেন্যু বন্ধ করবে
+    setMobileOpen(false);
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 pt-3">
+<header className="sticky top-0 left-0 right-0 z-50 pt-3 relative"> 
+<div
+  className={`
+    absolute inset-0 -z-10 pointer-events-none
+    transition-opacity duration-400 ease-out
+    ${pathname === "/" && !isScrolled && !mobileOpen ? "opacity-100" : "opacity-0"}
+  `}
+  style={{
+    backgroundImage:
+      "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+    backgroundSize: "18px 18px",
+  }}
+/>
+
       <Container>
         <div ref={dropdownRef} className="relative">
           <nav
             className={`
-              flex items-center justify-between gap-4
+              relative flex items-center justify-between gap-4
               px-4 py-2.5 rounded-2xl
               transition-all duration-400 ease-out
               ${
@@ -127,9 +133,12 @@ const Navbar = () => {
               <Logo />
             </Link>
 
-            {/* Desktop Nav */}
+            {/* Desktop Nav — solid opaque backdrop so dots never
+                leak through the gaps between individual links */}
             <div className="hidden lg:flex flex-1 justify-center">
-              <NavLinks currentSection={currentSection} />
+              <div className="flex items-center justify-center px-2 py-1 rounded-xl bg-white dark:bg-zinc-950">
+                <NavLinks currentSection={currentSection} />
+              </div>
             </div>
 
             {/* Right side */}
@@ -209,7 +218,7 @@ const Navbar = () => {
                   const isActive = currentSection === link.href.replace("#", "");
 
                   return (
-                    <a
+                    <Link
                       key={link.href}
                       href={link.href}
                       onClick={(e) => {
@@ -238,7 +247,7 @@ const Navbar = () => {
                       {isActive && (
                         <span className="w-1.5 h-1.5 rounded-full bg-current" />
                       )}
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

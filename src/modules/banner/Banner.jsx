@@ -11,7 +11,7 @@ import ResumeDownloadButton from "./download/ResumeDownloadButton";
 export default function Banner() {
   return (
     <div
-      className="banner w-full min-h-[90vh] flex flex-col justify-between relative overflow-hidden select-none pb-8"
+      className="banner w-full min-h-[500px] flex flex-col justify-between relative overflow-hidden select-none lg:pt-6 lg:pb-8"
       style={{
         backgroundColor: "#ffffff",
         backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
@@ -67,7 +67,7 @@ export default function Banner() {
       </Container>
 
       {/* ── Scroll Mouse Icon ── */}
-      <div className="flex flex-col items-center gap-2 opacity-60 hidden min-[450px]:flex mt-3 xl:mt-0">
+      <div className="flex flex-col items-center gap-2 opacity-60 hidden min-[450px]:flex mt-6">
         <div className="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center pt-1.5 relative">
           <span
             className="w-1 h-2 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-bounce"

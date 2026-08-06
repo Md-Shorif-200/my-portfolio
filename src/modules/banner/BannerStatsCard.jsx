@@ -40,7 +40,7 @@ const stats = [
 const BannerStatsCard = () => {
   return (
        <div
-            className="grid grid-cols-3  min-[450px]:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
+            className="grid grid-cols-2  min-[450px]:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -58,7 +58,7 @@ const BannerStatsCard = () => {
                   hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]
                   dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)]
                   hover:bg-white dark:hover:bg-zinc-900
-                  overflow-hidden ${stat.value === "Clean Code" ?  "hidden lg:flex" : "flex"}`}
+                  overflow-hidden ${stat.value === "Clean Code" ?  "hidden min-[450px]:flex" : stat.value ==="Remote" ? "hidden sm:flex" : "flex"} `}
               >
                 {/* Icon (Left side) */}
                 <span
