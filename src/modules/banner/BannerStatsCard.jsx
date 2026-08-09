@@ -49,8 +49,8 @@ const BannerStatsCard = () => {
                 key={index}
                 className={` group relative flex items-center gap-3 min-[450px]gap-2 sm:gap-3
                   p-3 min-[450px]:p-2 sm:p-3 rounded-xl cursor-default
-                  border border-zinc-100 dark:border-zinc-800/60
-                  bg-zinc-50/80 dark:bg-zinc-900/50
+                  border border-ds-border
+                  bg-ds-primary-foreground 
                   backdrop-blur-sm
                   transition-all duration-300 ease-out
                   hover:-translate-y-1
