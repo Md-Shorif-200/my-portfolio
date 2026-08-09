@@ -28,14 +28,17 @@ html {
   --color-ds-card: var(--ds-card);
   --color-ds-card-foreground: var(--ds-card-foreground);
   --color-ds-primary: var(--ds-primary);
-  --color-ds-primary-foreground: var(--ds-primary-foreground);
+    --color-ds-primary-foreground: var(--ds-primary-foreground);
   --color-ds-secondary: var(--ds-secondary);
+  --color-ds-secondary-foreground: var(--ds-secondary-foreground);
   --color-ds-border: var(--ds-border);
   --color-ds-input: var(--ds-input);
   --color-ds-ring: var(--ds-ring);
   --color-ds-text: var(--ds-text);
   --color-ds-muted: var(--ds-muted);
   --color-ds-muted-foreground: var(--ds-muted-foreground);
+  --color-ds-dot-color: var(--ds-dot-color);
+  --color-ds-radial-glow: var(--ds-radial-glow);
 
   --color-background: var(--ds-background);
   --color-foreground: var(--ds-foreground);
@@ -76,7 +79,10 @@ html {
   --color-shadow: rgba(17, 24, 39, 0.08);
   --color-shadow-accent: rgba(33, 191, 115, 0.2); */
 
-  --ds-background: white;
+  /* ---------------------------------
+  ------------------------ */
+
+  /* --ds-background: white;
   --ds-foreground: #DFDFDF;
   --ds-card: #ffffff;
   --ds-card-foreground: #0A0A0A;
@@ -88,8 +94,32 @@ html {
   --ds-ring: #0A0A0A;
   --ds-text: #0A0A0A;
   --ds-muted: #f7f8fa;
-  --ds-muted-foreground: #4b5563; 
+  --ds-muted-foreground: #4b5563;  */
+
+
+    --ds-background: #ffffff;
+  --ds-foreground: #0A0A0A;        /* fixed: ছিল #DFDFDF, টেক্সট হিসেবে ব্যবহার করলে এটা প্রায় অদৃশ্য হয়ে যেত */
+  --ds-card: #ffffff;
+  --ds-card-foreground: #0A0A0A;
+  --ds-primary: #0A0A0A;
+  --ds-primary-foreground: #ffffff;
+  --ds-secondary: #f4f4f5;         /* fixed: ছিল white, কিন্তু background-ও white হওয়ায় secondary বোতাম আলাদা বোঝা যেত না */
+  --ds-secondary-foreground: #0A0A0A; /* নতুন যোগ করলাম, secondary-এর উপর টেক্সট দরকার */
+  --ds-border: #e5e7eb;
+  --ds-input: #f7f8fa;
+  --ds-ring: #0A0A0A;
+  --ds-text: #0A0A0A;
+  --ds-muted: #f7f8fa;
+  --ds-muted-foreground: #4b5563;
+
+    --ds-dot-color: #d4d4d8;
+  --ds-radial-glow: rgba(255, 255, 255, 0.85);
+
+
+  
 }
+
+
 
 .dark {
   /* --color-primary: #21BF73;
@@ -111,7 +141,7 @@ html {
   --color-shadow-accent: rgba(33, 191, 115, 0.28); */
 
 
-  --ds-background: white;
+  /* --ds-background: white;
   --ds-foreground: #0A0A0A;
   --ds-card: #ffffff;
   --ds-card-foreground: #0A0A0A;
@@ -123,7 +153,26 @@ html {
   --ds-ring: #0A0A0A;
   --ds-text: var(--color-text);
   --ds-muted: #f7f8fa;
-  --ds-muted-foreground:  #4b5563;
+  --ds-muted-foreground:  #4b5563; */
+
+  --ds-background: #0A0A0A;
+  --ds-foreground: #FAFAFA;
+  --ds-card: #141414;
+  --ds-card-foreground: #FAFAFA;
+  --ds-primary: #FAFAFA;
+  --ds-primary-foreground: #0A0A0A;
+  --ds-secondary: #262626;
+  --ds-secondary-foreground: #FAFAFA;
+  --ds-border: #262626;
+  --ds-input: #1c1c1c;
+  --ds-ring: #FAFAFA;
+  --ds-text: #FAFAFA;
+  --ds-muted: #1c1c1c;
+  --ds-muted-foreground: #a1a1aa;
+    --ds-dot-color: #3f3f46;
+  --ds-radial-glow: rgba(10, 10, 10, 0.85);
+
+
 }
 
 .primary_color {

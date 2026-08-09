@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import {
   House,
@@ -10,6 +10,7 @@ import {
   Mails,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 // Next.js এর হুক ইমপোর্ট করুন
 import { usePathname, useRouter } from "next/navigation"; 
 
@@ -51,29 +52,33 @@ const NavLinks = ({ currentSection = "home", onLinkClick }) => {
         const Icon = link.icon;
 
         return (
-          <a
-            key={link.href}
-            href={pathname === "/" ? link.href : `/${link.href}`}
-            onClick={(e) => handleClick(e, link.href)}
-            className={`
-              relative flex items-center gap-1.5
-              px-3.5 py-1.5 rounded-full text-sm font-medium
-              transition-all duration-300 ease-out
-              ${
-                isActive && pathname === "/"
-                  ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-sm"
-                  : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
-              }
-            `}
-          >
-            <Icon
-              size={14}
-              className={`transition-transform duration-300 ${
-                isActive && pathname === "/" ? "scale-110" : "group-hover:scale-110"
-              }`}
-            />
-            <span>{link.label}</span>
-          </a>
+        <Link
+  key={link.href}
+  href={pathname === "/" ? link.href : `/${link.href}`}
+  onClick={(e) => handleClick(e, link.href)}
+  className={`
+    group relative flex items-center gap-1.5
+    px-3.5 py-1.5 rounded-full text-[13px] font-medium
+    transition-all duration-300 ease-out
+    ${
+      isActive && pathname === "/"
+        ? "bg-ds-primary text-ds-primary-foreground shadow-sm"
+        : "text-ds-primary"
+    }
+  `}
+>
+  <Icon
+    size={14}
+    className={`transition-transform duration-300 ${
+      isActive && pathname === "/" ? "scale-110" : "group-hover:scale-110"
+    }`}
+  />
+  <span
+    className="transition-[letter-spacing] duration-500 ease-out tracking-normal group-hover:tracking-[0.06em]"
+  >
+    {link.label}
+  </span>
+</Link>
         );
       })}
     </div>

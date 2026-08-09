@@ -7,6 +7,7 @@ import NavLinks from "./common/NavLinks";
 import Logo from "./common/Logo";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
+import { ModeToggle } from "./common/ModeToggle";
 
 const sections = [
   "home",
@@ -99,16 +100,15 @@ const Navbar = () => {
   };
 
   return (
-<header className="sticky top-0 left-0 right-0 z-50 pt-3 relative"> 
+<header className="sticky top-0 left-0 right-0 z-50 pt-3 relative "> 
 <div
   className={`
     absolute inset-0 -z-10 pointer-events-none
-    transition-opacity duration-400 ease-out
+    transition-opacity duration-400 ease-out 
     ${pathname === "/" && !isScrolled && !mobileOpen ? "opacity-100" : "opacity-0"}
   `}
   style={{
-    backgroundImage:
-      "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+       backgroundImage: "radial-gradient(circle, var(--ds-dot-color) 1px, transparent 1px)",
     backgroundSize: "18px 18px",
   }}
 />
@@ -122,7 +122,7 @@ const Navbar = () => {
               transition-all duration-400 ease-out
               ${
                 isScrolled || mobileOpen
-                  ? "bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl border border-zinc-200/70 dark:border-zinc-800/70 shadow-lg shadow-zinc-900/5 dark:shadow-black/20"
+                  ? "bg-ds-background/85  backdrop-blur-xl border border-ds-border shadow-lg"
                   : "bg-transparent border border-transparent"
               }
               ${mobileOpen ? "rounded-b-none border-b-0" : ""}
@@ -144,7 +144,7 @@ const Navbar = () => {
             {/* Right side */}
             <div className="flex items-center gap-1.5">
               {/* Theme Toggle */}
-              <button
+              {/* <button
                 aria-label="Toggle theme"
                 className="
                   relative flex items-center justify-center
@@ -163,7 +163,9 @@ const Navbar = () => {
                   size={18}
                   className="absolute transition-all duration-300 rotate-90 scale-0 dark:rotate-0 dark:scale-100"
                 />
-              </button>
+              </button> */}
+
+              <ModeToggle />
 
               {/* Hamburger */}
               <button

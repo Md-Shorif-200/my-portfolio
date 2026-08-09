@@ -4,6 +4,7 @@ import { Toaster } from "react-hot-toast";
 import AosInitializer from "@/components/AosInitializer";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "./provider/theme-provider";
 
 
 const geistSans = Geist({
@@ -30,10 +31,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}
-      >
+    <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <ThemeProvider
+              attribute="class"      
+          defaultTheme="light"    
+          enableSystem={false}  
+ 
+            disableTransitionOnChange
+          >
+
           <Navbar></Navbar>
         {children}
            <AosInitializer></AosInitializer>
@@ -41,6 +49,8 @@ export default function RootLayout({ children }) {
             <div className="">
               <Footer/>
             </div>
+
+               </ThemeProvider>
       </body>
     </html>
   );

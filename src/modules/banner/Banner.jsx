@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 
 import BannerStatsCard from "./BannerStatsCard";
 import ResumePreviewModal from "./ResumePreviewModal"; // Adjust path as needed
-import ResumeDownloadButton from "./download/ResumeDownloadButton";
+// import ResumeDownloadButton from "./download/ResumeDownloadButton";
 
 
 
@@ -13,15 +13,15 @@ export default function Banner() {
     <div
       className="banner w-full min-h-[500px] flex flex-col justify-between relative overflow-hidden select-none lg:pt-6 lg:pb-8"
       style={{
-        backgroundColor: "#ffffff",
-        backgroundImage: "radial-gradient(circle, #d4d4d8 1px, transparent 1px)",
+        backgroundColor: "var(--ds-background)",
+        backgroundImage: "radial-gradient(circle, var(--ds-dot-color) 1px, transparent 1px)",
         backgroundSize: "28px 28px",
       }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 100%)",
+      background: "radial-gradient(ellipse 70% 60% at 50% 40%, var(--ds-radial-glow) 0%, transparent 100%)",
         }}
       />
 
@@ -30,7 +30,7 @@ export default function Banner() {
         <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
           {/* ── Heading ── */}
           <h1
-            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-zinc-900 dark:text-white mt-6 relative"
+            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-ds-primary mt-6 relative"
             data-aos="fade-up"
           >
             <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
@@ -60,8 +60,8 @@ export default function Banner() {
 
           {/* ── Resume Modal Trigger ── */}
           <div data-aos="fade-up" data-aos-delay="300" className="mt-2">
-           {/* <ResumeDownloadButton /> */}
-           <ResumePreviewModal />
+            {/* <ResumeDownloadButton /> */}
+            <ResumePreviewModal />
           </div>
         </div>
       </Container>
