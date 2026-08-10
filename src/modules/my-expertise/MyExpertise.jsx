@@ -26,16 +26,16 @@ const MyExpertise = () => {
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[210px]">
 
         {/* ── Card 1: Full-Stack Web Development (2×2 Featured Card) ── */}
-        <div className=" sm:col-span-2 lg:row-span-2 group relative bg-gradient-to-br from-gray-100 via-gray-50 to-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:border hover:border-ds-border hover:-translate-y-0.5 transition-all duration-300 border border-gray-100">
+        <div className=" sm:col-span-2 lg:row-span-2 group relative bg-gradient-to-br from-gray-100 via-gray-50 to-white dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-black/40 hover:border hover:border-ds-border hover:-translate-y-0.5 transition-all duration-300 border border-gray-100 dark:border-neutral-800">
 
           {/* Watermark Icon */}
-          <div className="absolute right-6 bottom-6 opacity-[0.06] pointer-events-none text-gray-900">
+          <div className="absolute right-6 bottom-6 opacity-[0.06] dark:opacity-[0.08] pointer-events-none text-gray-900 dark:text-white">
             <Blocks size={170} strokeWidth={1.25} />
           </div>
 
           {/* Header Row */}
           <div className="relative z-10 flex items-start justify-between">
-            <div className="w-10  sm:w-12 h-10  sm:h-12 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-900">
+            <div className="w-10  sm:w-12 h-10  sm:h-12 rounded-xl bg-white dark:bg-neutral-800 shadow-sm border border-gray-100 dark:border-neutral-700 flex items-center justify-center text-gray-900 dark:text-white">
               <Code2 size={22} />
             </div>
             {/* <ArrowUpRight size={18} className="text-gray-300 group-hover:text-gray-600 transition-colors duration-200" /> */}
@@ -53,14 +53,14 @@ const MyExpertise = () => {
         </div>
 
         {/* ── Card 2: Performance & Quality Assurance ── */}
-        <div className="group relative bg-gradient-to-br from-orange-50 via-white to-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100">
+        <div className="group relative bg-gradient-to-br from-orange-50 via-white to-white dark:from-orange-950/20 dark:via-neutral-900 dark:to-neutral-900 rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-black/40 hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100 dark:border-neutral-800">
 
-          <div className="absolute right-3 bottom-3 opacity-[0.08] pointer-events-none text-orange-900">
+          <div className="absolute right-3 bottom-3 opacity-[0.08] dark:opacity-[0.12] pointer-events-none text-orange-900 dark:text-orange-400">
             <ShieldCheck size={100} strokeWidth={1.5} />
           </div>
 
           <div className="relative z-10 flex items-start justify-between">
-            <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-900">
+            <div className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-800 shadow-sm border border-gray-100 dark:border-neutral-700 flex items-center justify-center text-gray-900 dark:text-white">
               <ShieldCheck size={18} />
             </div>
             {/* <ArrowUpRight size={14} className="text-gray-300 group-hover:text-gray-500 transition-colors duration-200" /> */}
@@ -77,14 +77,14 @@ const MyExpertise = () => {
         </div>
 
         {/* ── Card 3: Product Mindset & Collaboration ── */}
-        <div className="group  relative bg-gradient-to-br from-sky-50 via-white to-white rounded-3xl p-3 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100">
+        <div className="group  relative bg-gradient-to-br from-sky-50 via-white to-white dark:from-sky-950/20 dark:via-neutral-900 dark:to-neutral-900 rounded-3xl p-3 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-black/40 hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100 dark:border-neutral-800">
 
-          <div className="absolute right-3 bottom-3 opacity-[0.08] pointer-events-none text-sky-900">
+          <div className="absolute right-3 bottom-3 opacity-[0.08] dark:opacity-[0.12] pointer-events-none text-sky-900 dark:text-sky-400">
             <Users size={100} strokeWidth={1.5} />
           </div>
 
           <div className="relative z-10 flex items-start justify-between">
-            <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-900">
+            <div className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-800 shadow-sm border border-gray-100 dark:border-neutral-700 flex items-center justify-center text-gray-900 dark:text-white">
               <Users size={18} />
             </div>
             {/* <ArrowUpRight size={14} className="text-gray-300 group-hover:text-gray-500 transition-colors duration-200" /> */}
@@ -101,14 +101,14 @@ const MyExpertise = () => {
         </div>
 
         {/* ── Card 4: Mentorship ── */}
-        <div className="group relative  sm:col-span-2 bg-gradient-to-br from-violet-50 via-white to-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100">
+        <div className="group relative  sm:col-span-2 bg-gradient-to-br from-violet-50 via-white to-white dark:from-violet-950/20 dark:via-neutral-900 dark:to-neutral-900 rounded-3xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-black/40 hover:-translate-y-0.5 hover:border hover:border-ds-border transition-all duration-300 border border-gray-100 dark:border-neutral-800">
 
-          <div className="absolute right-3 bottom-3 opacity-[0.08] pointer-events-none text-violet-900">
+          <div className="absolute right-3 bottom-3 opacity-[0.08] dark:opacity-[0.12] pointer-events-none text-violet-900 dark:text-violet-400">
             <GraduationCap size={100} strokeWidth={1.5} />
           </div>
 
           <div className="relative z-10 flex items-start justify-between">
-            <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-900">
+            <div className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-800 shadow-sm border border-gray-100 dark:border-neutral-700 flex items-center justify-center text-gray-900 dark:text-white">
               <GraduationCap size={18} />
             </div>
             {/* <ArrowUpRight size={14} className="text-gray-300 group-hover:text-gray-500 transition-colors duration-200" /> */}

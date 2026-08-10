@@ -70,8 +70,8 @@ function ResumePreviewModal({
           className="flex h-[88vh] w-[calc(100%-2rem)] max-w-[830px] flex-col gap-0 overflow-hidden rounded-2xl border-0 p-0 shadow-2xl sm:rounded-2xl"
         >
           {/* Header */}
-          <DialogHeader className="flex-row items-center justify-between space-y-0 border-b border-gray-100 bg-white px-5 py-3.5">
-            <DialogTitle className="text-sm font-semibold text-gray-800">
+          <DialogHeader className="flex-row items-center justify-between space-y-0 border-b border-ds-border bg-ds-background px-5 py-3.5">
+            <DialogTitle className="text-sm font-semibold text-ds-primary">
               Resume Preview
             </DialogTitle>
 
@@ -79,7 +79,7 @@ function ResumePreviewModal({
               <button
                 onClick={handleDownload}
                 disabled={isDownloading}
-                className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-medium text-white transition-colors hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-medium text-ds-secondary transition-colors hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isDownloading ? (
                   <Loader2 className="h-3.5 w-3.5 animate-spin" />

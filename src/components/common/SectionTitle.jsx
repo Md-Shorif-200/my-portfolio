@@ -40,9 +40,9 @@ const SectionTitle = ({
           align === "center" ? "justify-center" : align === "right" ? "justify-end" : "justify-start"
         }`}
       >
-        <span className="block h-[3px] w-8 rounded-full bg-[#0A0A0A]" />
-        <span className="block h-[3px] w-3 rounded-full bg-[#0A0A0A]/30" />
-        <span className="block h-[3px] w-1.5 rounded-full bg-[#0A0A0A]/10" />
+        <span className="block h-[3px] w-8 rounded-full bg-[#0A0A0A] dark:bg-white" />
+        <span className="block h-[3px] w-3 rounded-full bg-[#0A0A0A]/30 dark:bg-white/30" />
+        <span className="block h-[3px] w-1.5 rounded-full bg-[#0A0A0A]/10 dark:bg-white/10" />
       </div>
     </div>
   );

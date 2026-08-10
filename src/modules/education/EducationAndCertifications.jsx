@@ -1,5 +1,3 @@
-
-
 import { GraduationCap, BookOpen, Award, Calendar, Building2, CheckCircle2 } from 'lucide-react';
 import Container from "@/components/Container";
 import SectionTitle from '@/components/common/SectionTitle';
@@ -49,17 +47,17 @@ const TimelineItem = ({ item, isLast }) => {
     <div className="group relative flex gap-4 pb-8 h-full">
       {/* Icon Node & Vertical Connector Line */}
       <div className="flex flex-col items-center">
-        <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-ds-muted-foreground transition-colors duration-300 group-hover:bg-ds-primary group-hover:text-ds-secondary">
+        <div className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 text-ds-muted-foreground transition-colors duration-300 group-hover:bg-ds-primary group-hover:text-ds-secondary">
           <Icon size={16} />
         </div>
 
         {!isLast && (
-          <div className="mt-2 w-px flex-1 bg-neutral-200 transition-colors duration-300 group-hover:bg-neutral-400" />
+          <div className="mt-2 w-px flex-1 bg-neutral-200 dark:bg-neutral-700 transition-colors duration-300 group-hover:bg-neutral-400 dark:group-hover:bg-neutral-500" />
         )}
       </div>
 
       {/* Minimalist Light Gray Content Card - Flex-col & h-full added */}
-      <div className="flex flex-1 flex-col justify-between rounded-xl bg-gray-50 p-5 border border-gray-100 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-neutral-100/90 group-hover:shadow-sm">
+      <div className="flex flex-1 flex-col justify-between rounded-xl bg-gray-50 dark:bg-neutral-900/60 p-5 border border-gray-100 dark:border-neutral-800 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-neutral-100/90 dark:group-hover:bg-neutral-800/70 group-hover:shadow-sm dark:group-hover:shadow-none">
         <div>
           <div className="mb-2 flex flex-wrap items-center gap-2 text-xs font-medium text-ds-muted-foreground">
             <span className="flex items-center gap-1">
