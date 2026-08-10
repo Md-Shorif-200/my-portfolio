@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import AosInitializer from "@/components/AosInitializer";
@@ -6,15 +6,16 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "./provider/theme-provider";
 
-
-const geistSans = Geist({
+const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-const geistMono = Geist_Mono({
+const robotoMono = Roboto_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata = {
@@ -32,25 +33,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
-          <ThemeProvider
-              attribute="class"      
-          defaultTheme="light"    
-          enableSystem={false}  
- 
-            disableTransitionOnChange
-          >
-
+      <head />
+      <body className={`${interSans.variable} ${robotoMono.variable}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
           <Navbar></Navbar>
-        {children}
-           <AosInitializer></AosInitializer>
-            <Toaster/>
-            <div className="">
-              <Footer/>
-            </div>
-
-               </ThemeProvider>
+          {children}
+          <AosInitializer></AosInitializer>
+          <Toaster />
+          <div className="">
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

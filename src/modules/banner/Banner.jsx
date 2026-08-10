@@ -30,7 +30,7 @@ export default function Banner() {
         <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
           {/* ── Heading ── */}
           <h1
-            className="font-black sm:tracking-tighter uppercase sm:leading-[0.85] text-ds-primary mt-6 relative"
+            className="  text-ds-primary mt-6 relative font-extrabold"
             data-aos="fade-up"
           >
             <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">

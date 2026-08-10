@@ -102,7 +102,7 @@ const skillCategories = [
     span: "sm:col-span-1 lg:col-span-1",
     rows: 6,
     skills: [
-      { name: "Vercel", icon: "simple-icons:vercel", className: "text-black" },
+      { name: "Vercel", icon: "simple-icons:vercel", className: "text-black dark:text-white" },
       { name: "Docker", icon: "material-icon-theme:docker", className: "" },
       { name: "AWS", icon: "logos:aws" },
       { name: "CI/CD", icon: "devicon:githubactions" },
@@ -117,7 +117,7 @@ const skillCategories = [
     rows: 6,
     skills: [
       { name: "Git", icon: "logos:git-icon" },
-      { name: "GitHub", icon: "mdi:github", className: "text-black" },
+      { name: "GitHub", icon: "mdi:github", className: "text-black dark:text-white" },
       { name: "Figma To HTML", icon: "logos:figma" },
       { name: "PSD To HTML", icon: "logos:adobe-photoshop" },
       { name: "Postman", icon: "logos:postman-icon" },
@@ -135,7 +135,7 @@ const skillCategories = [
       {
         name: "System Design",
         icon: "lucide:network",
-        className: "text-[#0052CC]",
+        className: "text-[#0052CC] dark:text-[#4C9AFF]",
       },
       { name: "Performance", icon: "lucide:zap", className: "text-[#FF8A00]" },
       {
@@ -150,7 +150,7 @@ const skillCategories = [
 // ---- Skill Pill Component ----
 function SkillPill({ skill }) {
   return (
-    <div className="group inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-ds-primary/30 hover:shadow-md hover:bg-ds-secondary/80">
+    <div className="group inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm dark:shadow-none transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-ds-primary/30 hover:shadow-md dark:hover:shadow-none hover:bg-ds-secondary/80">
       <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full">
         <Icon
           icon={skill.icon}
@@ -175,7 +175,7 @@ function SkillCard({ category }) {
       style={{ "--row-span": category.rows || 6 }}
     >
       <div className="mb-6 flex items-center gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-ds-foreground bg-ds-foreground text-ds-primary transition-all duration-300 group-hover:bg-black group-hover:text-ds-secondary dark:group-hover:bg-white dark:group-hover:text-black">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-ds-border bg-ds-primary-foreground text-ds-primary transition-all duration-300 group-hover:bg-black group-hover:text-ds-secondary dark:group-hover:text-black">
           <Icon icon={category.icon} width={22} height={22} />
         </div>
 
