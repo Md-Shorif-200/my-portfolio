@@ -3,107 +3,142 @@ export const ProjectsData = [
     id: "1717430400123",
     category: "fullstack",
     isLive: true,
-    title: "AAryan",
-    subTitle: " B2B Product Inquiry & Showcase Website",
+    title: "Hive",
+    subTitle: "Interactive Multi-Vendor E-commerce Platform",
     image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture_vwo6f1.png",
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786375800/hive_4_esbe6i.webp",
 
     techStack: {
-      techStackPrev: ["JavaScript","Next.js","Tiptap","Express.js","MongoDB"],
-      techStackFull: [
-        "JavaScript",
-        "React",
+      techStackPrev: [
+        "TypeScript",
         "Next.js",
-        "Tailwind",
-        "Tiptap Editor",
-        "Chart.js",
-        "Swiper.js",
-        "Aos",
-        "Cloudinary",
-        "firebase",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Nodemailer",
+        "Zustand",
+        "Next Auth",
+        "Shadcn Ui",
+        "Formik",
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Zustand",
+        "Next Auth",
+        "Shadcn Ui",
+        "Formik",
+        "Yup",
+        "Tanstack Query",
+        "Tailwind CSS",
+        "swiper.js",
+        "Geolocation API",
       ],
     },
 
-    clientGithub: "https://github.com/Md-Shorif-200/ayira-ecommerce",
-    serverGithub: "https://github.com/Md-Shorif-200/Ayira-Ecommerce-Server",
-    liveLink: "https://ayira-ecommerce-1.vercel.app/",
+    liveLink: "https://hive.bd/",
     description:
-      "Customers can browse and filter products across multiple categories with server-side pagination. Each product shows details like  fabric, color, and production process. The admin dashboard manages products, orders, and users with full control over attributes, media, and SEO. I solved challenges in implementing the rich text editor for product descriptions by researching and applying optimized solutions. I solved challenges in implementing the rich text editor for product descriptions by researching and applying optimized solutions.",
-    keyFeatures: [
-      {
-        title: "Product Browsing",
-        feature:
-          "Category-based products with filtering and server-side pagination for smooth performance.",
-      },
-      {
-        title: "Advanced Admin Dashboard",
-        feature:
-          "Complete product management, banner editing and data analytics with Chart.js visualization.",
-      },
-      {
-        title: "Smart Order & Inquiry System",
-        feature:
-          "Dynamic order form with Nodemailer integration for instant email notifications and manual order processing.",
-      },
-    ],
-    contributions: {
-      organization: "Bigmode Technologies",
-      role: "Web Developer",
-      description:
-        "Customers can browse and filter products across multiple categories with server-side pagination. Each product shows details like  fabric, color, and production process. The admin dashboard manages products, orders, and users with full control ",
-    },
-  },
-  {
-    id: "1717430400456",
-    category: "fullstack",
-    title: "EduSpark",
-    subTitle: "online course management website",
-    image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153772/Capture-2_u5zt9z.png",
-    clientTech: [
-      "React",
-      "Tailwind",
-      "Framer Motion",
-      "Aos",
-      "sweper.js",
-      "Tanstack query",
-      "firebase",
-    ],
-    serverTech: ["Node.js", "Express.js", "MongoDB", "stripe"],
-    clientGithub: "https://github.com/Md-Shorif-200/EduSpark-Client",
-    serverGithub: "https://github.com/Md-Shorif-200/EduSpark-Server",
-    liveLink: "https://eduspark-3990d.web.app/",
-    description:
-      "Students can enroll through a user-friendly interface with secure authentication. Solved Stripe and image hosting issues using online resources; planning to add JWT for better access control.",
+      "Hive is a scalable multi-vendor e-commerce platform where sellers manage their own stores under one system. It supports guest and registered orders, real-time order tracking and uses geolocation to show branch-wise products based on the customer's location. With a merchant panel, custom authentication and flexible purchase plans, Hive is built for speed, accessibility, and SEO — delivering a smooth shopping experience.",
     keyFeatures: [
       {
         title: "User Friendly Interface",
         feature:
-          " Easy to use and simple design helps everyone find what they want fast. Works smoothly on phones, tablets, and computers.",
+          "A clean and simple design that makes it easy for both customers and vendors to navigate, search products, and manage their tasks without confusion. It also uses geolocation to detect the user's location and show relevant branch-wise products automatically.",
       },
       {
-        title: "Filtering & Searching",
+        title: "Vendor Management",
         feature:
-          "Users can filter courses by category and search by title to quickly find relevant content. This improves navigation and helps users access their desired courses more efficiently.",
+          "Created an efficient onboarding workflow so new sellers can sign up and get their store running with minimal friction.",
       },
       {
-        title: "Dynamic Dashboard",
+        title: "Live Order & Delivery Tracking",
         feature:
-          "Provides separate dashboards for students, teachers, and admins, each with role-specific features and controls.",
+          "Customers can track their orders in real time from purchase to delivery, giving them full visibility and reducing support queries.",
+      },
+      {
+        title: "Performance Optimization",
+        feature:
+          "Optimized the platform for speed, accessibility, and SEO, achieving Google Lighthouse scores of 90% for Performance, 100% for Best Practices and 95% for SEO.",
       },
     ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Frontend Developer",
+      description:
+        "I worked as a Frontend Developer on this project, building a user-friendly UI with TypeScript, Next.js and shadcn/ui, along with a geolocation package to show branch-wise products based on user location. I also focused on performance optimization, accessibility and SEO, helping the platform achieve Google Lighthouse scores of 90% Performance, 100% Best Practices and 95% SEO.",
+    },
   },
+
+  {
+    id: "17174304004577",
+    category: "fullstack",
+    isLive: true,
+    title: "Mates",
+    subTitle: " Driver Network & Job Dispatch Platform",
+    image:
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786384913/limoz_2_mvl2qx.webp",
+
+    techStack: {
+      techStackPrev: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "WebSocket",
+        "Shadcn Ui",
+        "Formik",
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "WebSocket",
+        "Shadcn Ui",
+        "Formik",
+        "Yup",
+        "Tanstack Query",
+        "Tailwind CSS",
+        "swiper.js",
+        "Swagger",
+        "Figma to HTML",
+      ],
+    },
+
+    liveLink: "https://app.limoz.co/",
+    description:
+      "Mates is a  B2B SaaS platform that connects chauffeurs, limousine operators, and fleet owners in one collaborative network. Users can find and bid on live jobs, dispatch extra bookings to trusted driver groups, and manage the full job lifecycle with real-time notifications, chat, billing, and fleet management — all in a fast, mobile-friendly platform.",
+    keyFeatures: [
+      {
+        title: "Live Job Marketplace & Bidding System",
+        feature:
+          "Drivers can browse live dispatched jobs and bid using points or a custom offer price, with countdown timers and auction/incremental bidding modes.",
+      },
+      {
+        title: "Smart Job Dispatch Engine",
+        feature:
+          "Operators can post job details (pickup, vehicle type, target group, pricing mode) and dispatch jobs instantly or schedule them later, with draft save and preview options.",
+      },
+      {
+        title: "Real-Time Notifications & Chat",
+        feature:
+          "WebSocket is used to send live job updates and notifications, and also powers a real-time chat system between users.",
+      },
+      {
+        title: "Billing & Fund Management",
+        feature:
+          "The platform supports subscriptions, account top-up, credit transfer between drivers, withdrawals, and detailed statements — all in one wallet system.",
+      },
+    ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Frontend Developer",
+      description:
+        "I contributed around 90% of the frontend development for this project. Since the platform is highly functional and logic-heavy, I built it closely following the client's requirements and Figma design, with strong focus on performance and SEO. I also implemented a clean, reusable code structure and worked on the real-time notification and chat system using WebSocket.",
+    },
+  },
+
   {
     id: "1717430400789",
     category: "fullstack",
     title: "Car Doctor",
     subTitle: "Car Servicing & Auto Parts Platform",
     image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762153778/Capture-3_pemenm.png",
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786368285/apprelix_3_egxfzo.webp",
     clientTech: [
       "React",
       "Next.js",

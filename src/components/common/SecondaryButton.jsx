@@ -13,7 +13,7 @@ const SecondaryButton = ({
   disabled = false,
 }) => {
   const baseClasses =
-    "group relative inline-flex items-center gap-2 overflow-hidden border border-black rounded-full bg-transfarent hover:bg-black px-6 py-3 text-sm font-semibold text-black  hover:text-white transition-all duration-300 hover:gap-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.18)] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed";
+    "group relative inline-flex items-center gap-2 overflow-hidden border border-ds-primary rounded-full bg-transfarent hover:bg-ds-primary px-6 py-3 text-sm font-semibold text-ds-primary  hover:text-ds-secondary transition-all duration-300 hover:gap-3 hover:shadow-[0_8px_30px_rgba(0,0,0,0.18)] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed";
 
   const buttonContent = (
     <>

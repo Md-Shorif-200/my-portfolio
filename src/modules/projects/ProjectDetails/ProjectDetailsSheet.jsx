@@ -41,8 +41,8 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
           w-[80%] max-w-xl
           p-0
           overflow-y-auto
-          bg-[#fafafa]
-          border-l border-black/8
+          bg-ds-primary-foreground
+          border-l border-ds-primary/10
           shadow-2xl
         "
       >
@@ -64,7 +64,7 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
           {/* Overview */}
           {project?.description && (
             <Section title="Overview">
-              <p className="text-[14px] leading-[1.85] text-black/55">
+              <p className="text-[14px] leading-[1.85] text-ds-primary/55">
                 {project.description}
               </p>
             </Section>
@@ -73,7 +73,7 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
           {/* My Contribution */}
           {hasUniqueContributionDesc && (
             <Section title="My Contribution">
-              <p className="text-[14px] leading-[1.85] text-black/55">
+              <p className="text-[14px] leading-[1.85] text-ds-primary/55">
                 {project.contributions.description}
               </p>
             </Section>
@@ -84,11 +84,11 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
             <Section title="Key Features">
               <div
                 className="
-                  border border-black/8
+                  border border-ds-primary/8
                   rounded-2xl
                   overflow-hidden
-                  bg-white
-                  divide-y divide-black/5
+                  bg-ds-secondary
+                  divide-y divide-ds-primary/5
                 "
               >
                 {project.keyFeatures
@@ -123,9 +123,9 @@ const ProjectDetailsSheet = ({ project, open, onOpenChange }) => {
                     className="
                       inline-flex items-center gap-2
                       text-sm font-semibold
-                      bg-black text-white
+                      bg-ds-primary text-ds-secondary
                       px-5 py-2.5 rounded-xl
-                      hover:bg-black/80
+                      hover:bg-ds-primary/80
                       transition-all duration-200
                       shadow-sm
                     "
