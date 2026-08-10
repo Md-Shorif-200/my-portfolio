@@ -9,11 +9,11 @@ const GithubLink = ({ href, label }) => (
     rel="noopener noreferrer"
     className="
       inline-flex items-center gap-2
-      text-sm font-medium text-black/60
-      border border-black/10 rounded-xl
+      text-sm font-medium text-ds-primary/60
+      border border-ds-primary/10 rounded-xl
       px-4 py-2.5
-      bg-white
-      hover:bg-black hover:text-white hover:border-black
+      bg-ds-primary-foreground
+      hover:bg-ds-primary hover:text-ds-secondary hover:border-ds-primary
       transition-all duration-200
     "
   >

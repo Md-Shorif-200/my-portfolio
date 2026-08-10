@@ -83,7 +83,7 @@ const FeaturedProject = () => {
             backgroundImage: `url(${BG_IMAGE})`,
           }}
         />
-        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/35 via-white/20 to-white/10" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/35 via-white/20 to-white/10 dark:from-black/35 dark:via-black/20 dark:to-black/10" />
 
         {/* ── Scrollable content ── */}
         <div className="relative z-10 py-14">

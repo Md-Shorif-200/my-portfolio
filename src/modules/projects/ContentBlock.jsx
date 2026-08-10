@@ -14,11 +14,11 @@ const ContentBlock = ({ project, accent, index }) => {
 
   return (
     <div className="flex flex-col">
-      <p className="mb-3 font-bold text-3xl lg:text-5xl capitalize  text-black">
+      <p className="mb-3 font-bold text-3xl lg:text-5xl capitalize  text-ds-primary">
         {project.title}
       </p>
 
-      <h3 className="text-base lg:text-lg font-semibold capitalize text-black/70 ">
+      <h3 className="text-base lg:text-lg font-semibold capitalize text-ds-primary/70 ">
         {project.subTitle}
       </h3>
 
@@ -29,7 +29,7 @@ const ContentBlock = ({ project, accent, index }) => {
       </div>
 
       {/* Description */}
-      <p className="mt-6 max-w-[480px] text-[14.5px] leading-[1.75] text-black/70 line-clamp-4">
+      <p className="mt-6 max-w-[480px] text-[14.5px] leading-[1.75] text-ds-primary/80 line-clamp-4 font-medium">
         {project?.description}
       </p>
 

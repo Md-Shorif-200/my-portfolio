@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const MockupBlock = ({ project, accent, hovered }) => {
   return (
     <div className="relative">
@@ -38,12 +40,14 @@ const MockupBlock = ({ project, accent, hovered }) => {
             </div>
           </div>
 
-          {/* Screenshot */}
-          <div className="relative overflow-hidden">
-            <img
+
+          <div className="relative h-[260px] w-full overflow-hidden md:h-[360px]">
+            <Image
               src={project.image}
               alt={project.title}
-              className={`h-[260px] w-full object-cover object-top transition-transform duration-700 ease-out md:h-[340px] ${
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={`object-cover object-top transition-transform duration-700 ease-out ${
                 hovered ? "scale-[1.03]" : "scale-100"
               }`}
             />
@@ -68,30 +72,26 @@ const MockupBlock = ({ project, accent, hovered }) => {
         </div>
       )}
 
-      {project.isLive && (
+  {project.isLive && (
+        <div
+          className={`absolute -top-3.5 z-10 flex items-center gap-1.5 rounded-full border border-emerald-100 dark:border-emerald-900/50 bg-white dark:bg-neutral-900 px-3 py-1.5 shadow-[0_4px_20px_rgba(16,185,129,0.15)] dark:shadow-[0_4px_20px_rgba(16,185,129,0.1)] backdrop-blur-sm transition-all duration-500 ease-out ${
+            hovered ? "-left-2" : "-left-4"
+          }`}
+        >
+          {/* Animated dot */}
+          <span className="relative flex h-2 w-2 shrink-0">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+          </span>
 
-
-
-  <div
-    className={`absolute -top-3.5 z-10 flex items-center gap-1.5 rounded-full border border-emerald-100 bg-white px-3 py-1.5 shadow-[0_4px_20px_rgba(16,185,129,0.15)] backdrop-blur-sm transition-all duration-500 ease-out ${
-      hovered ? "-left-2" : "-left-4"
-    }`}
-  >
-    {/* Animated dot */}
-    <span className="relative flex h-2 w-2 shrink-0">
-      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
-    </span>
-
-
-    {/* Label */}
-    <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-[10px] font-bold uppercase tracking-widest text-transparent">
-      Live Project
-    </span>
-  </div>
-)}
+          {/* Label */}
+          <span className="bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-[10px] font-bold uppercase tracking-widest text-transparent">
+            Live Project
+          </span>
+        </div>
+      )}
     </div>
   );
 };
 
-export default MockupBlock
+export default MockupBlock;

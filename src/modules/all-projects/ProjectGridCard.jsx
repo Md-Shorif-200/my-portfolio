@@ -33,10 +33,10 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
       transition={{ delay: index * 0.1, duration: 0.5 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative rounded-2xl overflow-hidden bg-ds-primary-foreground   border border-gray-200 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col"
+      className="group relative rounded-2xl overflow-hidden bg-ds-primary-foreground   border border-ds-border shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col"
     >
       {/* Gradient Overlay on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-ds-primary/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
 
       {/* ── Image Container ── */}
       <div className="relative h-[220px] overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -58,7 +58,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
-          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end justify-start p-4"
+          className="absolute inset-0 bg-gradient-to-t from-ds-primary/70 via-ds-primary/30 to-transparent flex items-end justify-start p-4"
         >
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -72,7 +72,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
               <Link
                 href={project.liveLink}
                 target="_blank"
-                className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-semibold border border-white/30"
+                className="inline-flex items-center gap-2 px-3 py-1.5 bg-ds-secondary/20 backdrop-blur-md rounded-full text-ds-secondary text-xs font-semibold border border-ds-secondary/30"
               >
                 <VscLiveShare className="text-sm" />
                 View Project
@@ -87,7 +87,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
             className={`px-3 py-1 backdrop-blur-sm rounded-full text-xs font-bold shadow-lg border ${
               project.isLive
                 ? "bg-emerald-500/90 text-white border-emerald-500/40"
-                : "bg-black text-heading border-black/40"
+                : "bg-ds-primary text-ds-secondary border-ds-primary/40"
             }`}
           >
             {project.isLive ? "Live Project" : project.category || "Web App"}
@@ -100,7 +100,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
         <div>
           {/* Title with animated underline */}
           <div className="relative inline-block">
-            <h3 className="text-xl font-bold text-ds-text  transition-colors duration-300">
+            <h3 className="text-xl font-bold text-ds-primary  transition-colors duration-300">
               {project.title}
             </h3>
             {/* <motion.div
@@ -113,7 +113,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
           {/* Subtitle */}
           {project.subTitle && (
             <p className="text-sm text-primary/90 font-medium mt-2 capitalize flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-black shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-ds-primary shrink-0" />
               {project.subTitle}
             </p>
           )}
@@ -129,7 +129,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
           {project?.techStack?.techStackPrev.length > 0 && (
             <>
               <div className="mt-5 mb-3 flex items-center gap-2">
-                <div className="w-8 h-[2px] bg-gradient-to-r from-black to-transparent" />
+                <div className="w-8 h-[2px] bg-gradient-to-r from-ds-primary to-transparent" />
                 <p className="text-xs font-bold text-ds-primary uppercase tracking-wider">
                   Tech Stack
                 </p>
@@ -143,7 +143,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.05 }}
                     whileHover={{ scale: 1.1, y: -2 }}
-                    className="px-3 py-1.5 text-xs font-semibold rounded-xl bg-white text-ds-primary border border-gray-200  hover:shadow-md transition-all duration-300 cursor-default"
+                    className="px-3 py-1.5 text-xs font-semibold rounded-xl bg-ds-background text-ds-primary border border-ds-border  hover:shadow-md transition-all duration-300 cursor-default"
                   >
                     {tech}
                   </motion.span>
@@ -174,7 +174,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
               <button
                 onClick={() => onViewDetails(project)}
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold
-                border-2 border-gray-300
+                border-2 border-ds-border
                  text-ds-primary hover:border-ds-border
                  transition-all duration-300 group/btn cursor-pointer"
               >
@@ -192,7 +192,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
-        className="absolute inset-0 rounded-2xl border-2 border-black pointer-events-none"
+        className="absolute inset-0 rounded-2xl border-2 border-ds-primary pointer-events-none"
       />
     </motion.article>
   );
@@ -209,7 +209,7 @@ function PrimaryBtn({ href, children, label }) {
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold
-      bg-ds-primary text-white shadow-lg shadow-ds-primary/30
+      bg-ds-primary text-ds-secondary shadow-lg shadow-ds-primary/30
       hover:shadow-xl hover:shadow-ds-primary/40 transition-all duration-300
       relative overflow-hidden group/link w-full"
     >

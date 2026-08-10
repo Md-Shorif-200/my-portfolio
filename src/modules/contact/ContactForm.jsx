@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { ImSpinner9 } from "react-icons/im";
 
 const inputStyle =
-  "w-full px-4 py-3 sm:py-3.5 rounded-xl border border-black/10 bg-white text-black placeholder:text-black/35 focus:outline-none focus:ring-2 focus:ring-black/80 focus:border-black transition-all duration-200 text-sm sm:text-base";
+  "w-full px-4 py-3 sm:py-3.5 rounded-xl border border-ds-primary/10 bg-ds-background text-ds-primary placeholder:text-ds-primary/35 focus:outline-none focus:ring-2 focus:ring-ds-primary/80 focus:border-ds-primary transition-all duration-200 text-sm sm:text-base";
 
 const ContactForm = () => {
   const [state, formAction, isPending] = useActionState(
@@ -32,13 +32,13 @@ const ContactForm = () => {
   return (
     <form
       action={formAction}
-      className="w-full flex flex-col gap-4 h-full min-w-0 bg-white border border-black/10 rounded-2xl p-5 sm:p-6 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300"
+      className="w-full flex flex-col gap-4 h-full min-w-0 bg-ds-background border border-ds-primary/10 rounded-2xl p-5 sm:p-6 md:p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-shadow duration-300"
     >
       <div>
-        <h2 className="text-black text-xs font-semibold uppercase tracking-widest mb-1">
+        <h2 className="text-ds-primary text-xs font-semibold uppercase tracking-widest mb-1">
           Send a Message
         </h2>
-        <p className="text-black/40 text-sm">
+        <p className="text-ds-primary/40 text-sm">
           Fill out the form below and I&rsquo;ll get back to you shortly.
         </p>
       </div>
