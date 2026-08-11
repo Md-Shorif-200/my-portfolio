@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { FaWhatsapp, FaMailBulk } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -28,9 +31,37 @@ const contactInfo = [
   },
 ];
 
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    x: -20,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.45,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.15,
+    },
+  },
+};
+
 const ContactInformation = () => {
   return (
-    <div className="flex flex-col gap-2 min-w-0 shadow-xs border border-ds-border p-3 sm:p-4 rounded-xl">
+    <motion.div
+      variants={containerVariants}
+      className="flex flex-col gap-2 min-w-0 shadow-xs border border-ds-border p-3 sm:p-4 rounded-xl"
+    >
       {contactInfo.map((item) => {
         const Icon = item.icon;
 
@@ -40,32 +71,42 @@ const ContactInformation = () => {
               className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
               style={{ backgroundColor: `${item.color}14` }}
             >
-              <Icon className="text-base sm:text-lg" style={{ color: item.color }} />
+              <Icon
+                className="text-base sm:text-lg"
+                style={{ color: item.color }}
+              />
             </div>
+
             <div className="pt-0.5 min-w-0">
-              <p className="text-ds-pribg-ds-primary font-semibold text-sm sm:text-[15px] leading-tight break-words">
+              <p className="text-ds-primary font-semibold text-sm sm:text-[15px] leading-tight break-words">
                 {item.title}
               </p>
-              <p className="text-ds-pribg-ds-primary/45 text-xs sm:text-sm mt-1">{item.subtitle}</p>
+
+              <p className="text-ds-primary/45 text-xs sm:text-sm mt-1">
+                {item.subtitle}
+              </p>
             </div>
           </div>
         );
 
-        return item.link ? (
-          <Link
-            key={item.id}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ds-pribg-ds-primary/30 rounded-xl"
-          >
-            {content}
-          </Link>
-        ) : (
-          <div key={item.id}>{content}</div>
+        return (
+          <motion.div key={item.id} variants={itemVariants}>
+            {item.link ? (
+              <Link
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ds-primary/30 rounded-xl"
+              >
+                {content}
+              </Link>
+            ) : (
+              content
+            )}
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
 import Container from "@/components/Container";
 import { ProjectsData } from "@/data/project/projects-data";
 import ProjectCardSkeleton from "./ProjectCardSkeleton";
@@ -20,16 +21,17 @@ const AllProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
-  // Force scroll to top on mount (fixes scrollbar not starting at top on route change)
+  // Keep page at the top when entering this page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
-  // Simulates fetch latency — swap for real data fetching when ready
+  // Simulated loading
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 700);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 700);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,6 +39,7 @@ const AllProjects = () => {
     () => ProjectsData.filter((p) => p.isLive),
     [],
   );
+
   const personalProjects = useMemo(
     () => ProjectsData.filter((p) => !p.isLive),
     [],
@@ -52,29 +55,37 @@ const AllProjects = () => {
 
   return (
     <section className="py-10">
-      <div className=" flex flex-col  items-center w-full mb-12 max-w-2xl mx-auto">
-        <div className=" inline-flex px-3 py-1 text-center text-sm font-semibold bg-ds-primary  rounded-full uppercase text-ds-secondary  justify-center items-center gap-2">
+      {/* =====================================================
+          Header
+      ====================================================== */}
+
+      <div className="flex flex-col items-center w-full mb-12 max-w-2xl mx-auto">
+        <div className="inline-flex px-3 py-1 text-center text-sm font-semibold bg-ds-primary rounded-full uppercase text-ds-secondary justify-center items-center gap-2">
           <GoProjectSymlink />
           Portfolio
         </div>
 
-        <h1 className="text-2xl md:text-3xl lg:text-4xl text-ds-primary my-3  font-bold text-center ">
-          {" "}
+        <h1 className="text-2xl md:text-3xl lg:text-4xl text-ds-primary my-3 font-bold text-center">
           All Projects
         </h1>
 
-        <p className="text-base font-medium text-ds-muted-foreground text-center capitalize ">
-          A curated collection of real-world client work and personal projects,
-          showcasing practical problem-solving, modern development practices,
-          and production-ready solutions.
+        <p className="text-base font-medium text-ds-muted-foreground text-center">
+          A curated collection of real-world client work and personal
+          projects, showcasing practical problem-solving, modern development
+          practices, and production-ready solutions.
         </p>
       </div>
+
       <Container>
-        {/* Tabs */}
+        {/* =====================================================
+            Tabs
+        ====================================================== */}
+
         <div className="mb-10 flex justify-center">
           <div className="relative inline-flex rounded-full border border-ds-border bg-ds-background p-1">
             {TABS.map((tab) => {
               const isActive = activeTab === tab.key;
+
               const count =
                 tab.key === "client"
                   ? clientProjects.length
@@ -90,9 +101,10 @@ const AllProjects = () => {
                       : "text-neutral-600 hover:text-neutral-900"
                   }`}
                 >
+                  {/* Active Tab Background */}
                   {isActive && (
                     <motion.span
-                      layoutId="tab-pill"
+                      layoutId="project-tab-pill"
                       transition={{
                         type: "spring",
                         stiffness: 350,
@@ -101,10 +113,14 @@ const AllProjects = () => {
                       className="absolute inset-0 -z-10 rounded-full bg-ds-primary"
                     />
                   )}
+
                   {tab.label}
+
                   <span
                     className={`ml-1.5 text-xs ${
-                      isActive ? "text-ds-secondary/80" : "text-neutral-400"
+                      isActive
+                        ? "text-ds-secondary/80"
+                        : "text-neutral-400"
                     }`}
                   >
                     ({count})
@@ -115,36 +131,79 @@ const AllProjects = () => {
           </div>
         </div>
 
-        {/* Grid */}
+        {/* =====================================================
+            Projects / Loading
+        ====================================================== */}
+
         <AnimatePresence mode="wait">
-          <motion.div
-            key={loading ? "loading" : activeTab}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
-          >
-            {loading
-              ? Array.from({ length: 6 }).map((_, i) => (
-                  <ProjectCardSkeleton key={i} />
-                ))
-              : visibleProjects.map((project) => (
-                  <ProjectGridCard
-                    key={project.id}
-                    project={project}
-                    onViewDetails={handleViewDetails}
-                  />
-                ))}
-          </motion.div>
+          {loading ? (
+            /* ---------------- Loading Skeleton ---------------- */
+            <motion.div
+              key="loading"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.35,
+                ease: "easeOut",
+              }}
+              className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+            >
+              {Array.from({ length: 6 }).map((_, index) => (
+                <ProjectCardSkeleton key={index} />
+              ))}
+            </motion.div>
+          ) : (
+            /* ---------------- Projects ---------------- */
+            <motion.div
+              key={activeTab}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+            >
+              {visibleProjects.map((project) => (
+                <ProjectGridCard
+                  key={project.id}
+                  project={project}
+                  onViewDetails={handleViewDetails}
+                />
+              ))}
+            </motion.div>
+          )}
         </AnimatePresence>
 
+        {/* =====================================================
+            Empty State
+        ====================================================== */}
+
         {!loading && visibleProjects.length === 0 && (
-          <p className="mt-10 text-center text-neutral-500">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.4,
+            }}
+            className="mt-10 text-center text-neutral-500"
+          >
             No projects to show in this category yet.
-          </p>
+          </motion.p>
         )}
       </Container>
+
+      {/* =====================================================
+          Project Details
+      ====================================================== */}
 
       <ProjectDetailsSheet
         project={selectedProject}
