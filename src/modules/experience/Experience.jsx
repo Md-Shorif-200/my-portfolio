@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { Briefcase, Building2, Laptop, Calendar } from "lucide-react";
 import Container from "@/components/Container";
 import ExperienceTitle from "./ExperienceTitle";
@@ -47,20 +50,77 @@ const experiences = [
   },
 ];
 
+// ── Animation variants ──
+const timelineVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 45 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const dotVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: "backOut", delay: 0.15 },
+  },
+};
+
+const badgeContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.35,
+    },
+  },
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, y: 10, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
+};
+
 const Experience = () => {
   return (
-    <section className="mt-10 mb-20">
+    <section className="pt-30">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-start">
           {/* Left Title Section */}
           <ExperienceTitle />
 
           {/* Timeline Container */}
-          <div className="lg:col-span-8 relative border-l-0 sm:border-l border-neutral-200/80 dark:border-neutral-800 ml-0 sm:ml-4 pl-0 sm:pl-11 space-y-8 sm:space-y-10">
+          <motion.div
+            className="lg:col-span-8 relative border-l-0 sm:border-l border-neutral-200/80 dark:border-neutral-800 ml-0 sm:ml-4 pl-0 sm:pl-11 space-y-8 sm:space-y-10"
+            variants={timelineVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {experiences.map((exp) => (
-              <div key={exp.id} className="relative group">
+              <motion.div key={exp.id} className="relative group" variants={cardVariants}>
                 {/* Timeline Dot - hidden on mobile, visible from sm */}
-                <div className="hidden sm:block absolute -left-[35px] sm:-left-[51px] top-2 w-3.5 h-3.5 rounded-full bg-white dark:bg-neutral-900 border-[2.5px] border-neutral-900 dark:border-neutral-100 shadow-[0_0_0_4px_rgba(0,0,0,0.04)] dark:shadow-[0_0_0_4px_rgba(255,255,255,0.04)] group-hover:bg-neutral-900 dark:group-hover:bg-neutral-100 group-hover:scale-110 transition-all duration-300 ease-out" />
+                <motion.div
+                  variants={dotVariants}
+                  className="hidden sm:block absolute -left-[35px] sm:-left-[51px] top-2 w-3.5 h-3.5 rounded-full bg-white dark:bg-neutral-900 border-[2.5px] border-neutral-900 dark:border-neutral-100 shadow-[0_0_0_4px_rgba(0,0,0,0.04)] dark:shadow-[0_0_0_4px_rgba(255,255,255,0.04)] group-hover:bg-neutral-900 dark:group-hover:bg-neutral-100 group-hover:scale-110 transition-all duration-300 ease-out"
+                />
 
                 {/* Experience Card */}
                 <div className="relative flex rounded-2xl border border-neutral-200/70 dark:border-neutral-800 bg-neutral-50/40 dark:bg-neutral-900/40 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-900 hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.5)] transition-all duration-300 ease-out overflow-hidden">
@@ -129,10 +189,17 @@ const Experience = () => {
                     </div>
 
                     {/* Technology Badges */}
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
+                    <motion.div
+                      className="flex flex-wrap gap-1.5 sm:gap-2 pt-1"
+                      variants={badgeContainerVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.5 }}
+                    >
                       {exp.technologies.map((tech) => (
-                        <span
+                        <motion.span
                           key={tech}
+                          variants={badgeVariants}
                           className="inline-flex items-center px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl text-[11px] sm:text-[12px] font-medium tracking-wide
                             bg-neutral-100/70 dark:bg-neutral-800/70 text-neutral-700 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-700/60
                             shadow-[0_1px_2px_rgba(0,0,0,0.04)] dark:shadow-none
@@ -142,14 +209,14 @@ const Experience = () => {
                             transition-all duration-300 ease-out"
                         >
                           {tech}
-                        </span>
+                        </motion.span>
                       ))}
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>

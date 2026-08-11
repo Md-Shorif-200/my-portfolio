@@ -5,9 +5,7 @@
 
 html {
   scroll-behavior: smooth;
-
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -28,7 +26,7 @@ html {
   --color-ds-card: var(--ds-card);
   --color-ds-card-foreground: var(--ds-card-foreground);
   --color-ds-primary: var(--ds-primary);
-    --color-ds-primary-foreground: var(--ds-primary-foreground);
+  --color-ds-primary-foreground: var(--ds-primary-foreground);
   --color-ds-secondary: var(--ds-secondary);
   --color-ds-secondary-foreground: var(--ds-secondary-foreground);
   --color-ds-border: var(--ds-border);
@@ -96,30 +94,24 @@ html {
   --ds-muted: #f7f8fa;
   --ds-muted-foreground: #4b5563;  */
 
-
-    --ds-background: #ffffff;
-  --ds-foreground: #0A0A0A;        /* fixed: ছিল #DFDFDF, টেক্সট হিসেবে ব্যবহার করলে এটা প্রায় অদৃশ্য হয়ে যেত */
+  --ds-background: #ffffff;
+  --ds-foreground: #0a0a0a; /* fixed: ছিল #DFDFDF, টেক্সট হিসেবে ব্যবহার করলে এটা প্রায় অদৃশ্য হয়ে যেত */
   --ds-card: #ffffff;
-  --ds-card-foreground: #0A0A0A;
-  --ds-primary: #0A0A0A;
+  --ds-card-foreground: #0a0a0a;
+  --ds-primary: #0a0a0a;
   --ds-primary-foreground: #ffffff;
-  --ds-secondary: #f4f4f5;         /* fixed: ছিল white, কিন্তু background-ও white হওয়ায় secondary বোতাম আলাদা বোঝা যেত না */
-  --ds-secondary-foreground: #0A0A0A; /* নতুন যোগ করলাম, secondary-এর উপর টেক্সট দরকার */
+  --ds-secondary: #f4f4f5; /* fixed: ছিল white, কিন্তু background-ও white হওয়ায় secondary বোতাম আলাদা বোঝা যেত না */
+  --ds-secondary-foreground: #0a0a0a; /* নতুন যোগ করলাম, secondary-এর উপর টেক্সট দরকার */
   --ds-border: #e5e7eb;
   --ds-input: #f7f8fa;
-  --ds-ring: #0A0A0A;
-  --ds-text: #0A0A0A;
+  --ds-ring: #0a0a0a;
+  --ds-text: #0a0a0a;
   --ds-muted: #f7f8fa;
   --ds-muted-foreground: #4b5563;
 
-    --ds-dot-color: #d4d4d8;
+  --ds-dot-color: #d4d4d8;
   --ds-radial-glow: rgba(255, 255, 255, 0.85);
-
-
-  
 }
-
-
 
 .dark {
   /* --color-primary: #21BF73;
@@ -140,7 +132,6 @@ html {
   --color-shadow: rgba(0, 0, 0, 0.35);
   --color-shadow-accent: rgba(33, 191, 115, 0.28); */
 
-
   /* --ds-background: white;
   --ds-foreground: #0A0A0A;
   --ds-card: #ffffff;
@@ -155,159 +146,33 @@ html {
   --ds-muted: #f7f8fa;
   --ds-muted-foreground:  #4b5563; */
 
-  --ds-background: #0A0A0A;
-  --ds-foreground: #FAFAFA;
+  --ds-background: #0a0a0a;
+  --ds-foreground: #fafafa;
   --ds-card: #141414;
-  --ds-card-foreground: #FAFAFA;
-  --ds-primary: #FAFAFA;
-  --ds-primary-foreground: #0A0A0A;
+  --ds-card-foreground: #fafafa;
+  --ds-primary: #fafafa;
+  --ds-primary-foreground: #0a0a0a;
   --ds-secondary: #262626;
-  --ds-secondary-foreground: #FAFAFA;
+  --ds-secondary-foreground: #fafafa;
   --ds-border: #262626;
   --ds-input: #1c1c1c;
-  --ds-ring: #FAFAFA;
-  --ds-text: #FAFAFA;
+  --ds-ring: #fafafa;
+  --ds-text: #fafafa;
   --ds-muted: #1c1c1c;
   --ds-muted-foreground: #a1a1aa;
-    --ds-dot-color: #3f3f46;
+  --ds-dot-color: #3f3f46;
   --ds-radial-glow: rgba(10, 10, 10, 0.85);
-
-
 }
-
-.primary_color {
-  color: var(--color-primary);
-}
-
-.secondary_color {
-  color: var(--color-accent);
-}
-
-.bg_color {
-  background-color: var(--color-page-bg);
-}
-
-.bg-surface {
-  background-color: var(--color-surface);
-}
-
-.bg-surface-80 {
-  background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-}
-
-.bg-surface-muted {
-  background-color: var(--color-surface-muted);
-}
-
-.bg-surface-muted-90 {
-  background-color: color-mix(in srgb, var(--color-surface-muted) 90%, transparent);
-}
-
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
-.bg-primary-soft {
-  background-color: var(--color-primary-soft);
-}
-
-.bg-primary-soft-strong {
-  background-color: var(--color-primary-soft-strong);
-}
-
-.text-heading {
-  color: var(--color-text);
-}
-
-.text-subtle {
-  color: var(--color-text-muted);
-}
-
-.text-soft {
-  color: var(--color-text-soft);
-}
-
-.border-soft {
-  border-color: var(--color-border);
-}
-
-.border-primary {
-  border-color: var(--color-primary);
-}
-
-.shadow-soft {
-  box-shadow: 0 10px 30px var(--color-shadow);
-}
-
-.gradient-primary {
-  background-image: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-}
-
-.gradient-primary-reverse {
-  background-image: linear-gradient(90deg, var(--color-accent), var(--color-primary));
-}
-
-.featurd_card:hover .icon {
-  transform: rotateY(360deg);
-  transition: transform 0.6s ease;
-}
-
-.primary_btn {
-  @apply inline-flex items-center gap-3 px-4 py-2 rounded-xl font-semibold transition-all;
-  background-color: var(--color-primary);
-  color: white;
-  box-shadow: 0 12px 25px var(--color-shadow-accent);
-}
-
-.primary_btn:hover {
-  background-color: var(--color-primary-hover);
-}
-
-.secondary_btn {
-  @apply inline-flex items-center gap-3 px-4 py-2 rounded-xl font-semibold transition-all;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-}
-
-.secondary_btn:hover {
-  background-color: var(--color-primary-soft);
-}
-
-.icon_bg_color {
-  @apply w-11 h-11 flex items-center justify-center rounded-xl border transition-all duration-300 ease-out hover:-translate-y-1 active:scale-95;
-  background-color: var(--color-surface);
-  color: var(--color-text-muted);
-  border-color: var(--color-border);
-  box-shadow: 0 8px 20px var(--color-shadow);
-}
-
-.icon_bg_color::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(33,191,115,0.6), rgba(33,191,115,0.15));
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.3s ease;
-}
-
-.icon_bg_color:hover {
-  color: var(--color-primary);
-  border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
-  box-shadow: 0 12px 28px var(--color-shadow-accent);
-}
-
-.icon_bg_color:hover::after {
-  opacity: 1;
-}
-
-
 
 @layer utilities {
   @keyframes pulse-small {
-    0%, 100% { transform: scale(0.8); }
-    50% { transform: scale(1.2); }
+    0%,
+    100% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }
 
   .animate-pulse-small {
@@ -315,65 +180,53 @@ html {
   }
 }
 
-
-
-
 pre {
   white-space: pre-wrap;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   font-size: 14px;
 }
 
+@media (min-width: 350px) and (max-width: 449px) {
+  .banner .banner_img_section {
+    @apply w-[350px];
+  }
+}
 
+@media (min-width: 450px) and (max-width: 500px) {
+  .banner .banner_img_section {
+    @apply w-[400px];
+  }
+}
 
-@media (min-width : 350px ) and (max-width : 449px) {
-    .banner  .banner_img_section {
-        @apply w-[350px]
-    }
-} 
+@media (min-width: 501px) and (max-width: 767px) {
+  .banner .banner_img_section {
+    @apply w-[450px];
+  }
+}
 
-@media (min-width : 450px ) and (max-width : 500px) {
-    .banner  .banner_img_section {
-        @apply w-[400px]
-    }
-} 
-
-@media (min-width : 501px ) and (max-width : 767px) {
-    .banner  .banner_img_section {
-        @apply w-[450px]
-    }
-} 
-
-
-@media (min-width : 430px ) and (max-width : 639px) {
-    .banner  .banner_buttons {
-        @apply flex-row
-    }
-} 
-@media (min-width : 480px ) and (max-width : 639px) {
-    .FocusCard_secton   {
-        @apply grid-cols-2 
-    }
-} 
-@media (min-width : 450px ) and (max-width : 639px) {
-    .about_section .lottie_img   {
-        @apply  w-[80%] h-[400px]
-    }
-} 
-
-
-
-
-
+@media (min-width: 430px) and (max-width: 639px) {
+  .banner .banner_buttons {
+    @apply flex-row;
+  }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  .FocusCard_secton {
+    @apply grid-cols-2;
+  }
+}
+@media (min-width: 450px) and (max-width: 639px) {
+  .about_section .lottie_img {
+    @apply w-[80%] h-[400px];
+  }
+}
 
 .Techstack_Div_1 {
-  @apply w-12 h-12  2xl:w-14 2xl:h-14 flex justify-center items-center border border-2 border-[#21BF73] rounded-full bg-white
+  @apply w-12 h-12  2xl:w-14 2xl:h-14 flex justify-center items-center border border-2 border-[#21BF73] rounded-full bg-white;
 }
 
 .Techstack_Div_2 {
-@apply w-10 h-10 2xl:w-14 2xl:h-14 flex justify-center items-center bg-[#EAF9F2]  rounded-full
+  @apply w-10 h-10 2xl:w-14 2xl:h-14 flex justify-center items-center bg-[#EAF9F2]  rounded-full;
 }
-
 
 @keyframes fadeInUp {
   from {
@@ -387,7 +240,8 @@ pre {
 }
 
 @keyframes gradient {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -403,8 +257,6 @@ pre {
 .bg-size-200 {
   background-size: 200% 200%;
 }
-
-
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
@@ -424,7 +276,6 @@ pre {
   background: linear-gradient(180deg, #3fd694, #2bc77d);
 }
 
-
 /* global.css */
 
 @keyframes gradientShift {
@@ -439,27 +290,24 @@ pre {
   }
 }
 
-
-.skill_Card_Box_Shadow {
-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-.skill_card_pill_box_shadow {
-  
-}
-
-
-
-
 @media (min-width: 640px) {
   .skill-card {
     grid-row: span var(--row-span);
   }
 }
 
-
 @keyframes shimmer {
   100% {
     transform: translateX(100%);
   }
 }
+
+.section_top_padding {
+  @apply pt-22
+}
+
+
+.section_bottom_padding {
+  @apply pb-20
+}
+

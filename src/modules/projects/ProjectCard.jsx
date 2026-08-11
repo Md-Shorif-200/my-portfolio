@@ -1,5 +1,6 @@
-"use client"
-import { useRef, useState } from "react";
+"use client";
+
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import ContentBlock from "./ContentBlock";
 import MockupBlock from "./MockupBlock";
 import { ACCENTS } from "./FeaturedProject";
@@ -7,21 +8,28 @@ import { ACCENTS } from "./FeaturedProject";
 const ProjectCard = ({ project, index }) => {
   const isReversed = index % 2 === 1;
   const accent = ACCENTS[index % ACCENTS.length];
-  const cardRef = useRef(null);
-  const [hovered, setHovered] = useState(false);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+
+  // ── Smooth spring-based tilt (replaces manual state + inline transform) ──
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springConfig = { stiffness: 150, damping: 18, mass: 0.4 };
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [10, -10]), springConfig);
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-10, 10]), springConfig);
+  const scale = useSpring(1, springConfig);
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -10;
-    setTilt({ x, y });
+    const rect = e.currentTarget.getBoundingClientRect();
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
   };
 
+  const handleMouseEnter = () => scale.set(1.02);
+
   const handleMouseLeave = () => {
-    setHovered(false);
-    setTilt({ x: 0, y: 0 });
+    x.set(0);
+    y.set(0);
+    scale.set(1);
   };
 
   return (
@@ -31,29 +39,55 @@ const ProjectCard = ({ project, index }) => {
       }`}
     >
       {/* Content */}
-      <div className="w-full lg:w-[45%]">
+      <motion.div
+        className="w-full lg:w-[45%]"
+        initial={{ opacity: 0, x: isReversed ? 60 : -60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.35 }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      >
         <ContentBlock project={project} accent={accent} index={index} />
-      </div>
+      </motion.div>
 
-      {/* Mockup with tilt */}
-      <div className="w-full lg:w-[55%]">
-        <div
-          ref={cardRef}
-          onMouseEnter={() => setHovered(true)}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            transform: `perspective(1000px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
-            transition: hovered
-              ? "transform 0.1s ease-out"
-              : "transform 0.5s ease-out",
-          }}
-        >
-          <MockupBlock project={project} accent={accent} hovered={hovered} />
-        </div>
-      </div>
+      {/* Mockup with spring tilt */}
+    <motion.div
+  className="w-full lg:w-[55%]"
+  initial={{
+    opacity: 0,
+    x: isReversed ? -60 : 60,
+    scale: 0.94,
+  }}
+  whileInView={{
+    opacity: 1,
+    x: 0,
+    scale: 1,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.35,
+  }}
+  transition={{
+    duration: 1.05,
+    ease: [0.16, 1, 0.3, 1],
+    delay: 0.15,
+  }}
+>
+  <motion.div
+    onMouseMove={handleMouseMove}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+    style={{
+      rotateX,
+      rotateY,
+      scale,
+      transformPerspective: 1000,
+    }}
+  >
+    <MockupBlock project={project} accent={accent} />
+  </motion.div>
+</motion.div>
     </div>
   );
 };
 
-export default ProjectCard
+export default ProjectCard;

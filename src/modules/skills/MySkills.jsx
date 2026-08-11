@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
 import SectionTitle from "@/components/common/SectionTitle";
 import Container from "@/components/Container";
@@ -63,7 +64,7 @@ const skillCategories = [
         icon: "simple-icons:nextdotjs",
         className: "text-black dark:text-white",
       },
-        { name: "Firebase", icon: "selfhst:firebase" },
+      { name: "Firebase", icon: "selfhst:firebase" },
       { name: "JWT", icon: "logos:jwt-icon" },
 
       { name: "Nodemailer", icon: "lucide:mail", className: "text-[#22B573]" },
@@ -90,7 +91,6 @@ const skillCategories = [
     rows: 6,
     skills: [
       { name: "MongoDB", icon: "devicon:mongodb" },
-    
       { name: "Redis", icon: "devicon:redis" },
     ],
   },
@@ -128,7 +128,7 @@ const skillCategories = [
     id: 6,
     key: "system_architecture",
     title: "System & Architecture",
-    icon: "lucide:cpu", // বা "lucide:layers-3" / "lucide:network"
+    icon: "lucide:cpu",
     span: "lg:col-span-1",
     rows: 6,
     skills: [
@@ -147,10 +147,53 @@ const skillCategories = [
   },
 ];
 
+// ---- Animation variants ----
+const gridVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const pillContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const pillVariants = {
+  hidden: { opacity: 0, scale: 0.85, y: 8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
+};
+
 // ---- Skill Pill Component ----
 function SkillPill({ skill }) {
   return (
-    <div className="group inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm dark:shadow-none transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-ds-primary/30 hover:shadow-md dark:hover:shadow-none hover:bg-ds-secondary/80">
+    <motion.div
+      variants={pillVariants}
+      className="group inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm dark:shadow-none transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-ds-primary/30 hover:shadow-md dark:hover:shadow-none hover:bg-ds-secondary/80"
+    >
       <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full">
         <Icon
           icon={skill.icon}
@@ -162,16 +205,17 @@ function SkillPill({ skill }) {
       <span className="whitespace-nowrap text-sm font-medium text-ds-muted-foreground transition-colors duration-300 ease-out group-hover:text-ds-primary">
         {skill.name}
       </span>
-    </div>
+    </motion.div>
   );
 }
 
 // ---- Category Card Component ----
 function SkillCard({ category }) {
   return (
-    <div
-
-      className={`${category.span} skill-card group flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ds-primary/10 skill_Card_Box_Shadow`}
+    <motion.div
+      variants={cardVariants}
+      whileHover={{ y: -4 }}
+      className={`${category.span} skill-card group flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:border-ds-primary/10 skill_Card_Box_Shadow`}
       style={{ "--row-span": category.rows || 6 }}
     >
       <div className="mb-6 flex items-center gap-4">
@@ -184,31 +228,50 @@ function SkillCard({ category }) {
         </h3>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <motion.div
+        className="flex flex-wrap gap-2"
+        variants={pillContainerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
         {category.skills.map((skill) => (
           <SkillPill key={skill.name} skill={skill} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
 // ---- Main Component ----
 export default function Skills() {
   return (
-    <section className="pt-10 pb-20">
+    <section className="section_top_padding">
       <Container>
-        <SectionTitle
-          align="left"
-          badgeText="Tech Stack"
-          title="Technical Skills"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <SectionTitle
+            align="left"
+            badgeText="Tech Stack"
+            title="Technical Skills"
+          />
+        </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min ">
+        <motion.div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {skillCategories.map((category) => (
             <SkillCard key={category.title} category={category} />
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

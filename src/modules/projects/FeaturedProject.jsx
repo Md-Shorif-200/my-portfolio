@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Container from "@/components/Container";
 
 import ProjectCard from "./ProjectCard";
@@ -9,7 +10,7 @@ import PrimaryButton from "@/components/common/PrimaryButton";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-const BG_IMAGE = "/image/projects/project-img-1.webp";
+const BG_IMAGE = "/image/projects/project_image_2.webp";
 
 export const ACCENTS = [
   {
@@ -63,9 +64,15 @@ const FeaturedProject = () => {
   const featuredProjects = ProjectsData.slice(0, 3);
 
   return (
-    <section>
+    <section className="section_top_padding">
       <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-12 lg:px-14 xl:px-0 mb-6 lg:mb-0">
-        <div className="flex items-center justify-between flex-wrap gap-1 ">
+        <motion.div
+          className="flex items-center justify-between flex-wrap gap-1"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <SectionTitle
             align="left"
             badgeText="My Work"
@@ -73,17 +80,20 @@ const FeaturedProject = () => {
           />
 
           <ViewAllProjectsLink href="/all-projects" />
-        </div>
+        </motion.div>
       </div>
+
       <div className="relative overflow-hidden">
         {/* ── Parallax fixed background ── */}
-        <div
-          className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-30"
-          style={{
-            backgroundImage: `url(${BG_IMAGE})`,
-          }}
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
+          style={{ backgroundImage: `url(${BG_IMAGE})` }}
+          initial={{ opacity: 0, scale: 1.08 }}
+          whileInView={{ opacity: 0.3, scale: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         />
-      <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/35 via-white/20 to-white/10 dark:from-black/35 dark:via-black/20 dark:to-black/10" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/35 via-white/20 to-white/10 dark:from-black/35 dark:via-black/20 dark:to-black/10" />
 
         {/* ── Scrollable content ── */}
         <div className="relative z-10 py-14">
@@ -98,13 +108,19 @@ const FeaturedProject = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center mt-10">
+      <motion.div
+        className="w-full flex justify-center items-center mt-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <PrimaryButton
           href="/all-projects"
           content="View All Projects"
           icon={ArrowUpRight}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
