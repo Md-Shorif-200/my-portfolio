@@ -200,8 +200,8 @@ export default function Skills() {
       <Container>
         <SectionTitle
           align="left"
-          badgeText="My Skills"
-          title="Technical Expertise"
+          badgeText="Tech Stack"
+          title="Technical Skills"
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min ">

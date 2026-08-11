@@ -19,11 +19,6 @@ export default function Home() {
         <About />
       </section>
 
-        <EducationAndCertifications />
-
-        <MyExpertise />
-      
-
       <section id="skills" className="scroll-mt-20">
         <MySkills />
       </section>
@@ -35,6 +30,9 @@ export default function Home() {
       <section id="featured_project" className="scroll-mt-28">
         <FeaturedProject />
       </section>
+
+      <MyExpertise />
+      <EducationAndCertifications />
 
       <section id="contact" className="scroll-mt-20">
         <Contact />

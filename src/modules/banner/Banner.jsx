@@ -27,16 +27,16 @@ export default function Banner() {
 
       <Container>
         {/* ── Main Content ── */}
-        <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto">
+        <div className="flex flex-col items-center text-center gap-3 max-w-6xl mx-auto mt-6 min-[450px]:mt-10 lg:mt-0">
           {/* ── Heading ── */}
           <h1
-            className="  text-ds-primary mt-6 relative font-extrabold"
+            className="  text-ds-primary font-sans text-5xl min-[450px]:text-6xl sm:text-7xl lg:text-[82px] mt-6 relative font-extrabold"
             data-aos="fade-up"
           >
-            <span className="block text-5xl lg:text-7xl text-ds-text name-line-1">
+            <span className="block  text-ds-text name-line-1">
               SHORIF
             </span>
-            <span className="block text-5xl lg:text-7xl mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
+            <span className="block  mt-2 sm:tracking-[1.5px] text-[#858585] name-line-2">
               UDDIN RIFAT
             </span>
           </h1>
@@ -59,7 +59,7 @@ export default function Banner() {
           </div>
 
           {/* ── Resume Modal Trigger ── */}
-          <div data-aos="fade-up" data-aos-delay="300" className="mt-2">
+          <div data-aos="fade-up" data-aos-delay="300" className="mt-4">
             {/* <ResumeDownloadButton /> */}
             <ResumePreviewModal />
           </div>
@@ -67,14 +67,14 @@ export default function Banner() {
       </Container>
 
       {/* ── Scroll Mouse Icon ── */}
-      <div className="flex flex-col items-center gap-2 opacity-60 hidden min-[450px]:flex mt-6">
-        <div className="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center pt-1.5 relative">
+      <div className="flex flex-col items-center gap-2 opacity-60   mt-10 animate-bounce">
+        <div className="w-6 h-10 rounded-full border-2 border-ds-primary flex justify-center pt-1.5 relative">
           <span
-            className="w-1 h-2 bg-zinc-400 dark:bg-zinc-500 rounded-full animate-bounce"
+            className="w-1 h-2 bg-ds-primary rounded-full animate-bounce"
             style={{ animationDuration: "1.5s" }}
           />
         </div>
-        <p className="text-[10px] uppercase tracking-[3px] text-zinc-400 dark:text-zinc-600 font-medium">
+        <p className="text-[11px] uppercase tracking-[3px] text-ds-primary font-semibold">
           Scroll
         </p>
       </div>
