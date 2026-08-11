@@ -18,7 +18,7 @@ const ContentBlock = ({ project, accent, index }) => {
         {project.title}
       </p>
 
-      <h3 className="text-base lg:text-lg font-semibold capitalize text-ds-primary/70 ">
+      <h3 className="text-xl lg:text-2xl font-semibold capitalize text-ds-primary/80 ">
         {project.subTitle}
       </h3>
 

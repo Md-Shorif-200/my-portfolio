@@ -26,12 +26,12 @@ const stats = [
     label: "Always",
     description: "Readable & maintainable code",
   },
-  {
-    icon: <BsLightningCharge size={22} />,
-    value: "Remote",
-    label: "Friendly",
-    description: "Available globally, anytime",
-  },
+  // {
+  //   icon: <BsLightningCharge size={22} />,
+  //   value: "Remote",
+  //   label: "Friendly",
+  //   description: "Available globally, anytime",
+  // },
 ];
 
 
@@ -40,7 +40,7 @@ const stats = [
 const BannerStatsCard = () => {
   return (
        <div
-            className="grid grid-cols-2  min-[450px]:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
+            className="grid grid-cols-2  min-[450px]:grid-cols-3  gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
             data-aos="fade-up"
             data-aos-delay="200"
           >

@@ -39,7 +39,7 @@ export const ProjectsData = [
       {
         title: "User Friendly Interface",
         feature:
-          "A clean and simple design that makes it easy for both customers and vendors to navigate, search products, and manage their tasks without confusion. It also uses geolocation to detect the user's location and show relevant branch-wise products automatically.",
+          "A clean, intuitive interface that makes it easy for customers and vendors to navigate, search products, and manage tasks. Geolocation also shows relevant branch-wise products based on the user's location.",
       },
       {
         title: "Vendor Management",
@@ -52,9 +52,9 @@ export const ProjectsData = [
           "Customers can track their orders in real time from purchase to delivery, giving them full visibility and reducing support queries.",
       },
       {
-        title: "Performance Optimization",
+        title: "Performance Optimization & Scalability",
         feature:
-          "Optimized the platform for speed, accessibility, and SEO, achieving Google Lighthouse scores of 90% for Performance, 100% for Best Practices and 95% for SEO.",
+          "Optimized the platform to efficiently handle large amounts of data using server-side pagination and image optimization. Code splitting, reusable components and a modular folder structure were implemented to improve scalability, maintainability and overall performance. Achieved 90% Performance, 100% Best Practices, and 95% SEO scores in Google Lighthouse.",
       },
     ],
     contributions: {
@@ -135,40 +135,147 @@ export const ProjectsData = [
   {
     id: "1717430400789",
     category: "fullstack",
-    title: "Car Doctor",
-    subTitle: "Car Servicing & Auto Parts Platform",
+    title: "Apprelix",
+    subTitle: "AI-Powered B2B Apparel Sourcing Platform,",
     image:
       "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786368285/apprelix_3_egxfzo.webp",
-    clientTech: [
-      "React",
-      "Next.js",
-      "Tailwind",
-      "shadcn ui",
-      "Origin ui",
-      "Aos",
-    ],
-    serverTech: ["Node.js", "Express.js", "MongoDB", "Next Auth"],
-    github: "https://github.com/Md-Shorif-200/Card-Doctor-Next.js",
-    liveLink: "https://car-doctor-ruby.vercel.app/",
+
+    techStack: {
+      techStackPrev: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui`",
+        "Express.js",
+        "Mongoose",
+        "Jwt",
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Jwt",
+        "React Hook Form",
+        "Zod",
+        "Tanstack Query",
+        "Framer Motion",
+        "swiper.js",
+      ],
+    },
+
+    liveLink: "https://apprelix.vercel.app/",
+    clientGithub: "https://github.com/Md-Shorif-200/apprelix",
+    serverGithub: "https://github.com/Md-Shorif-200/apprelix-server",
     description:
-      "Car Doctor is a modern, user-friendly platform connecting car owners with reliable services and auto parts, offering a seamless experience with secure authentication via NextAuth..",
+      "This is a full-stack B2B apparel sourcing platform where buyers can post RFQs (Request for Quotation) and suppliers can submit quotations. It includes real-time chat, production tracking, and an admin panel to manage the whole system. AI features help match the right suppliers and estimate prices, making the sourcing process faster and easier.",
     keyFeatures: [
       {
-        title: "Service Booking ",
+        title: "RFQ & Quotation Management",
         feature:
-          "Users can view detailed information of a specific car service, book the service, and update or delete their bookings.",
+          "Buyers can create detailed RFQs, while suppliers can submit competitive quotations with pricing, delivery timelines, and additional terms—all in one streamlined workflow.",
       },
       {
-        title: "Service Management",
+        title: "AI-Powered Supplier Matching & Insights",
         feature:
-          "Admins can add, update, and delete car service data efficiently.",
+          "Find the right suppliers with AI-powered matching, pricing insights, supplier performance analysis, and smart recommendations for better sourcing decisions.",
       },
       {
-        title: "Secure Authentication ",
+        title: "Production & Tracking",
         feature:
-          "Authentication and user management implemented securely using NextAuth.",
+          "Track orders through every production stage, including cutting, stitching, quality checking, packaging, and shipment, giving buyers complete visibility.",
+      },
+      {
+        title: "Role-Based Dashboards",
+        feature:
+          "Separate dashboards for Buyers, Suppliers, and Admins with role-based permissions and protected routes. Buyers manage RFQs and orders, Suppliers handle quotations and production, and Admins manage users and analytics.",
+      },
+      {
+        title: "Performance Optimization",
+        feature:
+          "Enhanced performance with Next.js Image Optimization, TanStack Query for API caching, code splitting, and a scalable modular architecture. Achieved 95% Performance, 90% Accessibility, 100% Best Practices, and 100% SEO in Google Lighthouse.",
       },
     ],
+    contributions: {
+      organization: "Personal Project",
+      role: "Full-Stack Developer",
+      description:
+        "I built this entire project alone, both frontend and backend. On the frontend, I used TypeScript, Next.js, and Zustand, and organized the code with a modular folder structure. This gave me strong hands-on experience in building scalable and clean frontend architecture. On the backend, I used Express.js, Mongoose, and JWT to build a secure and well-structured API. This helped improve the website's performance, scalability, and security.",
+    },
+  },
+  {
+    id: "1717430407258",
+    category: "fullstack",
+    title: "Tution House",
+
+    subTitle: "Modern Tutor Marketplace & Management Platform",
+    isLive: true,
+    image:
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786362746/tution_house_1_rud2hz.webp",
+
+    techStack: {
+      techStackPrev: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui",
+        "Formik",
+
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui`",
+        "Tailwind CSS",
+        "Formik",
+        "Yup",
+        "Tanstack Query",
+        "Framer Motion",
+      ],
+    },
+
+    liveLink: "https://tuitionhouse.org/",
+
+    description:
+      "TuitionHouse is a tutor finding and job management platform for students, guardians, and teachers in Bangladesh. Users can find online or offline teachers based on subject, location, class level, category, and availability. Teachers can apply to join the platform and apply for suitable tutoring jobs. Guardians can also submit tutoring job requests with their requirements. The platform includes an advanced admin dashboard to manage teachers, students, jobs, and other platform activities.",
+    keyFeatures: [
+      {
+        title: "Smart Tutor Discovery",
+        feature:
+          "Designed an intuitive search experience that helps students and guardians find suitable online or offline tutors based on subject, category, location, class level, and availability.",
+      },
+      {
+        title: "Teacher & Job Applications",
+        feature:
+          "Enabled teachers to apply for tutoring opportunities and explore detailed job posts based on their preferred teaching requirements.",
+      },
+      {
+        title: "Advanced Admin Management",
+        feature:
+          "Developed a comprehensive admin dashboard with teacher, student, and job management features, including profile review, approval, blocking, deletion, and job post management.",
+      },
+      {
+        title: "Performance & Scalability",
+        feature:
+          "Improved application performance through server-side pagination, filtering, query-based data fetching, lazy loading, image optimization, and clean reusable components.",
+      },
+    ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Frontend Developer",
+      description:
+        "I worked on the frontend development of the TuitionHouse platform . I collaborated with backend developers to integrate APIs and develop features based on client requirements. I also worked on the advanced admin dashboard, including Teacher, Student, and Job Management, while building reusable and responsive UI components.",
+    },
   },
   {
     id: "1717430401012",
@@ -323,35 +430,6 @@ export const ProjectsData = [
     liveLink: "https://gyan-online-course.netlify.app/",
     description:
       "gyan is a beautifully designed, fully responsive and  static website that showcases online courses with a modern look and smooth browsing experience.",
-    keyFeatures: [
-      {
-        title: "",
-        feature: "",
-      },
-      {
-        title: "",
-        feature: "",
-      },
-      {
-        title: "",
-        feature: "",
-      },
-    ],
-  },
-
-  {
-    id: "1717430402567",
-    category: "frontend",
-    title: "Rinterio",
-    subTitle: "",
-    image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1762277350/Capture-13-min_guwcul.png",
-    clientTech: ["html", "css", "Tailwind", "daisy ui"],
-    serverTech: [],
-    github: "https://github.com/Md-Shorif-200/ph-assignment-3",
-    liveLink: "https://rinterio-200.netlify.app/",
-    description:
-      "This is a beautifully designed, fully responsive website where users can explore various luxurious and elegant apartments.",
     keyFeatures: [
       {
         title: "",
