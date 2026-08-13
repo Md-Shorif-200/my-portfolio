@@ -10,7 +10,7 @@ import {
 import PrimaryButton from "../../components/common/PrimaryButton";
 
 const RESUME_URL =
-  "https://res.cloudinary.com/dxg4xodmg/image/upload/v1785770820/Shorif_Frontend_Developer_Resume_w0r89p.pdf";
+  "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786628803/Shorif_Web_Developer_Resume_dw2url.pdf";
 
 function ResumePreviewModal({
   resumeUrl = RESUME_URL,
