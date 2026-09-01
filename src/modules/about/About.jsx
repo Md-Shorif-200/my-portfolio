@@ -84,7 +84,7 @@ const About = () => {
       Hi, I&apos;m{" "}
       <span className={hightlightedText}>Shorif Uddin Rifat</span> — a
       passionate web developer with over{" "}
-      <span className={hightlightedText}>1+ years of experience </span> crafting
+      <span className={hightlightedText}>2+ years of experience </span> crafting
       high-performance, full-stack web applications. I thrive on architecting
       clean code, streamlining user experiences, and building scalable digital
       solutions that drive business growth.
@@ -96,11 +96,11 @@ const About = () => {
       <span className={hightlightedText}>dynamic front-end frameworks</span>,
       with strong expertise in{" "}
       <span className={hightlightedText}>
-        Next.js, Redux, Zustand, and Node.js
+        Next.js, Redux, Zustand and Node.js
       </span>
       . On the backend and data architecture side, I leverage{" "}
       <span className={hightlightedText}>
-        MongoDB, Mongoose, Redis, and Docker
+        MongoDB and Mongoose
       </span>{" "}
       along with <span className={hightlightedText}>JWT authentication</span>{" "}
       to build secure, reliable, and containerized systems.
