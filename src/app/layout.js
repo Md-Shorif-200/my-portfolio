@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
       <body className={`${interSans.variable} ${robotoMono.variable}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="night"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >
