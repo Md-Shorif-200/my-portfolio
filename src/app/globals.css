@@ -98,8 +98,8 @@ html {
   --ds-foreground: #0a0a0a; /* fixed: ছিল #DFDFDF, টেক্সট হিসেবে ব্যবহার করলে এটা প্রায় অদৃশ্য হয়ে যেত */
   --ds-card: #ffffff;
   --ds-card-foreground: #0a0a0a;
-  --ds-primary: #0a0a0a;
   --ds-primary-foreground: #ffffff;
+  --ds-primary: #0a0a0a;
   --ds-secondary: #f4f4f5; /* fixed: ছিল white, কিন্তু background-ও white হওয়ায় secondary বোতাম আলাদা বোঝা যেত না */
   --ds-secondary-foreground: #0a0a0a; /* নতুন যোগ করলাম, secondary-এর উপর টেক্সট দরকার */
   --ds-border: #e5e7eb;
@@ -310,4 +310,6 @@ pre {
 .section_bottom_padding {
   @apply pb-20
 }
+
+
 
