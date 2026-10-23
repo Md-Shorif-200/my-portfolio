@@ -1,117 +1,73 @@
-
-
-
-import { HiOutlineCode } from "react-icons/hi";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { TbWorldCheck } from "react-icons/tb";
-import { BsLightningCharge } from "react-icons/bs";
-
-
+/* count থাকলে GSAP সংখ্যাটি 0 থেকে count-up করবে।
+   আগের stats এর সব data এখানে আছে। Remote entry টি আবার চালু করতে comment তুলে দিন। */
 const stats = [
   {
-    icon: <MdOutlineWorkOutline size={22} />,
-    value: "2+ Years",
+    count: 2,
+    suffix: "+",
+    unit: "Years",
     label: "Experience",
-    description: "Professional web development",
+    desc: "Professional web development",
   },
   {
-    icon: <TbWorldCheck size={22} />,
-    value: "5+ Projects",
+    count: 5,
+    suffix: "+",
+    unit: "Projects",
     label: "Real World",
-    description: "Production-ready applications",
+    desc: "Production-ready applications",
   },
   {
-    icon: <HiOutlineCode size={22} />,
-    value: "Clean Code",
+    text: "Clean Code",
     label: "Always",
-    description: "Readable & maintainable code",
+    desc: "Readable & maintainable code",
   },
   // {
-  //   icon: <BsLightningCharge size={22} />,
-  //   value: "Remote",
+  //   text: "Remote",
   //   label: "Friendly",
-  //   description: "Available globally, anytime",
+  //   desc: "Available globally, anytime",
   // },
 ];
 
-
-
- 
-const BannerStatsCard = () => {
+export default function BannerStats() {
   return (
-       <div
-            className="grid grid-cols-2  min-[450px]:grid-cols-3  gap-2.5 md:gap-3 w-full md:max-w-xl lg:max-w-3xl xl:max-w-4xl mt-1"
-            data-aos="fade-up"
-            data-aos-delay="200"
+    <div className="relative">
+      {/* উপরের রেখা, load এ বাঁ থেকে ডানে আঁকা হয় */}
+      <span className="stat-rule absolute top-0 left-0 h-px w-full bg-[color:var(--line)]" />
+
+      <dl className="grid grid-cols-1 sm:grid-cols-3">
+        {stats.map((s, i) => (
+          <div
+            key={i}
+            className={`stat-item group relative py-6 sm:py-8 ${
+              i > 0 ? "sm:border-l sm:pl-8 border-[color:var(--line)]" : ""
+            }`}
           >
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={` group relative flex items-center gap-3 min-[450px]gap-2 sm:gap-3
-                  p-3 min-[450px]:p-2 sm:p-3 rounded-xl cursor-default
-                  border border-ds-border
-                  bg-ds-primary-foreground 
-                  backdrop-blur-sm
-                  transition-all duration-300 ease-out
-                  hover:-translate-y-1
-                  hover:border-zinc-300 dark:hover:border-zinc-600
-                  hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]
-                  dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.03)]
-                  hover:bg-white dark:hover:bg-zinc-900
-                  overflow-hidden ${stat.value === "Clean Code" ?  "hidden min-[450px]:flex" : stat.value ==="Remote" ? "hidden sm:flex" : "flex"} `}
-              >
-                {/* Icon (Left side) */}
-                <span
-                  className="
-                    p-2.5  min-[450px]:p-1.5 sm:p-2.5  rounded-lg shrink-0
-                    bg-zinc-100 dark:bg-zinc-800
-                    text-zinc-500 dark:text-zinc-400
-                    group-hover:bg-zinc-900 dark:group-hover:bg-white
-                    group-hover:text-white dark:group-hover:text-zinc-900
-                    transition-all duration-300 hidden min-[450px]:block
-                  "
-                >
-                  {stat.icon}
-                </span>
-
-                {/* Main Focus: Value & Label */}
-                <div className="flex flex-col text-left">
-                  <span
-                    className="
-                      text-base sm:text-lg font-bold leading-none
-                      text-zinc-800 dark:text-zinc-100
-                      group-hover:text-zinc-900 dark:group-hover:text-white
-                      transition-colors duration-300
-                    "
-                  >
-                    {stat.value}
+            <dt className="flex items-baseline gap-2 text-4xl sm:text-5xl font-bold leading-none">
+              {s.count !== undefined ? (
+                <>
+                  <span>
+                    <span className="count tabular-nums" data-count={s.count}>
+                      {s.count}
+                    </span>
+                    <span className="text-[color:var(--accent)]">{s.suffix}</span>
                   </span>
-                  <span
-                    className="
-                      text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5
-                      group-hover:text-zinc-700 dark:group-hover:text-zinc-200
-                      transition-colors duration-300
-                    "
-                  >
-                    {stat.label}
+                  <span className="text-xl sm:text-2xl font-semibold text-[color:var(--muted)]">
+                    {s.unit}
                   </span>
-                </div>
+                </>
+              ) : (
+                <span>{s.text}</span>
+              )}
+            </dt>
+            <dd className="mt-3">
+              <span className="block text-base font-semibold">{s.label}</span>
+              <span className="block text-sm text-[color:var(--muted)]">{s.desc}</span>
+            </dd>
 
-                {/* Bottom accent line on hover */}
-                <span
-                  className="
-                    absolute bottom-0 left-1/2 -translate-x-1/2
-                    h-[2px] w-0 rounded-full
-                    bg-zinc-800 dark:bg-white
-                    group-hover:w-3/4
-                    transition-all duration-500 ease-out
-                  "
-                />
-              </div>
-            ))}
+            {/* hover করলে উপরে accent রেখা বাড়ে */}
+            <span className="absolute top-0 left-0 h-[2px] w-0 bg-[color:var(--accent)] transition-[width] duration-500 ease-out group-hover:w-full" />
           </div>
-
-  )
+        ))}
+      </dl>
+    </div>
+  );
 }
-
-export default BannerStatsCard

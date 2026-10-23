@@ -100,7 +100,7 @@ const Navbar = () => {
   };
 
   return (
-<header className="sticky top-0 left-0 right-0 z-50 pt-3 relative "> 
+<header className="fixed top-0 left-0 right-0 z-50 pt-3">
 <div
   className={`
     absolute inset-0 -z-10 pointer-events-none
@@ -108,7 +108,7 @@ const Navbar = () => {
     ${pathname === "/" && !isScrolled && !mobileOpen ? "opacity-100" : "opacity-0"}
   `}
   style={{
-       backgroundImage: "radial-gradient(circle, var(--ds-dot-color) 1px, transparent 1px)",
+      //  backgroundImage: "radial-gradient(circle, var(--ds-dot-color) 1px, transparent 1px)",
     backgroundSize: "18px 18px",
   }}
 />

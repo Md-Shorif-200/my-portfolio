@@ -15,7 +15,7 @@ export default function Home() {
         <Banner />
       </section>
 
-      <section id="about" className="scroll-mt-10 sm:scroll-mt-20">
+      <section id="about" className="scroll-mt-10 sm:scroll-mt-30">
         <About />
       </section>
 

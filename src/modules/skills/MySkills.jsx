@@ -15,6 +15,7 @@ const skillCategories = [
     icon: "lucide:code-2",
     span: "sm:col-span-2 lg:col-span-2",
     rows: 6,
+    color: "#3B82F6",
     skills: [
       { name: "JavaScript", icon: "logos:javascript" },
       { name: "TypeScript", icon: "logos:typescript-icon" },
@@ -53,10 +54,11 @@ const skillCategories = [
     icon: "lucide:layers",
     span: "sm:col-span-1 lg:col-span-1",
     rows: 12,
+    color: "#A855F7",
     skills: [
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "Express.js", icon: "devicon:express" },
-      { name: "Mongoose", icon: "devicon:mongoose" },
+
       { name: "Socket.io", icon: "devicon:socketio" },
       { name: "REST API", icon: "lucide:zap", className: "text-[#FF8A00]" },
       {
@@ -89,8 +91,12 @@ const skillCategories = [
     icon: "lucide:database",
     span: "sm:col-span-1 lg:col-span-1",
     rows: 6,
+    color: "#10B981",
     skills: [
       { name: "MongoDB", icon: "devicon:mongodb" },
+      { name: "Mongoose", icon: "devicon:mongoose" },
+      { name: "PostgreSQL", icon: "devicon:postgresql" },
+
       { name: "Redis", icon: "devicon:redis" },
     ],
   },
@@ -101,10 +107,15 @@ const skillCategories = [
     icon: "lucide:cloud",
     span: "sm:col-span-1 lg:col-span-1",
     rows: 6,
+    color: "#F59E0B",
     skills: [
-      { name: "Vercel", icon: "simple-icons:vercel", className: "text-black dark:text-white" },
+      {
+        name: "Vercel",
+        icon: "simple-icons:vercel",
+        className: "text-black dark:text-white",
+      },
       { name: "Docker", icon: "material-icon-theme:docker", className: "" },
-      { name: "AWS", icon: "logos:aws" },
+      // { name: "AWS", icon: "logos:aws" },
       { name: "CI/CD", icon: "devicon:githubactions" },
     ],
   },
@@ -115,13 +126,21 @@ const skillCategories = [
     icon: "lucide:wrench",
     span: "sm:col-span-1 lg:col-span-2",
     rows: 6,
+    color: "#6366F1",
     skills: [
       { name: "Git", icon: "logos:git-icon" },
-      { name: "GitHub", icon: "mdi:github", className: "text-black dark:text-white" },
+      {
+        name: "GitHub",
+        icon: "mdi:github",
+        className: "text-black dark:text-white",
+      },
       { name: "Figma To HTML", icon: "logos:figma" },
       { name: "PSD To HTML", icon: "logos:adobe-photoshop" },
       { name: "Postman", icon: "logos:postman-icon" },
-      { name: "Swagger", icon: "logos:swagger" },
+      { name: "Vs Code", icon: "lineicons:vs-code" },
+      { name: "Cursor", icon: "devicon-plain:cursor" },
+      { name: "Notion", icon: "devicon:notion" },
+
     ],
   },
   {
@@ -131,6 +150,7 @@ const skillCategories = [
     icon: "lucide:cpu",
     span: "lg:col-span-1",
     rows: 6,
+    color: "#F43F5E",
     skills: [
       {
         name: "System Design",
@@ -188,21 +208,33 @@ const pillVariants = {
 };
 
 // ---- Skill Pill Component ----
-function SkillPill({ skill }) {
+function SkillPill({ skill, color }) {
   return (
     <motion.div
       variants={pillVariants}
-      className="group inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm dark:shadow-none transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-ds-primary/30 hover:shadow-md dark:hover:shadow-none hover:bg-ds-secondary/80"
+      className="group/pill relative inline-flex w-fit flex-none items-center gap-2 rounded-xl border border-ds-border/60 bg-ds-secondary px-3 py-1.5 shadow-sm dark:shadow-none backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-0.5"
+      style={{
+        "--hover-border": `${color}55`,
+        "--hover-shadow": `${color}22`,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = "var(--hover-border)";
+        e.currentTarget.style.boxShadow = `0 8px 20px -6px var(--hover-shadow)`;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = "";
+        e.currentTarget.style.boxShadow = "";
+      }}
     >
       <div className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full">
         <Icon
           icon={skill.icon}
           width={18}
           height={18}
-          className={`transition-transform duration-300 ease-out group-hover:scale-110 ${skill.className || ""}`}
+          className={`transition-transform duration-300 ease-out group-hover/pill:scale-110 ${skill.className || ""}`}
         />
       </div>
-      <span className="whitespace-nowrap text-sm font-medium text-ds-muted-foreground transition-colors duration-300 ease-out group-hover:text-ds-primary">
+      <span className="whitespace-nowrap text-sm font-medium text-ds-muted-foreground transition-colors duration-300 ease-out group-hover/pill:text-ds-primary">
         {skill.name}
       </span>
     </motion.div>
@@ -215,11 +247,32 @@ function SkillCard({ category }) {
     <motion.div
       variants={cardVariants}
       whileHover={{ y: -4 }}
-      className={`${category.span} skill-card group flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:border-ds-primary/10 skill_Card_Box_Shadow`}
+      className={`${category.span} skill-card group relative flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-neutral-900 dark:via-neutral-900/80 dark:to-neutral-950 p-6 transition-all duration-300 ease-out hover:border-ds-primary/10 skill_Card_Box_Shadow`}
       style={{ "--row-span": category.rows || 6 }}
     >
-      <div className="mb-6 flex items-center gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-ds-border bg-ds-primary-foreground text-ds-primary transition-all duration-300 group-hover:bg-black group-hover:text-ds-secondary dark:group-hover:text-black">
+      {/* top gradient accent line */}
+      <div
+        className="absolute inset-x-0 top-0 h-[3px] opacity-80"
+        style={{
+          background: `linear-gradient(90deg, ${category.color}, transparent 80%)`,
+        }}
+      />
+
+      {/* decorative glow blob */}
+      <div
+        className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-20"
+        style={{ background: category.color }}
+      />
+
+      <div className="relative z-10 mb-6 flex items-center gap-4">
+        <div
+          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3"
+          style={{
+            backgroundColor: `${category.color}14`,
+            borderColor: `${category.color}30`,
+            color: category.color,
+          }}
+        >
           <Icon icon={category.icon} width={22} height={22} />
         </div>
 
@@ -229,14 +282,14 @@ function SkillCard({ category }) {
       </div>
 
       <motion.div
-        className="flex flex-wrap gap-2"
+        className="relative z-10 flex flex-wrap gap-2"
         variants={pillContainerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
         {category.skills.map((skill) => (
-          <SkillPill key={skill.name} skill={skill} />
+          <SkillPill key={skill.name} skill={skill} color={category.color} />
         ))}
       </motion.div>
     </motion.div>
