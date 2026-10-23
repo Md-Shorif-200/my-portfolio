@@ -3,14 +3,13 @@
 import { useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Facebook, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, FacebookIcon } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 import Container from "../../components/Container";
 import ResumePreviewModal from "./ResumePreviewModal";
-import { FacebookIcon } from "lucide-react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -18,23 +17,11 @@ const NAME = "SHORIF UDDIN RIFAT";
 
 const ROLES = ["Full-Stack Developer", "Frontend Engineer", "Tech Enthusiast"];
 
-const STACK = [
-  "MongoDB",
-  "Express.js",
-  "React",
-  "Node.js",
-  "Next.js",
-  "Tailwind CSS",
-  "GSAP",
-  "REST APIs",
-];
-
 // Tech-orbit rings (right-side decorative animation)
 const ORBIT_OUTER = ["React", "Next.js", "Node.js", "MongoDB"];
 const ORBIT_INNER = ["Express.js", "Tailwind CSS", "GSAP", "REST APIs"];
 
 // Social links shown under the hero CTAs.
-// TODO: replace the placeholder hrefs with your real profile URLs.
 const SOCIALS = [
   {
     label: "GitHub",
@@ -97,7 +84,6 @@ export default function Banner() {
           /* ---------- Reduced motion: show the final state, no animation ---------- */
           if (!motion) {
             gsap.set(q("[data-reveal]"), { opacity: 1 });
-            gsap.set(q(".hero-rule"), { scaleX: 1 });
             return;
           }
 
@@ -242,35 +228,7 @@ export default function Banner() {
               .to({}, { duration: 0.25 });
           });
 
-          /* ---------- 3. Tech-stack marquee (speeds up with scroll velocity) ---------- */
-          const marquee = gsap.to(q(".hero-marquee-track"), {
-            xPercent: -50,
-            duration: 30,
-            ease: "none",
-            repeat: -1,
-          });
-
-          ScrollTrigger.create({
-            trigger: root,
-            start: "top bottom",
-            end: "bottom top",
-            onUpdate: (self) => {
-              const boost = 1 + Math.min(Math.abs(self.getVelocity()) / 250, 7);
-              gsap.to(marquee, {
-                timeScale: boost,
-                duration: 0.2,
-                overwrite: true,
-                onComplete: () =>
-                  gsap.to(marquee, {
-                    timeScale: 1,
-                    duration: 0.9,
-                    ease: "power2.out",
-                  }),
-              });
-            },
-          });
-
-          /* ---------- 4. Scroll-linked exit (parallax) ---------- */
+          /* ---------- 3. Scroll-linked exit (parallax) ---------- */
           gsap
             .timeline({
               scrollTrigger: {
@@ -293,7 +251,7 @@ export default function Banner() {
               0,
             );
 
-          /* ---------- 5. Master intro timeline ---------- */
+          /* ---------- 4. Master intro timeline ---------- */
           const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
           tl.from(
@@ -327,22 +285,10 @@ export default function Banner() {
               "-=0.3",
             )
             .fromTo(
-              q(".hero-rule"),
-              { scaleX: 0 },
-              { scaleX: 1, duration: 0.9, ease: "power3.inOut" },
-              "-=0.7",
-            )
-            .fromTo(
-              q(".hero-tagline"),
-              { y: 20, opacity: 0 },
-              { y: 0, opacity: 1, duration: 0.7 },
-              "-=0.5",
-            )
-            .fromTo(
               q(".hero-role"),
               { y: 20, opacity: 0 },
               { y: 0, opacity: 1, duration: 0.7 },
-              "<0.1",
+              "-=0.6",
             )
             .add(() => typer.play(), "<0.3")
             .fromTo(
@@ -370,24 +316,17 @@ export default function Banner() {
               { y: 0, opacity: 1, duration: 0.6, stagger: 0.08 },
               "-=0.3",
             )
-            .addLabel("outro", "-=0.2")
-            .fromTo(
-              q(".hero-marquee"),
-              { opacity: 0, y: 20 },
-              { opacity: 1, y: 0, duration: 0.8 },
-              "outro",
-            )
             .fromTo(
               q(".hero-scroll-indicator"),
               { opacity: 0 },
               { opacity: 1, duration: 0.6 },
-              "outro+=0.1",
+              "-=0.2",
             )
             .add(() => {
               introDone = true;
             });
 
-          /* ---------- 6. Particle network (canvas driven by gsap.ticker) ---------- */
+          /* ---------- 5. Particle network (canvas driven by gsap.ticker) ---------- */
           const canvas = canvasRef.current;
           const ctx = canvas ? canvas.getContext("2d") : null;
           const pointer = { x: -9999, y: -9999 };
@@ -495,7 +434,7 @@ export default function Banner() {
             });
           }
 
-          /* ---------- 7. Pointer interactions (mouse / trackpad only) ---------- */
+          /* ---------- 6. Pointer interactions (mouse / trackpad only) ---------- */
           if (fine) {
             // Depth layers (orbs, tech-orbit) drift with the pointer
             const layers = q(".hero-layer").map((el) => ({
@@ -506,23 +445,24 @@ export default function Banner() {
 
             // Soft spotlight that follows the cursor
             const spot = q(".hero-spot")[0];
-            gsap.set(spot, { xPercent: -50, yPercent: -50 });
-            const spotX = gsap.quickTo(spot, "x", {
-              duration: 0.7,
-              ease: "power3",
-            });
-            const spotY = gsap.quickTo(spot, "y", {
-              duration: 0.7,
-              ease: "power3",
-            });
+            const spotX = spot
+              ? gsap.quickTo(spot, "x", { duration: 0.7, ease: "power3" })
+              : null;
+            const spotY = spot
+              ? gsap.quickTo(spot, "y", { duration: 0.7, ease: "power3" })
+              : null;
+            if (spot) gsap.set(spot, { xPercent: -50, yPercent: -50 });
 
             // Name letters are pushed away from the cursor
             const title = q(".hero-title")[0];
+            // NOTE: "scale" is split into scaleX + scaleY (fixes
+            // "scale not eligible for reset" warning)
             const letters = q(".hero-letter").map((el) => ({
               el,
               x: gsap.quickTo(el, "x", { duration: 0.6, ease: "power3" }),
               y: gsap.quickTo(el, "y", { duration: 0.6, ease: "power3" }),
-              s: gsap.quickTo(el, "scale", { duration: 0.6, ease: "power3" }),
+              sx: gsap.quickTo(el, "scaleX", { duration: 0.6, ease: "power3" }),
+              sy: gsap.quickTo(el, "scaleY", { duration: 0.6, ease: "power3" }),
             }));
             let wasNear = false;
 
@@ -530,13 +470,14 @@ export default function Banner() {
               letters.forEach((l) => {
                 l.x(0);
                 l.y(0);
-                l.s(1);
+                l.sx(1);
+                l.sy(1);
               });
               wasNear = false;
             };
 
             const repel = (cx, cy) => {
-              if (!introDone) return;
+              if (!introDone || !title) return;
               const tb = title.getBoundingClientRect();
               const near =
                 cx > tb.left - 140 &&
@@ -562,7 +503,8 @@ export default function Banner() {
                 const f = Math.max(0, 1 - d / 150);
                 l.x((dx / d) * f * 26);
                 l.y((dy / d) * f * 26 - f * 10);
-                l.s(1 + f * 0.18);
+                l.sx(1 + f * 0.18);
+                l.sy(1 + f * 0.18);
               });
             };
 
@@ -572,8 +514,10 @@ export default function Banner() {
               const ly = e.clientY - r.top;
               pointer.x = lx;
               pointer.y = ly;
-              spotX(lx);
-              spotY(ly);
+              if (spotX && spotY) {
+                spotX(lx);
+                spotY(ly);
+              }
 
               const nx = lx / r.width - 0.5;
               const ny = ly / r.height - 0.5;
@@ -585,12 +529,13 @@ export default function Banner() {
               repel(e.clientX, e.clientY);
             };
 
-            const onEnter = () =>
-              gsap.to(spot, { opacity: 0.9, duration: 0.6 });
+            const onEnter = () => {
+              if (spot) gsap.to(spot, { opacity: 0.9, duration: 0.6 });
+            };
             const onLeave = () => {
               pointer.x = -9999;
               pointer.y = -9999;
-              gsap.to(spot, { opacity: 0, duration: 0.6 });
+              if (spot) gsap.to(spot, { opacity: 0, duration: 0.6 });
               layers.forEach((l) => {
                 l.xTo(0);
                 l.yTo(0);
@@ -660,7 +605,6 @@ export default function Banner() {
               ...q(".hero-action"),
               ...q(".hero-social"),
               ...q(".hero-spot"),
-              marquee,
             ]);
           };
         },
@@ -675,10 +619,11 @@ export default function Banner() {
     <section
       ref={rootRef}
       className="
-      relative isolate flex min-h-[600px]
+      relative isolate flex min-h-[600px] 
       flex-col justify-center overflow-hidden
       pt-24
       bg-[radial-gradient(ellipse_zat_50%_0%,rgba(59,130,246,0.07),transparent_60%)]
+    
       
     "
     >
@@ -930,31 +875,6 @@ export default function Banner() {
           <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
-
-      {/* Tech marquee: full width, reacts to scroll speed */}
-      {/* <div
-        aria-hidden="true"
-        data-reveal
-        className="hero-marquee mt-16 w-full overflow-hidden border-y border-ds-border py-4"
-        style={{
-          opacity: 0,
-          WebkitMaskImage:
-            "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
-          maskImage:
-            "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
-        }}
-      >
-        <div className="hero-marquee-track flex w-max">
-          {[...STACK, ...STACK].map((item, i) => (
-            <div key={i} className="flex shrink-0 items-center gap-10 pr-10">
-              <span className="text-sm font-semibold text-ds-primary/70 sm:text-base">
-                {item}
-              </span>
-              <span className="h-1.5 w-1.5 rounded-full bg-ds-primary/30" />
-            </div>
-          ))}
-        </div>
-      </div> */}
     </section>
   );
 }
