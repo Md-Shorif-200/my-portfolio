@@ -55,9 +55,7 @@ const AllProjects = () => {
 
   return (
     <section className=" pt-30 pb-10">
-      {/* =====================================================
-          Header
-      ====================================================== */}
+    {/* header */}
 
       <div className="flex flex-col items-center w-full mb-12 max-w-2xl mx-auto">
         <div className="inline-flex px-3 py-1 text-center text-sm font-semibold bg-ds-primary rounded-full uppercase text-ds-secondary justify-center items-center gap-2">
