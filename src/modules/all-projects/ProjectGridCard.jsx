@@ -4,8 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink, Eye, Github, ArrowRight } from "lucide-react";
+import {  Eye } from "lucide-react";
 import { VscLiveShare } from "react-icons/vsc";
+import { ArrowUpRight } from "lucide-react";
 
 // Normalizes tech tags regardless of which shape the project object uses
 const getTechTags = (project) => {
@@ -165,7 +166,7 @@ const ProjectGridCard = ({ project, onViewDetails, index = 0 }) => {
                 className="flex-1"
               >
                 <PrimaryBtn href={project.liveLink} label="Visit Website">
-                  <ExternalLink className="w-4 h-4" />
+                  {/* <ExternalLink className="w-4 h-4" /> */}
                 </PrimaryBtn>
               </motion.div>
             )}
@@ -224,7 +225,7 @@ function PrimaryBtn({ href, children, label }) {
         {children}
         {label}
       </span>
-      <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform relative z-10" />
+      <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform relative z-10" />
     </Link>
   );
 }

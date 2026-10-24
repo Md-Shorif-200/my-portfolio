@@ -1,5 +1,144 @@
 export const ProjectsData = [
   {
+    id: "1717430407258",
+    category: "fullstack",
+    title: "Tution House",
+
+    subTitle: "Modern Tutor Marketplace & Management Platform",
+    isLive: true,
+    image:
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786362746/tution_house_1_rud2hz.webp",
+
+    techStack: {
+      techStackPrev: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui",
+        "Formik",
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "Zustand",
+        "Shadcn Ui`",
+        "Tailwind CSS",
+        "Formik",
+        "Yup",
+        "Tanstack Query",
+        "Framer Motion",
+      ],
+    },
+
+    liveLink: "https://tuitionhouse.org/",
+
+    description:
+      "TuitionHouse is a Modern Tutor Marketplace & Management Platform in Bangladesh that connects students, guardians and teachers. Guardians can search for online or offline tutors or post tuition requests, and teachers can register and apply for jobs. An admin dashboard manages the whole platform.",
+    keyFeatures: [
+      {
+        title: "Smart Tutor Search",
+        feature:
+          "A modern, user-friendly interface where guardians and students can find tutors by subject, category, location, class level, and availability. Server-side filtering and pagination keep results fast even with a large tutor list.",
+      },
+      {
+        title: "Multi-Step Teacher Onboarding",
+        feature:
+          "Developed a staged application form where teachers submit their qualifications, preferred subjects, and availability across multiple steps. Managed the complex form state and step-by-step validation using Formik and Yup.",
+      },
+      {
+        title: "Tutor Request & Tuition Jobs",
+        feature:
+          "Guardians can post tuition requests with their requirements. Teachers can browse these jobs in an infinite-scroll list and apply to the ones that fit them.",
+      },
+      {
+        title: "Advanced Admin Dashboard",
+        feature:
+          "Developed an admin panel with Chart.js analytics and teacher, job, user, and billing management, including tutor verification and approve, block, and delete controls. Advanced server-side filtering and lazy loading keep it fast with large data.",
+      },
+      {
+        title: "Performance & Scalability",
+        feature:
+          "Reduced load times across the platform using server-side pagination, infinite scroll, and component-level lazy loading. Optimized high-resolution images with Next.js Image and maintained a clean, reusable component structure with an organized file architecture for long-term maintainability.",
+      },
+    ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Frontend Developer",
+      description:
+        "I built the frontend of TuitionHouse with a modern, user-friendly UI. I implemented server-side filtering, pagination, infinite scroll, and query-based data fetching to handle large data smoothly. I also developed the admin dashboard with Chart.js analytics, built multi-step forms with Formik and Yup, and improved loading with lazy loading and Next.js Image. I followed clean code practices and reusable components throughout.",
+    },
+  },
+
+  {
+    id: "17174304004577",
+    category: "fullstack",
+    isLive: true,
+    title: "Mates",
+    subTitle: " Driver Network & Job Dispatch Platform",
+    image:
+      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786384913/limoz_2_mvl2qx.webp",
+
+    techStack: {
+      techStackPrev: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "WebSocket",
+        "Shadcn Ui",
+        "Formik",
+      ],
+      techStackFull: [
+        "TypeScript",
+        "Next.js",
+        "Next Auth",
+        "WebSocket",
+        "Shadcn Ui",
+        "Formik",
+        "Yup",
+        "Tanstack Query",
+        "Tailwind CSS",
+        "swiper.js",
+        "Swagger",
+        "Figma to HTML",
+      ],
+    },
+
+    liveLink: "https://app.matesdriver.com.au/",
+    description:
+      "Mates is a  B2B SaaS platform that connects chauffeurs, limousine operators, and fleet owners in one collaborative network. Users can find and bid on live jobs, dispatch extra bookings to trusted driver groups, and manage the full job lifecycle with real-time notifications, chat, billing, and fleet management — all in a fast, mobile-friendly platform.",
+    keyFeatures: [
+      {
+        title: "Live Job Marketplace & Bidding System",
+        feature:
+          "Drivers can browse live dispatched jobs and bid using points or a custom offer price, with countdown timers and auction/incremental bidding modes.",
+      },
+      {
+        title: "Smart Job Dispatch Engine",
+        feature:
+          "Operators can post job details (pickup, vehicle type, target group, pricing mode) and dispatch jobs instantly or schedule them later, with draft save and preview options.",
+      },
+      {
+        title: "Real-Time Notifications & Chat",
+        feature:
+          "WebSocket is used to send live job updates and notifications, and also powers a real-time chat system between users.",
+      },
+      {
+        title: "Billing & Fund Management",
+        feature:
+          "The platform supports subscriptions, account top-up, credit transfer between drivers, withdrawals, and detailed statements — all in one wallet system.",
+      },
+    ],
+    contributions: {
+      organization: "Bigmode Technologies",
+      role: "Frontend Developer",
+      description:
+        "I contributed around 90% of the frontend development for this project. Since the platform is highly functional and logic-heavy, I built it closely following the client's requirements and Figma design, with strong focus on performance and SEO. I also implemented a clean, reusable code structure and worked on the real-time notification and chat system using WebSocket.",
+    },
+  },
+
+  {
     id: "1717430400123",
     category: "fullstack",
     isLive: true,
@@ -62,73 +201,6 @@ export const ProjectsData = [
       role: "Frontend Developer",
       description:
         "I worked as a Frontend Developer on this project, building a user-friendly UI with TypeScript, Next.js and shadcn/ui, along with a geolocation package to show branch-wise products based on user location. I also focused on performance optimization, accessibility and SEO, helping the platform achieve Google Lighthouse scores of 90% Performance, 100% Best Practices and 95% SEO.",
-    },
-  },
-
-  {
-    id: "17174304004577",
-    category: "fullstack",
-    isLive: true,
-    title: "Mates",
-    subTitle: " Driver Network & Job Dispatch Platform",
-    image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786384913/limoz_2_mvl2qx.webp",
-
-    techStack: {
-      techStackPrev: [
-        "TypeScript",
-        "Next.js",
-        "Next Auth",
-        "WebSocket",
-        "Shadcn Ui",
-        "Formik",
-      ],
-      techStackFull: [
-        "TypeScript",
-        "Next.js",
-        "Next Auth",
-        "WebSocket",
-        "Shadcn Ui",
-        "Formik",
-        "Yup",
-        "Tanstack Query",
-        "Tailwind CSS",
-        "swiper.js",
-        "Swagger",
-        "Figma to HTML",
-      ],
-    },
-
-    liveLink: "https://app.limoz.co/",
-    description:
-      "Mates is a  B2B SaaS platform that connects chauffeurs, limousine operators, and fleet owners in one collaborative network. Users can find and bid on live jobs, dispatch extra bookings to trusted driver groups, and manage the full job lifecycle with real-time notifications, chat, billing, and fleet management — all in a fast, mobile-friendly platform.",
-    keyFeatures: [
-      {
-        title: "Live Job Marketplace & Bidding System",
-        feature:
-          "Drivers can browse live dispatched jobs and bid using points or a custom offer price, with countdown timers and auction/incremental bidding modes.",
-      },
-      {
-        title: "Smart Job Dispatch Engine",
-        feature:
-          "Operators can post job details (pickup, vehicle type, target group, pricing mode) and dispatch jobs instantly or schedule them later, with draft save and preview options.",
-      },
-      {
-        title: "Real-Time Notifications & Chat",
-        feature:
-          "WebSocket is used to send live job updates and notifications, and also powers a real-time chat system between users.",
-      },
-      {
-        title: "Billing & Fund Management",
-        feature:
-          "The platform supports subscriptions, account top-up, credit transfer between drivers, withdrawals, and detailed statements — all in one wallet system.",
-      },
-    ],
-    contributions: {
-      organization: "Bigmode Technologies",
-      role: "Frontend Developer",
-      description:
-        "I contributed around 90% of the frontend development for this project. Since the platform is highly functional and logic-heavy, I built it closely following the client's requirements and Figma design, with strong focus on performance and SEO. I also implemented a clean, reusable code structure and worked on the real-time notification and chat system using WebSocket.",
     },
   },
 
@@ -228,7 +300,6 @@ export const ProjectsData = [
         "Zustand",
         "Shadcn Ui",
         "Formik",
-
       ],
       techStackFull: [
         "TypeScript",
