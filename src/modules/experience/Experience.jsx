@@ -250,16 +250,7 @@ const Experience = () => {
               </motion.div>
             ))}
 
-            {/* End of timeline marker */}
-            <motion.div
-              variants={cardVariants}
-              className="flex items-center justify-center gap-2 py-3 text-neutral-400 dark:text-neutral-600"
-            >
-              <Sparkles className="w-3.5 h-3.5" strokeWidth={2} />
-              <span className="text-[11px] font-medium tracking-wide">
-                More experiences coming soon
-              </span>
-            </motion.div>
+       
           </motion.div>
         </div>
       </Container>
