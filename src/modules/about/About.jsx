@@ -174,38 +174,6 @@ const About = () => {
                 </motion.p>
               </div>
 
-              {/* Tech groups */}
-              <motion.div
-                variants={itemVariants}
-                className="mt-6 space-y-3"
-              >
-                {techGroups.map((group) => (
-                  <div
-                    key={group.label}
-                    className="flex flex-wrap items-center gap-2"
-                  >
-                    <span className="w-20 shrink-0 text-xs font-medium uppercase tracking-wider text-ds-muted-foreground">
-                      {group.label}
-                    </span>
-                    <motion.ul
-                      className="flex flex-wrap gap-2"
-                      variants={chipsContainerVariants}
-                    >
-                      {group.items.map((item) => (
-                        <motion.li
-                          key={item}
-                          variants={chipVariants}
-                          whileHover={{ y: -2 }}
-                          transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                          className="rounded-full border border-ds-primary/20 bg-ds-primary/[0.04] px-3 py-1 text-xs font-medium text-ds-primary"
-                        >
-                          {item}
-                        </motion.li>
-                      ))}
-                    </motion.ul>
-                  </div>
-                ))}
-              </motion.div>
 
               {/* Quote */}
               <motion.blockquote
