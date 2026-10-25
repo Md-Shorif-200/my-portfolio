@@ -282,72 +282,7 @@ export const ProjectsData = [
         "I built this entire project alone, both frontend and backend. On the frontend, I used TypeScript, Next.js, and Zustand, and organized the code with a modular folder structure. This gave me strong hands-on experience in building scalable and clean frontend architecture. On the backend, I used Express.js, Mongoose, and JWT to build a secure and well-structured API. This helped improve the website's performance, scalability, and security.",
     },
   },
-  {
-    id: "1717430407258",
-    category: "fullstack",
-    title: "Tution House",
-
-    subTitle: "Modern Tutor Marketplace & Management Platform",
-    isLive: true,
-    image:
-      "https://res.cloudinary.com/dxg4xodmg/image/upload/v1786362746/tution_house_1_rud2hz.webp",
-
-    techStack: {
-      techStackPrev: [
-        "TypeScript",
-        "Next.js",
-        "Next Auth",
-        "Zustand",
-        "Shadcn Ui",
-        "Formik",
-      ],
-      techStackFull: [
-        "TypeScript",
-        "Next.js",
-        "Next Auth",
-        "Zustand",
-        "Shadcn Ui`",
-        "Tailwind CSS",
-        "Formik",
-        "Yup",
-        "Tanstack Query",
-        "Framer Motion",
-      ],
-    },
-
-    liveLink: "https://tuitionhouse.org/",
-
-    description:
-      "TuitionHouse is a tutor finding and job management platform for students, guardians, and teachers in Bangladesh. Users can find online or offline teachers based on subject, location, class level, category, and availability. Teachers can apply to join the platform and apply for suitable tutoring jobs. Guardians can also submit tutoring job requests with their requirements. The platform includes an advanced admin dashboard to manage teachers, students, jobs, and other platform activities.",
-    keyFeatures: [
-      {
-        title: "Smart Tutor Discovery",
-        feature:
-          "Designed an intuitive search experience that helps students and guardians find suitable online or offline tutors based on subject, category, location, class level, and availability.",
-      },
-      {
-        title: "Teacher & Job Applications",
-        feature:
-          "Enabled teachers to apply for tutoring opportunities and explore detailed job posts based on their preferred teaching requirements.",
-      },
-      {
-        title: "Advanced Admin Management",
-        feature:
-          "Developed a comprehensive admin dashboard with teacher, student, and job management features, including profile review, approval, blocking, deletion, and job post management.",
-      },
-      {
-        title: "Performance & Scalability",
-        feature:
-          "Improved application performance through server-side pagination, filtering, query-based data fetching, lazy loading, image optimization, and clean reusable components.",
-      },
-    ],
-    contributions: {
-      organization: "Bigmode Technologies",
-      role: "Frontend Developer",
-      description:
-        "I worked on the frontend development of the TuitionHouse platform . I collaborated with backend developers to integrate APIs and develop features based on client requirements. I also worked on the advanced admin dashboard, including Teacher, Student, and Job Management, while building reusable and responsive UI components.",
-    },
-  },
+  
   {
     id: "1717430401012",
     category: "fullstack",
